@@ -247,7 +247,7 @@ int main(int argc, char* argv[])
     // Setup socket for server to listen to
 
     listenSock = open_socket(atoi(argv[1])); 
-    printf("Listening on port: %d\n", listenSock);
+    printf("Listening on port: %d\n", atoi(argv[1]));
 
     if(listen(listenSock, BACKLOG) < 0)
     {
