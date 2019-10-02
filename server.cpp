@@ -251,6 +251,14 @@ int main(int argc, char* argv[])
         } else {
             // First, accept  any new connections to the server on the listening socket
             if(FD_ISSET(listenSock, &readSockets)) {
+                // Code wouldn't run on Ubuntu 18.04 specifically unless
+                // this clientLen was explicitly set.
+                // It's good practice anyhow.
+                // One of the weirder bugs I've encountered.
+                // Multiple tests were run from multiple compilations
+                // on multiple systems and it consistently ran on
+                // everything except 18.04
+                clientLen = sizeof(client);
                 clientSock = accept(listenSock, (struct sockaddr *)&client,
                                     &clientLen);
 
