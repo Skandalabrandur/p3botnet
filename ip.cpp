@@ -9,6 +9,8 @@
 #include <errno.h>
 #include <string.h>
 
+#define INTERFACE "wlp1s0"
+
 int main(int argc, char *argv[])
 {
     struct ifaddrs *myaddrs, *ifa;
@@ -48,10 +50,12 @@ int main(int argc, char *argv[])
         if (!inet_ntop(ifa->ifa_addr->sa_family, in_addr, buf, sizeof(buf))) {
             printf("%s: inet_ntop failed!\n", ifa->ifa_name);
         } else {
-	    if(strcmp(ifa->ifa_name, "eth0") == 0) {
-		printf("%s\n", buf);
-		return 0;
-	    }
+            if(strcmp(ifa->ifa_name, INTERFACE) == 0) {
+                printf("%s\n", buf);
+                return 0;
+            }
+
+
             //printf("%s: %s\n", ifa->ifa_name, buf);
         }
     }
