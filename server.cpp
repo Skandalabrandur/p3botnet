@@ -152,8 +152,10 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
     while(stream >> token) {
         tokens.push_back(token);
     }
-
-    if((tokens[0].compare("CONNECT") == 0) && (tokens.size() == 2)) {
+    // Segfault fix because tokens[0] is invalid when size is 0
+    if (tokens.size() == 0) {
+        std::cout << "Received empty message" << std::endl;
+    } else if((tokens[0].compare("CONNECT") == 0) && (tokens.size() == 2)) {
         clients[clientSocket]->name = tokens[1];
     } else if(tokens[0].compare("LEAVE") == 0) {
         // Close the socket, and leave the socket handling
