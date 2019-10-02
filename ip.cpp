@@ -7,6 +7,7 @@
 #include <net/if.h>
 #include <ifaddrs.h>
 #include <errno.h>
+#include <string.h>
 
 int main(int argc, char *argv[])
 {
@@ -47,7 +48,11 @@ int main(int argc, char *argv[])
         if (!inet_ntop(ifa->ifa_addr->sa_family, in_addr, buf, sizeof(buf))) {
             printf("%s: inet_ntop failed!\n", ifa->ifa_name);
         } else {
-            printf("%s: %s\n", ifa->ifa_name, buf);
+	    if(strcmp(ifa->ifa_name, "eth0") == 0) {
+		printf("%s\n", buf);
+		return 0;
+	    }
+            //printf("%s: %s\n", ifa->ifa_name, buf);
         }
     }
 
