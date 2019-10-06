@@ -199,13 +199,9 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
                 std::string s_msg = "Only one argument for GETMSG! You supplied too many!";
                 send(clientSocket, s_msg.c_str(), s_msg.length(), 0);
             }
-        } else if(strs[0] == "LISTSERVERS") {
+        } else if(boost::contains(strs[0], (std::string) "LISTSERVERS")) {
             std::cout << "Received LISTSERVERS command" << std::endl;
         }
-
-
-    } else if(strcmp(msg.c_str(), "LISTSERVERS") == 0) {
-        std::cout << "Received LISTSERVERS command from < 0" << std::endl;
     }
 
     std::cout << "Received buffer: " << buffer << std::endl;
