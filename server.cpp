@@ -284,29 +284,6 @@ int main(int argc, char* argv[])
         } else {
             // First, accept  any new connections to the server on the listening socket
 
-            if(FD_ISSET(serverSock, &readSockets)) {
-                clientLen = sizeof(client);
-                clientSock = accept(listenSock, (struct sockaddr *)&client,
-                                    &clientLen);
-
-                // Add new client to the list of open sockets
-                FD_SET(clientSock, &openSockets);
-
-                // And update the maximum file descriptor
-                maxfds = std::max(maxfds, clientSock);
-
-                // create a new client to store information.
-                clients[clientSock] = new Client(clientSock);
-
-                // Decrement the number of sockets waiting to be dealt with
-                n--;
-
-                printf("Server connected on server: %d\n", clientSock);
-                std::ostringstream ss;
-                ss << "Server connected on server: " << clientSock << std::endl;
-                writeToLog(ss.str());
-            }
-
             if(FD_ISSET(listenSock, &readSockets)) {
                 clientLen = sizeof(client);
                 clientSock = accept(listenSock, (struct sockaddr *)&client,
