@@ -1,9 +1,18 @@
 #include "messageOperations.h"
 #include <iostream>
+#include <sstream>
 #include <stdio.h>
 
 bool isMessageValid(std::string msg) {
     return ((int) msg.at(0) == 0x01 && (int) msg.at(msg.length() - 1) == 0x04);
+}
+
+std::string constructMessage(std::string msg) {
+    std::stringstream ss;
+    ss << (char) 0x01;
+    ss << msg;
+    ss << (char) 0x04;
+    return ss.str();
 }
 
 
@@ -19,4 +28,13 @@ bool isMessageValid(std::string msg) {
 //    std::cout << std::endl;
 //    std::cout << valid << std::endl;
 //    std::cout << "isMessageValid(valid) = " << isMessageValid(valid) << std::endl;
+
+//    std::string newmsg;
+//    std::string rawmsg;
+//
+//    rawmsg = "Hello fellow kiddos";
+//    newmsg = constructMessage(rawmsg);
+//
+//    std::cout << "isMessageValid(rawmsg) = " << isMessageValid(rawmsg) << std::endl;
+//    std::cout << "isMessageValid(newmsg) = " << isMessageValid(newmsg) << std::endl;
 //}
