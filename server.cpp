@@ -284,7 +284,7 @@ int main(int argc, char* argv[])
         } else {
             // First, accept  any new connections to the server on the listening socket
 
-            if(FD_ISSET(listenSock, &readSockets)) {
+            if(FD_ISSET(serverSock, &readSockets)) {
                 clientLen = sizeof(client);
                 clientSock = accept(listenSock, (struct sockaddr *)&client,
                                     &clientLen);
