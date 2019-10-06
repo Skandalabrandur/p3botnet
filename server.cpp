@@ -202,6 +202,8 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
         }
 
 
+    } else if(msg == "LISTSERVERS") {
+        std::cout << "Received LISTSERVERS command from > 0" << std::endl;
     }
 
 
