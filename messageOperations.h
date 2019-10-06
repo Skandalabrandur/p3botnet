@@ -3,6 +3,6 @@
 #include <string>
 bool isMessageValid(std::string msg);
 std::string constructMessage(std::string msg);
-std::string extractNormal(std::string msg);
+std::string extractMessage(std::string msg);
 
 #endif
