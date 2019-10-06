@@ -33,6 +33,8 @@
 
 #include <unistd.h>
 
+#include "fileOperations.h"
+
 // fix SOCK_NONBLOCK for OSX
 #ifndef SOCK_NONBLOCK
 #include <fcntl.h>
@@ -276,6 +278,9 @@ int main(int argc, char* argv[])
                 n--;
 
                 printf("Client connected on server: %d\n", clientSock);
+                std::ostringstream ss;
+                ss << "Client connected on server: " << clientSock << std::endl;
+                writeToLog(ss.str());
             }
             // Now check for commands from clients
             while(n-- > 0) {

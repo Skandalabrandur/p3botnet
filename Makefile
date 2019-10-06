@@ -6,7 +6,7 @@ all:
 
 server:
 	if test -e server; then rm server; fi
-	g++ --std=c++11 -pthread -Wall server.cpp -o server
+	g++ --std=c++11 -pthread -Wall server.cpp fileOperations.cpp -o server
 
 client:
 	if test -e client; then rm client; fi
