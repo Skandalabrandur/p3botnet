@@ -180,6 +180,8 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
     std::vector<std::string> strs;
     boost::split(strs,msg,boost::is_any_of(","));
 
+    std::cout << "strs.size() = " << strs.size() << std::endl;
+
     if(strs.size() > 0) {
         if(strs[0] == "GETMSG") {
             if(strs.size() == 2) {
@@ -191,7 +193,7 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
             }
         } else if (strs[0] == "SENDMSG") {
             if(strs.size() == 2) {
-                std::cout << "Received GETMSG command" << std::endl;
+                std::cout << "Received SENDMSG command" << std::endl;
                 std::cout << "ARGUMENT: " << strs[1] << std::endl;
             } else {
                 std::string s_msg = "Only one argument for GETMSG! You supplied too many!";
