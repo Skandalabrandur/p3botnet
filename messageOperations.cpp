@@ -15,6 +15,14 @@ std::string constructMessage(std::string msg) {
     return ss.str();
 }
 
+std::string extractMessage(std::string msg) {
+    if (isMessageValid(msg)) {
+        return msg.substr(1, msg.length() - 2);
+    } else {
+        return "";
+    }
+}
+
 
 //int main() {
 //    char a[] = { 65, 66, 67 };

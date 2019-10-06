@@ -233,6 +233,11 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
 
 }
 
+void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
+                   char *buffer) {
+    std::cout << "Received from server:\n\t" << extractMessage((std::string) buffer) << std::endl;
+}
+
 int main(int argc, char* argv[])
 {
     bool finished;
@@ -355,6 +360,28 @@ int main(int argc, char* argv[])
  
             // Now check for commands from clients
             while(n-- > 0) {
+                for(auto const& pair : servers) {
+                    Server *server = pair.second;
+
+                    if(FD_ISSET(server->sock, &readSockets)) {
+                        // recv() == 0 means client has closed connection
+                        if(recv(server->sock, buffer, sizeof(buffer), MSG_DONTWAIT) == 0) {
+                            printf("Server closed connection: %d", server->sock);
+                            close(server->sock);
+
+                            closeServer(server->sock, &openSockets, &maxfds);
+
+                        }
+                        // We don't check for -1 (nothing received) because select()
+                        // only triggers if there is something on the socket for us.
+                        else {
+                            std::cout << buffer << std::endl;
+                            serverCommand(server->sock, &openSockets, &maxfds,
+                                          buffer);
+                        }
+                    }
+                }
+
                 for(auto const& pair : clients) {
                     Client *client = pair.second;
 
