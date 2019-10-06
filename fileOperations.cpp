@@ -18,7 +18,7 @@ void writeToLog(std::string text) {
     logfile.close();
 }
 
-int main () {
-    writeToLog("This was written, when?");
-    return 0;
-}
+//int main () {
+//    writeToLog("This was written, when?");
+//    return 0;
+//}
