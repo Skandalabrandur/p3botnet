@@ -2,6 +2,7 @@
 #include <fstream>
 #include <chrono>
 #include <ctime>
+#include "fileOperations.h"
 using namespace std;
 
 // Reference: http://www.cplusplus.com/doc/tutorial/files/

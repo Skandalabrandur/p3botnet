@@ -34,6 +34,7 @@
 #include <unistd.h>
 
 #include "fileOperations.h"
+#include "messageOperations.h"
 
 // fix SOCK_NONBLOCK for OSX
 #ifndef SOCK_NONBLOCK
