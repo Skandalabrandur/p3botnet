@@ -31,6 +31,8 @@
 #include <thread>
 #include <map>
 
+#include "messageOperations.h"
+
 // Threaded function for handling responss from server
 
 void listenServer(int serverSocket)
@@ -102,8 +104,9 @@ int main(int argc, char* argv[])
         bzero(buffer, sizeof(buffer));
 
         fgets(buffer, sizeof(buffer), stdin);
+        std::string msg = constructMessage((std::string) buffer);
 
-        nwrite = send(serverSocket, buffer, strlen(buffer),0);
+        nwrite = send(serverSocket, msg.c_str(), msg.length(),0);
 
         if(nwrite  == -1) {
             perror("send() to server failed: ");

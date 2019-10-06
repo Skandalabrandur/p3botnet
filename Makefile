@@ -16,7 +16,7 @@ compileforskel:
 
 client:
 	if test -e client; then rm client; fi
-	g++ --std=c++11 -pthread -Wall client.cpp -o client
+	g++ --std=c++11 -pthread -Wall client.cpp messageOperations.cpp fileOperations.cpp -o client
 
 clean:
 	if test -e tsamp3group77; then rm tsamp3group77; fi
