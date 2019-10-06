@@ -248,8 +248,8 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                 std::cout << "Received LISTSERVERS command" << std::endl;
                 std::cout << "ARGUMENT: " << strs[2] << std::endl;
             } else {
-                std::string msg = "Only 1 argument for LISTSERVERS!\n You supplied this many: " + strs.size();
-                send(serverSocket, msg.c_str(), msg.length()-1, 0);
+                std::string ls_msg = "Only 1 argument for LISTSERVERS! You supplied too many!";
+                send(serverSocket, ls_msg.c_str(), ls_msg.length()-1, 0);
             }
         } else if (strs[0] == "KEEPALIVE") {
             std::cout << "Received KEEPALIVE command" << std::endl;
