@@ -33,8 +33,11 @@
 
 #include <unistd.h>
 
+#include <boost/circular_buffer.hpp>
+
 #include "fileOperations.h"
 #include "messageOperations.h"
+#include "dataObjects.h"
 
 // fix SOCK_NONBLOCK for OSX
 #ifndef SOCK_NONBLOCK
@@ -65,7 +68,13 @@ public:
 // Quite often a simple array can be used as a lookup table,
 // (indexed on socket no.) sacrificing memory for speed.
 
-std::map<int, Client*> clients; // Lookup table for per Client information
+std::map<int, Client*> clients;     // Lookup table for per Client information
+std::map<int, s_server*> servers;   // Lookup table for connected servers
+
+typedef boost::circular_buffer<s_message> circular_buffer;
+circular_buffer cb{500};
+
+
 
 // Open socket for specified port.
 //
