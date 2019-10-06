@@ -206,6 +206,7 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
         std::cout << "Received LISTSERVERS command from < 0" << std::endl;
     }
 
+    std::cout << "Received buffer: " << buffer << std::endl;
 
 
 }
