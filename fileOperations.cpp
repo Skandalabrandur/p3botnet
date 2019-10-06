@@ -13,7 +13,7 @@ void writeToLog(std::string text) {
 
     ofstream logfile;
     logfile.open ("log.txt", ios::app);
-    logfile << "\t" << std::ctime(&now) << std::endl;
+    logfile << " | " << std::ctime(&now) << std::endl;
     logfile.close();
 }
 
