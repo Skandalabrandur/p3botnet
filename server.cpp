@@ -243,40 +243,26 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
     boost::split(strs,msg,boost::is_any_of(","));
 
     if(strs.size() > 0) {
-        if (strs[0] == "LISTSERVERS") {
+        if(strs[0] == "LISTSERVERS") {
             if(strs.size() != 2) {
                 std::cout << "Received LISTSERVERS command" << std::endl;
             }
-        }
-
-        if (strs[0] == "KEEPALIVE") {
+        } else if (strs[0] == "KEEPALIVE") {
             std::cout << "Received KEEPALIVE command" << std::endl;
-        }
-
-        if (strs[0] == "GET_MSG") {
+        } else if (strs[0] == "GET_MSG") {
             std::cout << "Received GET_MSG command" << std::endl;
-        }
-
-        if (strs[0] == "SEND_MSG") {
+        } else if (strs[0] == "SEND_MSG") {
             std::cout << "Received LEAVE command" << std::endl;
-        }
-
-        if (strs[0] == "STATUSREQ") {
+        } else if (strs[0] == "STATUSREQ") {
             std::cout << "Received STATUSREQ command" << std::endl;
-        }
-
-        if (strs[0] == "STATUSRESP") {
+        } else if (strs[0] == "STATUSRESP") {
             std::cout << "Received STATUSRESP command" << std::endl;
+        } else {
+            std::string msg = "Please refer to the pdf on how to send messages.\nDid you perhaps forget a comma in LISTSERVERS or another command? LISTSERVERS on its own is not enough. LISTERVERS,YOUR_GROUP_ID is the way to go my friend!";
+
+            send(serverSocket, msg.c_str(), msg.length()-1, 0);
         }
-    } else {
-        std::string msg = "Please refer to the pdf on how to send messages.\nDid you perhaps forget a comma in LISTSERVERS or another command? LISTSERVERS on its own is not enough. LISTERVERS,YOUR_GROUP_ID is the way to go my friend!";
-
-        send(serverSocket, msg.c_str(), msg.length()-1, 0);
     }
-
-
-
-
 
     std::cout << "Received from server:\n\t" << msg << std::endl;
 
