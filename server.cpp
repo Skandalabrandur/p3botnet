@@ -246,7 +246,7 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
         if(strs[0] == "LISTSERVERS") {
             if(strs.size() == 2) {
                 std::cout << "Received LISTSERVERS command" << std::endl;
-                std::cout << "ARGUMENT: " << strs[2] << std::endl;
+                std::cout << "ARGUMENT: " << strs[1] << std::endl;
             } else {
                 std::string ls_msg = "Only one argument for LISTSERVERS! You supplied too many!";
                 send(serverSocket, ls_msg.c_str(), ls_msg.length(), 0);
