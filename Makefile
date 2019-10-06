@@ -6,7 +6,7 @@ all:
 
 server:
 	if test -e server; then rm server; fi
-	g++ --std=c++11 -pthread -Wall server.cpp fileOperations.cpp -o server
+	g++ --std=c++11 -pthread -Wall server.cpp fileOperations.cpp messageOperations.cpp -o server
 
 compileforskel:
 	if test -e server; then rm server; fi
