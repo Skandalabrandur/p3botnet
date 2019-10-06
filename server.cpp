@@ -220,6 +220,7 @@ int main(int argc, char* argv[])
     bool finished;
     int listenSock;                 // Socket for connections to server
     int clientSock;                 // Socket of connecting client
+    int serverSock;
     fd_set openSockets;             // Current open sockets
     fd_set readSockets;             // Socket list for select()
     fd_set exceptSockets;           // Exception socket list
@@ -228,18 +229,23 @@ int main(int argc, char* argv[])
     socklen_t clientLen;
     char buffer[1025];              // buffer for reading from clients
 
-    if(argc != 2) {
-        printf("Usage: chat_server <ip port>\n");
+    if(argc != 5) {
+        //SERVERS and CLIENTS are mainly used to make it readable for people searching for servers
+        //via the 'w' command
+        printf("Usage: chat_server SERVERS <server listen port> CLIENTS <client listen port>\n");
         exit(0);
     }
 
     // Setup socket for server to listen to
 
-    listenSock = open_socket(atoi(argv[1]));
-    printf("Listening on port: %d\n", atoi(argv[1]));
+    listenSock = open_socket(atoi(argv[2]));
+    printf("Listening for servers on port: %d\n", atoi(argv[2]));
 
+    serverSock = open_socket(atoi(argv[4]));
+
+    printf("Listening for clients on port: %d\n", atoi(argv[4]));
     if(listen(listenSock, BACKLOG) < 0) {
-        printf("Listen failed on port %s\n", argv[1]);
+        printf("Listening for failed on port %s\n", argv[1]);
         exit(0);
     } else
         // Add listen socket to socket set we are monitoring
