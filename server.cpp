@@ -248,8 +248,8 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                 std::cout << "Received LISTSERVERS command" << std::endl;
                 std::cout << "ARGUMENT: " << strs[2] << std::endl;
             } else {
-                std::string ls_msg = "Only 1 argument for LISTSERVERS! You supplied too many!";
-                send(serverSocket, ls_msg.c_str(), ls_msg.length()-1, 0);
+                std::string ls_msg = "Only one argument for LISTSERVERS! You supplied too many!";
+                send(serverSocket, ls_msg.c_str(), ls_msg.length(), 0);
             }
         } else if (strs[0] == "KEEPALIVE") {
             std::cout << "Received KEEPALIVE command" << std::endl;
@@ -262,9 +262,9 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
         } else if (strs[0] == "STATUSRESP") {
             std::cout << "Received STATUSRESP command" << std::endl;
         } else {
-            std::string msg = "Please refer to the pdf on how to send messages.\nDid you perhaps forget a comma in LISTSERVERS or another command? LISTSERVERS on its own is not enough. LISTERVERS,YOUR_GROUP_ID is the way to go my friend!";
+            std::string e_msg = "Please refer to the pdf on how to send messages.\nDid you perhaps forget a comma in LISTSERVERS or another command? LISTSERVERS on its own is not enough. LISTERVERS,YOUR_GROUP_ID is the way to go my friend!";
 
-            send(serverSocket, msg.c_str(), msg.length()-1, 0);
+            send(serverSocket, e_msg.c_str(), e_msg.length()-1, 0);
         }
     }
 
