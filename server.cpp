@@ -263,14 +263,15 @@ int main(int argc, char* argv[])
 
     // Setup socket for server to listen to
 
-    clistenSock = open_socket(atoi(argv[2]));
-    printf("Listening for servers on port: %d\n", atoi(argv[2]));
-
-    slistenSock = open_socket(atoi(argv[4]));
-
+    clistenSock = open_socket(atoi(argv[4]));
     printf("Listening for clients on port: %d\n", atoi(argv[4]));
+
+    slistenSock = open_socket(atoi(argv[2]));
+
+    printf("Listening for server on port: %d\n", atoi(argv[2]));
+
     if(listen(clistenSock, BACKLOG) < 0) {
-        printf("Listening for failed on port %s\n", argv[4]);
+        printf("Listening for clients failed on port %s\n", argv[4]);
         exit(0);
     } else
         // Add listen socket to socket set we are monitoring
