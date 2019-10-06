@@ -224,6 +224,9 @@ int main(int argc, char* argv[])
     fd_set openSockets;             // Current open sockets
     fd_set readSockets;             // Socket list for select()
     fd_set exceptSockets;           // Exception socket list
+
+    fd_set openServerSockets;
+    fd_set readServerSockets;
     int maxfds;                     // Passed to select() as max fd in set
     struct sockaddr_in client;
     socklen_t clientLen;
@@ -245,7 +248,7 @@ int main(int argc, char* argv[])
 
     printf("Listening for clients on port: %d\n", atoi(argv[4]));
     if(listen(listenSock, BACKLOG) < 0) {
-        printf("Listening for failed on port %s\n", argv[1]);
+        printf("Listening for failed on port %s\n", argv[4]);
         exit(0);
     } else
         // Add listen socket to socket set we are monitoring
@@ -254,9 +257,20 @@ int main(int argc, char* argv[])
         maxfds = listenSock;
     }
 
+    if(listen(serverSock, BACKLOG) < 0) {
+        printf("Listening for servers failed on port %s\n", argv[2]);
+        exit(0);
+    } else {
+        FD_SET(serverSock, &openSockets);
+        maxfds = serverSock;        //TODO: determine maxfds in a better way?
+    }
+
+
     finished = false;
 
     while(!finished) {
+        
+
         // Get modifiable copy of readSockets
         readSockets = exceptSockets = openSockets;
         memset(buffer, 0, sizeof(buffer));
@@ -270,13 +284,6 @@ int main(int argc, char* argv[])
         } else {
             // First, accept  any new connections to the server on the listening socket
             if(FD_ISSET(listenSock, &readSockets)) {
-                // Code wouldn't run on Ubuntu 18.04 specifically unless
-                // this clientLen was explicitly set.
-                // It's good practice anyhow.
-                // One of the weirder bugs I've encountered.
-                // Multiple tests were run from multiple compilations
-                // on multiple systems and it consistently ran on
-                // everything except 18.04
                 clientLen = sizeof(client);
                 clientSock = accept(listenSock, (struct sockaddr *)&client,
                                     &clientLen);
