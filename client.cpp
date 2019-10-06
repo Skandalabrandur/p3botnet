@@ -6,7 +6,8 @@
 // Base:        Author: Jacky Mallett (jacky@ru.is)
 //  -The base client can be seen in its original form under /root/base/client.cpp
 //
-// Implement:   Author: Þorsteinn Sævar Kristjánsson (thorsteinnk17@ru.is)
+// Implement:   Authors:    Fjóla Sif Sigvaldadóttir (fjola17@ru.is)
+//                          Þorsteinn Sævar Kristjánsson (thorsteinnk17@ru.is)
 //
 #include <stdio.h>
 #include <errno.h>
