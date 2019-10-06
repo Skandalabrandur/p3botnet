@@ -266,7 +266,7 @@ int main(int argc, char* argv[])
     clistenSock = open_socket(atoi(argv[2]));
     printf("Listening for servers on port: %d\n", atoi(argv[2]));
 
-    serverSock = open_socket(atoi(argv[4]));
+    slistenSock = open_socket(atoi(argv[4]));
 
     printf("Listening for clients on port: %d\n", atoi(argv[4]));
     if(listen(clistenSock, BACKLOG) < 0) {
@@ -283,7 +283,7 @@ int main(int argc, char* argv[])
         printf("Listening for servers failed on port %s\n", argv[2]);
         exit(0);
     } else {
-        FD_SET(serverSock, &openSockets);
+        FD_SET(slistenSock, &openSockets);
         maxfds = slistenSock;        //TODO: determine maxfds in a better way?
     }
 
