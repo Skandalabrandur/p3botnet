@@ -34,6 +34,8 @@
 #include <unistd.h>
 
 #include <boost/circular_buffer.hpp>
+#include <boost/algorithm/string.hpp>
+
 
 #include "fileOperations.h"
 #include "messageOperations.h"
@@ -234,8 +236,44 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
 }
 
 void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
-                   char *buffer) {
-    std::cout << "Received from server:\n\t" << extractMessage((std::string) buffer) << std::endl;
+        char *buffer) {
+    std::string msg = extractMessage((std::string) buffer);
+
+    std::vector<std::string> strs;
+    boost::split(strs,msg,boost::is_any_of(","));
+
+    if(strs.size() > 0) {
+        if (strs[0] == "LISTSERVERS") {
+            std::cout << "Received LISTSERVERS command" << std::endl;
+        }
+
+        if (strs[0] == "KEEPALIVE") {
+            std::cout << "Received KEEPALIVE command" << std::endl;
+        }
+
+        if (strs[0] == "GET_MSG") {
+            std::cout << "Received GET_MSG command" << std::endl;
+        }
+
+        if (strs[0] == "SEND_MSG") {
+            std::cout << "Received LEAVE command" << std::endl;
+        }
+
+        if (strs[0] == "STATUSREQ") {
+            std::cout << "Received STATUSREQ command" << std::endl;
+        }
+
+        if (strs[0] == "STATUSRESP") {
+            std::cout << "Received STATUSRESP command" << std::endl;
+        }
+    }
+
+
+
+
+
+    std::cout << "Received from server:\n\t" << msg << std::endl;
+
 }
 
 int main(int argc, char* argv[])
