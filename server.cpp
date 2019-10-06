@@ -69,7 +69,7 @@ public:
 // (indexed on socket no.) sacrificing memory for speed.
 
 std::map<int, Client*> clients;     // Lookup table for per Client information
-std::map<int, s_server*> servers;   // Lookup table for connected servers
+std::map<int, Server*> servers;   // Lookup table for connected servers
 
 typedef boost::circular_buffer<s_message> circular_buffer;
 circular_buffer cb{500};
@@ -141,6 +141,9 @@ void closeClient(int clientSocket, fd_set *openSockets, int *maxfds)
     // so there aren't any nice ways to do this.
 
     if(*maxfds == clientSocket) {
+        for(auto const& p : servers) {
+            *maxfds = std::max(*maxfds, p.second->sock);
+        }
         for(auto const& p : clients) {
             *maxfds = std::max(*maxfds, p.second->sock);
         }
@@ -149,6 +152,21 @@ void closeClient(int clientSocket, fd_set *openSockets, int *maxfds)
     // And remove from the list of open sockets.
 
     FD_CLR(clientSocket, openSockets);
+}
+
+void closeServer(int serverSocket, fd_set *openSockets, int *maxfds) {
+    servers.erase(serverSocket);
+
+    if(*maxfds == serverSocket) {
+        for(auto const& p : clients) {
+            *maxfds = std::max(*maxfds, p.second->sock);
+        }
+        for(auto const& p : servers) {
+            *maxfds = std::max(*maxfds, p.second->sock);
+        }
+    }
+
+    FD_CLR(serverSocket, openSockets);
 }
 
 // Process command from client on the server
@@ -218,9 +236,10 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
 int main(int argc, char* argv[])
 {
     bool finished;
-    int listenSock;                 // Socket for connections to server
+    int clistenSock;                // Socket for client connections to server
     int clientSock;                 // Socket of connecting client
-    int serverSock;
+    int slistenSock;                // Socket for server connections to server
+    int serverSock;                 // Socket of connected servers
     fd_set openSockets;             // Current open sockets
     fd_set readSockets;             // Socket list for select()
     fd_set exceptSockets;           // Exception socket list
@@ -230,6 +249,9 @@ int main(int argc, char* argv[])
     int maxfds;                     // Passed to select() as max fd in set
     struct sockaddr_in client;
     socklen_t clientLen;
+
+    struct sockaddr_in server;
+    socklen_t serverLen;
     char buffer[1025];              // buffer for reading from clients
 
     if(argc != 5) {
@@ -241,28 +263,28 @@ int main(int argc, char* argv[])
 
     // Setup socket for server to listen to
 
-    listenSock = open_socket(atoi(argv[2]));
+    clistenSock = open_socket(atoi(argv[2]));
     printf("Listening for servers on port: %d\n", atoi(argv[2]));
 
     serverSock = open_socket(atoi(argv[4]));
 
     printf("Listening for clients on port: %d\n", atoi(argv[4]));
-    if(listen(listenSock, BACKLOG) < 0) {
+    if(listen(clistenSock, BACKLOG) < 0) {
         printf("Listening for failed on port %s\n", argv[4]);
         exit(0);
     } else
         // Add listen socket to socket set we are monitoring
     {
-        FD_SET(listenSock, &openSockets);
-        maxfds = listenSock;
+        FD_SET(clistenSock, &openSockets);
+        maxfds = clistenSock;
     }
 
-    if(listen(serverSock, BACKLOG) < 0) {
+    if(listen(slistenSock, BACKLOG) < 0) {
         printf("Listening for servers failed on port %s\n", argv[2]);
         exit(0);
     } else {
         FD_SET(serverSock, &openSockets);
-        maxfds = serverSock;        //TODO: determine maxfds in a better way?
+        maxfds = slistenSock;        //TODO: determine maxfds in a better way?
     }
 
 
@@ -284,9 +306,9 @@ int main(int argc, char* argv[])
         } else {
             // First, accept  any new connections to the server on the listening socket
 
-            if(FD_ISSET(listenSock, &readSockets)) {
+            if(FD_ISSET(clistenSock, &readSockets)) {
                 clientLen = sizeof(client);
-                clientSock = accept(listenSock, (struct sockaddr *)&client,
+                clientSock = accept(clistenSock, (struct sockaddr *)&client,
                                     &clientLen);
 
                 // Add new client to the list of open sockets
@@ -307,26 +329,26 @@ int main(int argc, char* argv[])
                 writeToLog(ss.str());
             }
 
-            if(FD_ISSET(serverSock, &readSockets)) {
-                clientLen = sizeof(client);
-                clientSock = accept(serverSock, (struct sockaddr *)&client,
-                                    &clientLen);
+            if(FD_ISSET(slistenSock, &readSockets)) {
+                serverLen = sizeof(server);
+                serverSock = accept(slistenSock, (struct sockaddr *)&server,
+                                    &serverLen);
 
                 // Add new client to the list of open sockets
-                FD_SET(clientSock, &openSockets);
+                FD_SET(serverSock, &openSockets);
 
                 // And update the maximum file descriptor
-                maxfds = std::max(maxfds, clientSock);
+                maxfds = std::max(maxfds, serverSock);
 
                 // create a new client to store information.
-                clients[clientSock] = new Client(clientSock);
+                servers[serverSock] = new Server(serverSock);
 
                 // Decrement the number of sockets waiting to be dealt with
                 n--;
 
-                printf("Client connected on server: %d\n", clientSock);
+                printf("Server connected on server: %d\n", serverSock);
                 std::ostringstream ss;
-                ss << "Client connected on server: " << clientSock << std::endl;
+                ss << "Server connected on server: " << serverSock << std::endl;
                 writeToLog(ss.str());
             }
  
