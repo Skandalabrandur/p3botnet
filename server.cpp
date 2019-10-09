@@ -309,7 +309,8 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                         response << p.second->port << ",";
                         response << ";";
                     }
-                    //*maxfds = std::max(*maxfds, p.second->sock);
+                    std::cout << p.second->group_id << std::endl;
+                    std::cout << p.second->port << std::endl;
                 }
  
                 std::string response_msg = constructMessage(response.str());
@@ -474,6 +475,7 @@ int main(int argc, char* argv[])
  
             // Now check for commands from clients
             while(n-- > 0) {
+                std::vector<int> serversToClose;
                 for(auto const& pair : servers) {
                     Server *server = pair.second;
 
@@ -481,10 +483,9 @@ int main(int argc, char* argv[])
                         // recv() == 0 means client has closed connection
                         if(recv(server->sock, buffer, sizeof(buffer), MSG_DONTWAIT) == 0) {
                             printf("Server closed connection: %d", server->sock);
-                            close(server->sock);
-
-                            closeServer(server->sock, &openSockets, &maxfds);
-
+                            //close(server->sock);
+                            //closeServer(server->sock, &openSockets, &maxfds);
+                            serversToClose.push_back(server->sock);
                         }
                         // We don't check for -1 (nothing received) because select()
                         // only triggers if there is something on the socket for us.
@@ -496,6 +497,7 @@ int main(int argc, char* argv[])
                     }
                 }
 
+                std::vector<int> clientsToClose;
                 for(auto const& pair : clients) {
                     Client *client = pair.second;
 
@@ -503,10 +505,9 @@ int main(int argc, char* argv[])
                         // recv() == 0 means client has closed connection
                         if(recv(client->sock, buffer, sizeof(buffer), MSG_DONTWAIT) == 0) {
                             printf("Client closed connection: %d", client->sock);
-                            close(client->sock);
-
-                            closeClient(client->sock, &openSockets, &maxfds);
-
+                            //close(client->sock);
+                            //closeClient(client->sock, &openSockets, &maxfds);
+                            clientsToClose.push_back(client->sock);
                         }
                         // We don't check for -1 (nothing received) because select()
                         // only triggers if there is something on the socket for us.
@@ -516,6 +517,16 @@ int main(int argc, char* argv[])
                                           buffer);
                         }
                     }
+                }
+
+                for(long unsigned int i = 0; i < serversToClose.size(); i++) {
+                    close(serversToClose[i]);
+                    closeServer(serversToClose[i], &openSockets, &maxfds);
+                }
+
+                for(long unsigned int i = 0; i < clientsToClose.size(); i++) {
+                    close(clientsToClose[i]);
+                    closeClient(clientsToClose[i], &openSockets, &maxfds);
                 }
                 n--;
             }
