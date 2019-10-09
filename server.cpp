@@ -497,6 +497,12 @@ int main(int argc, char* argv[])
                 std::ostringstream ss;
                 ss << "Server connected on server: " << serverSock << std::endl;
                 writeToLog(ss.str());
+
+                std::ostringstream request;
+                request << "LISTSERVERS," << MYGROUP;
+                std::string crequest = constructMessage(request.str());
+                send(serverSock, crequest.c_str(), crequest.length(), 0);
+
             }
 
             // Now check for commands from clients
