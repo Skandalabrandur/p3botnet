@@ -13,6 +13,7 @@ public:
 
     Server(int socket, std::string saddress) : sock(socket), address(saddress)  {
         port = -1;
+        group_id = "UNKNOWN";
     }
 
     ~Server() {}           // Virtual destructor defined for base class

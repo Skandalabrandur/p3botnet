@@ -75,6 +75,10 @@ int main(int argc, char* argv[])
 
     memset(&hints,   0, sizeof(hints));
 
+    std::cout << "address: " << argv[1] << ": type= " << typeid(argv[1]).name() << std::endl;
+    std::cout << "port: " << argv[2] << ": type= " << typeid(argv[2]).name() << std::endl;
+
+
     if(getaddrinfo(argv[1], argv[2], &hints, &svr) != 0) {
         perror("getaddrinfo failed: ");
         exit(0);

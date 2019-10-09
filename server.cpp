@@ -25,6 +25,7 @@
 #include <algorithm>
 #include <map>
 #include <vector>
+#include <typeinfo>
 
 #include <iostream>
 #include <sstream>
@@ -170,6 +171,9 @@ int connectToServer(char *address, char *port, fd_set *openSockets, int *maxfds)
     hints.ai_flags    = AI_PASSIVE;
     memset(&hints,   0, sizeof(hints));
 
+    std::cout << "address: " << address << ": type= " << typeid(address).name() << std::endl;
+    std::cout << "port: " << port << ": type= " << typeid(port).name() << std::endl;
+
     if(getaddrinfo(address, port, &hints, &svr) != 0) {
         perror("getaddrinfo failed: ");
         return -1;
@@ -200,7 +204,7 @@ int connectToServer(char *address, char *port, fd_set *openSockets, int *maxfds)
 
     // create a new client to store information.
     servers[serverSocket] = new Server(serverSocket, (std::string) address);
-
+    servers[serverSocket]->port = atoi(port);
 
     printf("Connecting to: %d\n", serverSocket);
     std::ostringstream ss;
@@ -233,7 +237,8 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
     std::string msg = extractMessage((std::string) buffer);
 
     std::vector<std::string> strs;
-    boost::split(strs,msg,boost::is_any_of(","));
+    boost::split(strs,msg,boost::is_any_of(",\n"));
+    strs.pop_back();    //drop the newline
 
     std::cout << "strs.size() = " << strs.size() << std::endl;
 
@@ -296,13 +301,35 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                 std::ostringstream response;
                 
                 response << "SERVERS," << MYGROUP << "," << serverListenPort << ";";
-                std::string response_msg = response.str();
+
+                for(auto const& p : servers) {
+                    if(strcmp(p.second->group_id.c_str(), "UNKNOWN") != 0 && p.second->port != -1) {
+                        response << p.second->group_id << ",";
+                        response << p.second->address << ",";
+                        response << p.second->port << ",";
+                        response << ";";
+                    }
+                    //*maxfds = std::max(*maxfds, p.second->sock);
+                }
+ 
+                std::string response_msg = constructMessage(response.str());
                 send(serverSocket, response_msg.c_str(), response_msg.length(), 0);
 
             } else {
                 writeToLog("Someone sent LISTSERVERS with too many arguments!");
                 std::string ls_msg = "Only one argument for LISTSERVERS! You supplied too many!";
                 send(serverSocket, ls_msg.c_str(), ls_msg.length(), 0);
+            }
+        } else if (strs[0] == "SERVERS") {
+            std::vector<std::string> server_infos;
+            boost::split(server_infos,msg,boost::is_any_of(";"));
+            if(server_infos.size() > 0) {
+                std::vector<std::string> server_info;
+                boost::split(server_info,server_infos[0],boost::is_any_of(","));
+                if(server_info.size() == 4) {
+                    // Getting Group_id
+                    servers[serverSocket]->group_id = server_info[1];
+                }
             }
         } else if (strs[0] == "KEEPALIVE") {
             std::cout << "Received KEEPALIVE command" << std::endl;
