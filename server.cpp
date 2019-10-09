@@ -240,10 +240,8 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
 
             send(serverSocket, e_msg.c_str(), e_msg.length()-1, 0);
         }
+        std::cout << "Received from server:\n\t" << msg << std::endl;
     }
-
-    std::cout << "Received from server:\n\t" << msg << std::endl;
-
 }
 
 int main(int argc, char* argv[])
