@@ -157,7 +157,7 @@ void closeClient(int clientSocket, fd_set *openSockets, int *maxfds)
     FD_CLR(clientSocket, openSockets);
 }
 
-int connectToServer(std::string address, std::string port, fd_set *openSockets, int *maxfds) {
+int connectToServer(char *address, char *port, fd_set *openSockets, int *maxfds) {
     
     // Stolen from client.cpp
     struct addrinfo hints, *svr;              // Network host entry for server
@@ -170,7 +170,7 @@ int connectToServer(std::string address, std::string port, fd_set *openSockets, 
     hints.ai_flags    = AI_PASSIVE;
     memset(&hints,   0, sizeof(hints));
 
-    if(getaddrinfo(address.c_str(), port.c_str(), &hints, &svr) != 0) {
+    if(getaddrinfo(address, port, &hints, &svr) != 0) {
         perror("getaddrinfo failed: ");
         return -1;
     }
@@ -181,13 +181,13 @@ int connectToServer(std::string address, std::string port, fd_set *openSockets, 
     // program exit.
 
     if(setsockopt(serverSocket, SOL_SOCKET, SO_REUSEADDR, &set, sizeof(set)) < 0) {
-        printf("Failed to set SO_REUSEADDR for port %s\n", port.c_str());
+        printf("Failed to set SO_REUSEADDR for port %s\n", port);
         perror("setsockopt failed: ");
         return -1;
     }
 
     if(connect(serverSocket, svr->ai_addr, svr->ai_addrlen )< 0) {
-        printf("Failed to open socket to server: %s\n", address.c_str());
+        printf("Failed to open socket to server: %s\n", address);
         perror("Connect failed: ");
         return -1;
     }
@@ -199,7 +199,7 @@ int connectToServer(std::string address, std::string port, fd_set *openSockets, 
     *maxfds = std::max(*maxfds, serverSocket);
 
     // create a new client to store information.
-    servers[serverSocket] = new Server(serverSocket, address);
+    servers[serverSocket] = new Server(serverSocket, (std::string) address);
 
 
     printf("Connecting to: %d\n", serverSocket);
@@ -244,7 +244,7 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
             // CONNECT,PASSWORD,IP,PORT
             if(strs.size() == 4) {
                 if(strcmp(strs[1].c_str(), PASSWORD) == 0) {
-                    if(connectToServer(strs[2], strs[3], openSockets, maxfds) != -1) {
+                    if(connectToServer((char *) strs[2].c_str(), (char *) strs[3].c_str(), openSockets, maxfds) != -1) {
                         send(clientSocket, "SUCCESS", 7, 0);
                     } else {
                         send(clientSocket, "FAIL", 4, 0);
