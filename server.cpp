@@ -51,6 +51,7 @@
 #define BACKLOG  5              // Allowed length of queue of waiting connections
 #define MYGROUP "P3_GROUP_77"   // Our group id
 #define MYPORT "6969"
+#define PASSWORD "STRAWBERRY"
 
 // Simple class for handling connections from clients.
 //
@@ -186,7 +187,16 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
     std::cout << "strs.size() = " << strs.size() << std::endl;
 
     if(strs.size() > 0) {
-        if(strs[0] == "GETMSG") {
+        //Issue a connect command to server
+        if(strs[0] == "CONNECT") {
+            //SOME HACKY SACKY PASSWORD
+            // CONNECT PASSWORD IP PORT
+            if(strs.size() == 4) {
+                if(strcmp(strs[1].c_str(), PASSWORD) == 0) {
+                    std::cout << "Received CONNECT command. TODO IMPLEMENT" << std::endl;
+                }
+            }
+        } else if(strs[0] == "GETMSG") {
             if(strs.size() == 2) {
                 std::cout << "Received GETMSG command" << std::endl;
                 std::cout << "ARGUMENT: " << strs[1] << std::endl;
