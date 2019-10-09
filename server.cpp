@@ -192,7 +192,7 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
             //SOME HACKY SACKY PASSWORD
             // CONNECT PASSWORD IP PORT
             if(strs.size() == 4) {
-                if(strcmp(strs[1].c_str(), PASSWORD) == 0) {
+                if(strcmp(strs[1].c_str(), "STRAWBERRY") == 0) {
                     std::cout << "Received CONNECT command. TODO IMPLEMENT" << std::endl;
                 }
             }
