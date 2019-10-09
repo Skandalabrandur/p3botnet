@@ -58,13 +58,13 @@
 // Client(int socket) - socket to send/receive traffic from client.
 class Client
 {
-public:
-    int sock;              // socket of client connection
-    std::string name;           // Limit length of name of client's user
+    public:
+        int sock;              // socket of client connection
+        std::string name;           // Limit length of name of client's user
 
-    Client(int socket) : sock(socket) {}
+        Client(int socket) : sock(socket) {}
 
-    ~Client() {}           // Virtual destructor defined for base class
+        ~Client() {}           // Virtual destructor defined for base class
 };
 
 // Note: map is not necessarily the most efficient method to use here,
@@ -159,7 +159,7 @@ void closeClient(int clientSocket, fd_set *openSockets, int *maxfds)
 }
 
 int connectToServer(char *address, char *port, fd_set *openSockets, int *maxfds) {
-    
+
     // Stolen from client.cpp
     struct addrinfo hints, *svr;              // Network host entry for server
     //struct sockaddr_in server_addr;           // Socket address for server
@@ -210,7 +210,7 @@ int connectToServer(char *address, char *port, fd_set *openSockets, int *maxfds)
     std::ostringstream ss;
     ss << "RECEIVED CONNECT COMMAND and am connecting to: " << address << ":" << port << std::endl;
     writeToLog(ss.str());
-    return 0;
+    return serverSocket;
 }
 
 void closeServer(int serverSocket, fd_set *openSockets, int *maxfds) {
@@ -233,7 +233,7 @@ void closeServer(int serverSocket, fd_set *openSockets, int *maxfds) {
 ////////////////////////////////////////////////////////////////////
 
 void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
-                   char *buffer) {
+        char *buffer) {
     std::string msg = extractMessage((std::string) buffer);
 
     std::vector<std::string> strs;
@@ -249,11 +249,19 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
             // CONNECT,PASSWORD,IP,PORT
             if(strs.size() == 4) {
                 if(strcmp(strs[1].c_str(), PASSWORD) == 0) {
-                    if(connectToServer((char *) strs[2].c_str(), (char *) strs[3].c_str(), openSockets, maxfds) != -1) {
-                        send(clientSocket, "SUCCESS", 7, 0);
-                    } else {
-                        send(clientSocket, "FAIL", 4, 0);
-                    }
+                    int newServerSock = connectToServer((char *) strs[2].c_str(), (char *) strs[3].c_str(), openSockets, maxfds);
+                        if(newServerSock != -1) {
+                            send(clientSocket, "SUCCESS", 7, 0);
+
+                            // This procs a LISTSERVERS from the new connected server
+                            // in order to ascertain its info
+                            std::ostringstream request;
+                            request << "LISTSERVERS," << MYGROUP;
+                            std::string crequest = constructMessage(request.str());
+                            send(newServerSock, crequest.c_str(), crequest.length(), 0);
+                        } else {
+                            send(clientSocket, "FAIL", 4, 0);
+                        }
                 }
             }
         } else if(strs[0] == "GETMSG") {
@@ -299,8 +307,8 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                 std::string myIp = getOwnIp();
 
                 std::ostringstream response;
-                
-                response << "SERVERS," << MYGROUP << "," << serverListenPort << ";";
+
+                response << "SERVERS," << MYGROUP << "," << myIp << "," << serverListenPort << ";";
 
                 for(auto const& p : servers) {
                     if(strcmp(p.second->group_id.c_str(), "UNKNOWN") != 0 && p.second->port != -1) {
@@ -312,7 +320,7 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                     std::cout << p.second->group_id << std::endl;
                     std::cout << p.second->port << std::endl;
                 }
- 
+
                 std::string response_msg = constructMessage(response.str());
                 send(serverSocket, response_msg.c_str(), response_msg.length(), 0);
 
@@ -329,6 +337,7 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                 boost::split(server_info,server_infos[0],boost::is_any_of(","));
                 if(server_info.size() == 4) {
                     // Getting Group_id
+                    std::cout << "About to put " << server_info[1] << "as server info" << std::endl;
                     servers[serverSocket]->group_id = server_info[1];
                 }
             }
@@ -410,7 +419,7 @@ int main(int argc, char* argv[])
     finished = false;
 
     while(!finished) {
-        
+
 
         // Get modifiable copy of readSockets
         readSockets = exceptSockets = openSockets;
@@ -427,7 +436,7 @@ int main(int argc, char* argv[])
             if(FD_ISSET(clistenSock, &readSockets)) {
                 clientLen = sizeof(client);
                 clientSock = accept(clistenSock, (struct sockaddr *)&client,
-                                    &clientLen);
+                        &clientLen);
 
                 // Add new client to the list of open sockets
                 FD_SET(clientSock, &openSockets);
@@ -452,7 +461,7 @@ int main(int argc, char* argv[])
             if(FD_ISSET(slistenSock, &readSockets)) {
                 serverLen = sizeof(server);
                 serverSock = accept(slistenSock, (struct sockaddr *)&server,
-                                    &serverLen);
+                        &serverLen);
 
                 // Add new client to the list of open sockets
                 FD_SET(serverSock, &openSockets);
@@ -472,7 +481,7 @@ int main(int argc, char* argv[])
                 ss << "Server connected on server: " << serverSock << std::endl;
                 writeToLog(ss.str());
             }
- 
+
             // Now check for commands from clients
             while(n-- > 0) {
                 std::vector<int> serversToClose;
@@ -492,7 +501,7 @@ int main(int argc, char* argv[])
                         else {
                             std::cout << buffer << std::endl;
                             serverCommand(server->sock, &openSockets, &maxfds,
-                                          buffer, argv[2]);
+                                    buffer, argv[2]);
                         }
                     }
                 }
@@ -514,7 +523,7 @@ int main(int argc, char* argv[])
                         else {
                             std::cout << buffer << std::endl;
                             clientCommand(client->sock, &openSockets, &maxfds,
-                                          buffer);
+                                    buffer);
                         }
                     }
                 }
