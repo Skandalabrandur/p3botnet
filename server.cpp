@@ -157,6 +157,58 @@ void closeClient(int clientSocket, fd_set *openSockets, int *maxfds)
     FD_CLR(clientSocket, openSockets);
 }
 
+int connectToServer(std::string address, std::string port, fd_set *openSockets, int *maxfds) {
+    
+    // Stolen from client.cpp
+    struct addrinfo hints, *svr;              // Network host entry for server
+    //struct sockaddr_in server_addr;           // Socket address for server
+    int serverSocket;                         // Socket used for server
+    int set = 1;                              // Toggle for setsockopt
+
+    hints.ai_family   = AF_INET;            // IPv4 only addresses
+    hints.ai_socktype = SOCK_STREAM;
+    hints.ai_flags    = AI_PASSIVE;
+    memset(&hints,   0, sizeof(hints));
+
+    if(getaddrinfo(address.c_str(), port.c_str(), &hints, &svr) != 0) {
+        perror("getaddrinfo failed: ");
+        return -1;
+    }
+
+    serverSocket = socket(svr->ai_family, svr->ai_socktype, svr->ai_protocol);
+
+    // Turn on SO_REUSEADDR to allow socket to be quickly reused after
+    // program exit.
+
+    if(setsockopt(serverSocket, SOL_SOCKET, SO_REUSEADDR, &set, sizeof(set)) < 0) {
+        printf("Failed to set SO_REUSEADDR for port %s\n", port.c_str());
+        perror("setsockopt failed: ");
+        return -1;
+    }
+
+    if(connect(serverSocket, svr->ai_addr, svr->ai_addrlen )< 0) {
+        printf("Failed to open socket to server: %s\n", address.c_str());
+        perror("Connect failed: ");
+        return -1;
+    }
+
+    // Add new client to the list of open sockets
+    FD_SET(serverSocket, openSockets);
+
+    // And update the maximum file descriptor
+    *maxfds = std::max(*maxfds, serverSocket);
+
+    // create a new client to store information.
+    servers[serverSocket] = new Server(serverSocket, address);
+
+
+    printf("Connecting to: %d\n", serverSocket);
+    std::ostringstream ss;
+    ss << "RECEIVED CONNECT COMMAND and am connecting to: " << address << ":" << port << std::endl;
+    writeToLog(ss.str());
+    return 0;
+}
+
 void closeServer(int serverSocket, fd_set *openSockets, int *maxfds) {
     servers.erase(serverSocket);
 
@@ -192,7 +244,11 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
             // CONNECT,PASSWORD,IP,PORT
             if(strs.size() == 4) {
                 if(strcmp(strs[1].c_str(), PASSWORD) == 0) {
-                    std::cout << "Received CONNECT command. TODO IMPLEMENT" << std::endl;
+                    if(connectToServer(strs[2], strs[3], openSockets, maxfds) != -1) {
+                        send(clientSocket, "SUCCESS", 7, 0);
+                    } else {
+                        send(clientSocket, "FAIL", 4, 0);
+                    }
                 }
             }
         } else if(strs[0] == "GETMSG") {
@@ -340,7 +396,6 @@ int main(int argc, char* argv[])
             finished = true;
         } else {
             // First, accept  any new connections to the server on the listening socket
-
             if(FD_ISSET(clistenSock, &readSockets)) {
                 clientLen = sizeof(client);
                 clientSock = accept(clistenSock, (struct sockaddr *)&client,
@@ -435,6 +490,7 @@ int main(int argc, char* argv[])
                         }
                     }
                 }
+                n--;
             }
         }
     }
