@@ -314,7 +314,7 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                     if(strcmp(p.second->group_id.c_str(), "UNKNOWN") != 0 && p.second->port != -1) {
                         response << p.second->group_id << ",";
                         response << p.second->address << ",";
-                        response << p.second->port << ",";
+                        response << p.second->port;
                         response << ";";
                     }
                     std::cout << p.second->group_id << std::endl;
@@ -337,7 +337,6 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                 boost::split(server_info,server_infos[0],boost::is_any_of(","));
                 if(server_info.size() == 4) {
                     // Getting Group_id
-                    std::cout << "About to put " << server_info[1] << "as server info" << std::endl;
                     servers[serverSocket]->group_id = server_info[1];
                 }
             }
