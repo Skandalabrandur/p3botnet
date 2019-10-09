@@ -313,7 +313,10 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
     std::string msg = extractMessage((std::string) buffer);
 
     std::vector<std::string> strs;
-    boost::split(strs,msg,boost::is_any_of(","));
+    boost::split(strs,msg,boost::is_any_of(",\n"));
+    strs.pop_back();    //drop the newline
+
+
 
     if(strs.size() > 0) {
         if(strs[0] == "LISTSERVERS") {
@@ -365,7 +368,24 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
         } else if (strs[0] == "GET_MSG") {
             std::cout << "Received GET_MSG command" << std::endl;
         } else if (strs[0] == "SEND_MSG") {
+            std::cout << "Received SEND_MSG command" << std::endl;
+        } else if (strs[0] == "LEAVE") {
             std::cout << "Received LEAVE command" << std::endl;
+            if(strs.size() == 3) {
+                int closedServer = -1;
+                for(auto const& p: servers) {
+                    // If address and port are found in the servers structure
+                    if(strcmp(p.second->address.c_str(), strs[1].c_str()) == 0
+                       && p.second->port == atoi(strs[2].c_str())) {
+                        closedServer = p.second->sock;
+                    }
+                }
+
+                if(closedServer != -1) {
+                    close(closedServer);
+                    closeServer(closedServer, openSockets, maxfds);
+                }
+            }
         } else if (strs[0] == "STATUSREQ") {
             std::cout << "Received STATUSREQ command" << std::endl;
         } else if (strs[0] == "STATUSRESP") {
