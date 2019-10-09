@@ -282,6 +282,24 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
             }
         } else if(boost::contains(strs[0], (std::string) "LISTSERVERS")) {
             std::cout << "Received LISTSERVERS command" << std::endl;
+            std::string myIp = getOwnIp();
+            std::ostringstream response;
+
+            response << "SERVERS,"; //<< MYGROUP << "," << myIp << "," << ";";
+
+            for(auto const& p : servers) {
+                    if(strcmp(p.second->group_id.c_str(), "UNKNOWN") != 0 && p.second->port != -1) {
+                        response << p.second->group_id << ",";
+                        response << p.second->address << ",";
+                        response << p.second->port;
+                        response << ";";
+                    }
+                    std::cout << p.second->group_id << std::endl;
+                    std::cout << p.second->port << std::endl;
+                }
+
+                std::string response_msg = constructMessage(response.str());
+                send(clientSocket, response_msg.c_str(), response_msg.length(), 0);
         }
     }
 }
