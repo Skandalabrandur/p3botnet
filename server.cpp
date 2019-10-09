@@ -302,6 +302,7 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
                 send(clientSocket, response_msg.c_str(), response_msg.length(), 0);
         }
     }
+    memset(&buffer, 0, sizeof(buffer));
 }
 
 ////////////////////////////////////////////////////////////////////
@@ -379,6 +380,7 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                         closedServer = p.second->sock;
                     }
                 }
+		std::cout << closedServer << std::endl;
 
                 if(closedServer != -1) {
                     close(closedServer);
@@ -396,6 +398,7 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
         }
         std::cout << "Received from server:\n\t" << msg << std::endl;
     }
+    memset(&buffer, 0, sizeof(buffer));
 }
 
 int main(int argc, char* argv[])
