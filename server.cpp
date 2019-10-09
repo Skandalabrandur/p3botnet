@@ -356,6 +356,8 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                 if(server_info.size() == 4) {
                     // Getting Group_id
                     servers[serverSocket]->group_id = server_info[1];
+                    servers[serverSocket]->address = server_info[2];
+                    servers[serverSocket]->port = atoi(server_info[3].c_str());
                 }
             }
         } else if (strs[0] == "KEEPALIVE") {
