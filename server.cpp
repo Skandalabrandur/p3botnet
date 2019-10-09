@@ -171,7 +171,9 @@ void closeServer(int serverSocket, fd_set *openSockets, int *maxfds) {
     FD_CLR(serverSocket, openSockets);
 }
 
-// Process command from client on the server
+/////////////////////////////////////////////////////////////////////
+//CLIENT COMMANDS
+////////////////////////////////////////////////////////////////////
 
 void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
                    char *buffer) {
@@ -209,6 +211,10 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
 
 }
 
+////////////////////////////////////////////////////////////////////
+//SERVER COMMANDS
+////////////////////////////////////////////////////////////////////
+
 void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
         char *buffer) {
     std::string msg = extractMessage((std::string) buffer);
@@ -219,9 +225,11 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
     if(strs.size() > 0) {
         if(strs[0] == "LISTSERVERS") {
             if(strs.size() == 2) {
+
                 std::cout << "Received LISTSERVERS command" << std::endl;
                 std::cout << "ARGUMENT: " << strs[1] << std::endl;
             } else {
+                writeToLog("Someone sent LISTSERVERS with too many arguments!");
                 std::string ls_msg = "Only one argument for LISTSERVERS! You supplied too many!";
                 send(serverSocket, ls_msg.c_str(), ls_msg.length(), 0);
             }
@@ -354,6 +362,8 @@ int main(int argc, char* argv[])
 
                 // create a new client to store information.
                 servers[serverSock] = new Server(serverSock);
+                std::cout << "Server address" << inet_ntoa(server.sin_addr) << std::endl;
+                std::cout << "Server port" << ntohs(server.sin_port) << std::endl;
 
                 // Decrement the number of sockets waiting to be dealt with
                 n--;
