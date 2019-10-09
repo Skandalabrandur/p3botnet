@@ -313,8 +313,7 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
     std::string msg = extractMessage((std::string) buffer);
 
     std::vector<std::string> strs;
-    boost::split(strs,msg,boost::is_any_of(",\n"));
-    strs.pop_back();    //drop the newline
+    boost::split(strs,msg,boost::is_any_of(","));
 
 
 
@@ -355,7 +354,7 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
             boost::split(server_infos,msg,boost::is_any_of(";"));
             if(server_infos.size() > 0) {
                 std::vector<std::string> server_info;
-                boost::split(server_info,server_infos[0],boost::is_any_of(","));
+                boost::split(server_info,server_infos[0],boost::is_any_of(",\n"));
                 if(server_info.size() == 4) {
                     // Getting Group_id
                     servers[serverSocket]->group_id = server_info[1];
