@@ -61,6 +61,6 @@ std::string getOwnIp()
             //printf("%s: %s\n", ifa->ifa_name, buf);
         }
     }
-
     freeifaddrs(myaddrs);
+    return "";
 }

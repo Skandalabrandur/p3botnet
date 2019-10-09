@@ -56,7 +56,7 @@ void listenServer(int serverSocket)
 int main(int argc, char* argv[])
 {
     struct addrinfo hints, *svr;              // Network host entry for server
-    struct sockaddr_in server_addr;           // Socket address for server
+    //struct sockaddr_in server_addr;           // Socket address for server
     int serverSocket;                         // Socket used for server
     int nwrite;                               // No. bytes written to server
     char buffer[1025];                        // buffer for writing to server

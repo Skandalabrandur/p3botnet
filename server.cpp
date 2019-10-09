@@ -50,7 +50,6 @@
 
 #define BACKLOG  5              // Allowed length of queue of waiting connections
 #define MYGROUP "P3_GROUP_77"   // Our group id
-#define MYPORT "6969"
 #define PASSWORD "STRAWBERRY"
 
 // Simple class for handling connections from clients.
@@ -190,9 +189,9 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
         //Issue a connect command to server
         if(strs[0] == "CONNECT") {
             //SOME HACKY SACKY PASSWORD
-            // CONNECT PASSWORD IP PORT
+            // CONNECT,PASSWORD,IP,PORT
             if(strs.size() == 4) {
-                if(strcmp(strs[1].c_str(), "STRAWBERRY") == 0) {
+                if(strcmp(strs[1].c_str(), PASSWORD) == 0) {
                     std::cout << "Received CONNECT command. TODO IMPLEMENT" << std::endl;
                 }
             }
@@ -223,7 +222,7 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
 ////////////////////////////////////////////////////////////////////
 
 void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
-        char *buffer) {
+        char *buffer, char *serverListenPort) {
     std::string msg = extractMessage((std::string) buffer);
 
     std::vector<std::string> strs;
@@ -240,7 +239,7 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
 
                 std::ostringstream response;
                 
-                response << "SERVERS," << MYGROUP << "," << MYPORT << ";";
+                response << "SERVERS," << MYGROUP << "," << serverListenPort << ";";
                 std::string response_msg = response.str();
                 send(serverSocket, response_msg.c_str(), response_msg.length(), 0);
 
@@ -279,8 +278,8 @@ int main(int argc, char* argv[])
     fd_set readSockets;             // Socket list for select()
     fd_set exceptSockets;           // Exception socket list
 
-    fd_set openServerSockets;
-    fd_set readServerSockets;
+    //fd_set openServerSockets;
+    //fd_set readServerSockets;
     int maxfds;                     // Passed to select() as max fd in set
     struct sockaddr_in client;
     socklen_t clientLen;
@@ -410,7 +409,7 @@ int main(int argc, char* argv[])
                         else {
                             std::cout << buffer << std::endl;
                             serverCommand(server->sock, &openSockets, &maxfds,
-                                          buffer);
+                                          buffer, argv[2]);
                         }
                     }
                 }
