@@ -7,11 +7,13 @@
 #include <net/if.h>
 #include <ifaddrs.h>
 #include <errno.h>
-#include <string.h>
+#include <string>
 
-#define INTERFACE "wlp1s0"
+#include "ip.h"
 
-int main(int argc, char *argv[])
+#define INTERFACE "eth0"    // eth0 for remote server, might have to change this on own comp
+
+std::string getOwnIp()
 {
     struct ifaddrs *myaddrs, *ifa;
     void *in_addr;
@@ -52,7 +54,7 @@ int main(int argc, char *argv[])
         } else {
             if(strcmp(ifa->ifa_name, INTERFACE) == 0) {
                 printf("%s\n", buf);
-                return 0;
+                return (std::string) buf;
             }
 
 
@@ -61,5 +63,4 @@ int main(int argc, char *argv[])
     }
 
     freeifaddrs(myaddrs);
-    return 0;
 }

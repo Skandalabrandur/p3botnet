@@ -40,6 +40,7 @@
 #include "fileOperations.h"
 #include "messageOperations.h"
 #include "dataObjects.h"
+#include "ip.h"
 
 // fix SOCK_NONBLOCK for OSX
 #ifndef SOCK_NONBLOCK
@@ -47,7 +48,9 @@
 #define SOCK_NONBLOCK O_NONBLOCK
 #endif
 
-#define BACKLOG  5          // Allowed length of queue of waiting connections
+#define BACKLOG  5              // Allowed length of queue of waiting connections
+#define MYGROUP "P3_GROUP_77"   // Our group id
+#define MYPORT "6969"
 
 // Simple class for handling connections from clients.
 //
@@ -75,8 +78,6 @@ std::map<int, Server*> servers;   // Lookup table for connected servers
 
 typedef boost::circular_buffer<s_message> circular_buffer;
 circular_buffer cb{500};
-
-
 
 // Open socket for specified port.
 //
@@ -205,10 +206,6 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
             std::cout << "Received LISTSERVERS command" << std::endl;
         }
     }
-
-    std::cout << "Received buffer: " << buffer << std::endl;
-
-
 }
 
 ////////////////////////////////////////////////////////////////////
@@ -228,6 +225,15 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
 
                 std::cout << "Received LISTSERVERS command" << std::endl;
                 std::cout << "ARGUMENT: " << strs[1] << std::endl;
+
+                std::string myIp = getOwnIp();
+
+                std::ostringstream response;
+                
+                response << "SERVERS," << MYGROUP << "," << MYPORT << ";";
+                std::string response_msg = response.str();
+                send(serverSocket, response_msg.c_str(), response_msg.length(), 0);
+
             } else {
                 writeToLog("Someone sent LISTSERVERS with too many arguments!");
                 std::string ls_msg = "Only one argument for LISTSERVERS! You supplied too many!";
@@ -347,6 +353,8 @@ int main(int argc, char* argv[])
                 std::ostringstream ss;
                 ss << "Client connected on server: " << clientSock << std::endl;
                 writeToLog(ss.str());
+
+
             }
 
             if(FD_ISSET(slistenSock, &readSockets)) {
@@ -361,9 +369,8 @@ int main(int argc, char* argv[])
                 maxfds = std::max(maxfds, serverSock);
 
                 // create a new client to store information.
-                servers[serverSock] = new Server(serverSock);
-                std::cout << "Server address" << inet_ntoa(server.sin_addr) << std::endl;
-                std::cout << "Server port" << ntohs(server.sin_port) << std::endl;
+                servers[serverSock] = new Server(serverSock, inet_ntoa(server.sin_addr));
+
 
                 // Decrement the number of sockets waiting to be dealt with
                 n--;

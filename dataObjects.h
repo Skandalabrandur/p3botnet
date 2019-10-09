@@ -6,10 +6,14 @@
 class Server 
 {
 public:
-    int sock;              // socket of client connection
+    int sock;               // socket of client connection
+    int port;               // Port where communications go to and fro
+    std::string address;
     std::string group_id;
 
-    Server(int socket) : sock(socket) {}
+    Server(int socket, std::string saddress) : sock(socket), address(saddress)  {
+        port = -1;
+    }
 
     ~Server() {}           // Virtual destructor defined for base class
 };
