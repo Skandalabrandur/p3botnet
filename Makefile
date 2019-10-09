@@ -11,7 +11,7 @@ all:
 
 server:
 	if test -e tsamp3group77; then rm tsamp3group77; fi
-	$(serverDirective)
+	$(gpp) $(serverDirective)
 
 compileforskel:
 	if test -e tsamp3group77; then rm tsamp3group77; fi
