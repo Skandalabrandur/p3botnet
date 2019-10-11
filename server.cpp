@@ -601,7 +601,7 @@ int main(int argc, char* argv[])
             }
 
             // Now check for commands from clients
-            while(n-- > 0) {
+            while(n > 0) {
                 std::vector<int> serversToClose;
                 for(auto const& pair : servers) {
                     Server *server = pair.second;
@@ -629,7 +629,7 @@ int main(int argc, char* argv[])
                                 bool booted = false;
                                 std::string checker = (std::string) buffer;
                                 if(checker.length() > 0) {
-                                    if((int) checker[0] != 0x1) {
+                                    if((int) checker.at(0) != 0x01) {
                                         send(server->sock, "START MSG WITH 0x1 PLEASE", 25, 0);
                                         serversToClose.push_back(server->sock);
                                         booted = true;
@@ -640,11 +640,11 @@ int main(int argc, char* argv[])
                                     booted = true;
                                 }
                                 std::cout << "DEBUG: MESSAGE ISN'T VALID" << std::endl;
-                                memset(&buffer, 0, sizeof(buffer));
                                 if(booted) {
                                     //Consume message to clear it away
                                     recv(server->sock, buffer, sizeof(buffer), MSG_DONTWAIT);
                                 }
+                                memset(&buffer, 0, sizeof(buffer));
                             }
                         }
                     }
@@ -681,6 +681,7 @@ int main(int argc, char* argv[])
                     close(clientsToClose[i]);
                     closeClient(clientsToClose[i], &openSockets, &maxfds);
                 }
+                n--;
             }
         }
 
