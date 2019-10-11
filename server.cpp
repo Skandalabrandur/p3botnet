@@ -51,7 +51,6 @@
 
 #define BACKLOG  5              // Allowed length of queue of waiting connections
 #define MYGROUP "P3_GROUP_77"   // Our group id
-#define PASSWORD "STRAWBERRY"
 
 // Simple class for handling connections from clients.
 //
@@ -250,23 +249,19 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
 
         //Issue a connect command to server
         if(strs[0] == "CONNECT") {
-            //SOME HACKY SACKY PASSWORD
-            // CONNECT,PASSWORD,IP,PORT
-            if(strs.size() == 4) {
-                if(strcmp(strs[1].c_str(), PASSWORD) == 0) {
-                    int newServerSock = connectToServer((char *) strs[2].c_str(), (char *) strs[3].c_str(), openSockets, maxfds);
-                    if(newServerSock != -1) {
-                        send(clientSocket, "SUCCESS", 7, 0);
+            if(strs.size() == 3) {
+                int newServerSock = connectToServer((char *) strs[1].c_str(), (char *) strs[2].c_str(), openSockets, maxfds);
+                if(newServerSock != -1) {
+                    send(clientSocket, "SUCCESS", 7, 0);
 
-                        // This procs a LISTSERVERS from the new connected server
-                        // in order to ascertain its info
-                        std::ostringstream request;
-                        request << "LISTSERVERS," << MYGROUP;
-                        std::string crequest = constructMessage(request.str());
-                        send(newServerSock, crequest.c_str(), crequest.length(), 0);
-                    } else {
-                        send(clientSocket, "FAIL", 4, 0);
-                    }
+                    // This procs a LISTSERVERS from the new connected server
+                    // in order to ascertain its info
+                    std::ostringstream request;
+                    request << "LISTSERVERS," << MYGROUP;
+                    std::string crequest = constructMessage(request.str());
+                    send(newServerSock, crequest.c_str(), crequest.length(), 0);
+                } else {
+                    send(clientSocket, "FAIL", 4, 0);
                 }
             }
         } else if(strs[0] == "GETMSG") {
