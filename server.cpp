@@ -321,13 +321,12 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
     std::vector<std::string> strs;
     boost::split(strs,msg,boost::is_any_of(","));
 
-    std::ostringstream msgFromServer;
-    msgFromServer << "Received from server " << servers[serverSocket]->group_id;
-    msgFromServer << " on socket: " << serverSocket << "\n\t" << msg << std::endl;
-    writeToLog(msgFromServer.str());
-
 
     if(strs.size() > 0) {
+        std::ostringstream msgFromServer;
+        msgFromServer << "Received from server " << servers[serverSocket]->group_id;
+        msgFromServer << " on socket: " << serverSocket << "\n\t" << msg << std::endl;
+        writeToLog(msgFromServer.str());
 
         if(strs[0] == "LISTSERVERS") {
             if(strs.size() == 2) {
