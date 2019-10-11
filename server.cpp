@@ -273,9 +273,15 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
                 send(clientSocket, g_msg.c_str(), g_msg.length(), 0);
             }
         } else if (strs[0] == "SENDMSG") {
-            if(strs.size() == 2) {
+            if(strs.size() > 2) {
                 std::cout << "Received SENDMSG command" << std::endl;
                 std::cout << "ARGUMENT: " << strs[1] << std::endl;
+                    for(auto const& p: servers){
+                    if (strcmp(strs[1].c_str(), p.second->group_id.c_str()) == 0){
+                        std::cout << "Sending message to me" << std::endl;
+                    }
+                }
+                
             } else {
                 std::string s_msg = "Only one argument for GETMSG! You supplied too many!";
                 send(clientSocket, s_msg.c_str(), s_msg.length(), 0);
