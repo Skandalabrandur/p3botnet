@@ -243,6 +243,11 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
     std::cout << "strs.size() = " << strs.size() << std::endl;
 
     if(strs.size() > 0) {
+        std::ostringstream msgFromClient;
+        msgFromClient << "Received from client on socket: ";
+        msgFromClient << clientSocket << "\n\t" << msg << std::endl;
+        writeToLog(msgFromClient.str());
+
         //Issue a connect command to server
         if(strs[0] == "CONNECT") {
             //SOME HACKY SACKY PASSWORD
@@ -250,18 +255,18 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
             if(strs.size() == 4) {
                 if(strcmp(strs[1].c_str(), PASSWORD) == 0) {
                     int newServerSock = connectToServer((char *) strs[2].c_str(), (char *) strs[3].c_str(), openSockets, maxfds);
-                        if(newServerSock != -1) {
-                            send(clientSocket, "SUCCESS", 7, 0);
+                    if(newServerSock != -1) {
+                        send(clientSocket, "SUCCESS", 7, 0);
 
-                            // This procs a LISTSERVERS from the new connected server
-                            // in order to ascertain its info
-                            std::ostringstream request;
-                            request << "LISTSERVERS," << MYGROUP;
-                            std::string crequest = constructMessage(request.str());
-                            send(newServerSock, crequest.c_str(), crequest.length(), 0);
-                        } else {
-                            send(clientSocket, "FAIL", 4, 0);
-                        }
+                        // This procs a LISTSERVERS from the new connected server
+                        // in order to ascertain its info
+                        std::ostringstream request;
+                        request << "LISTSERVERS," << MYGROUP;
+                        std::string crequest = constructMessage(request.str());
+                        send(newServerSock, crequest.c_str(), crequest.length(), 0);
+                    } else {
+                        send(clientSocket, "FAIL", 4, 0);
+                    }
                 }
             }
         } else if(strs[0] == "GETMSG") {
@@ -288,18 +293,18 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
             response << "SERVERS,"; //<< MYGROUP << "," << myIp << "," << ";";
 
             for(auto const& p : servers) {
-                    if(strcmp(p.second->group_id.c_str(), "UNKNOWN") != 0 && p.second->port != -1) {
-                        response << p.second->group_id << ",";
-                        response << p.second->address << ",";
-                        response << p.second->port;
-                        response << ";";
-                    }
-                    std::cout << p.second->group_id << std::endl;
-                    std::cout << p.second->port << std::endl;
+                if(strcmp(p.second->group_id.c_str(), "UNKNOWN") != 0 && p.second->port != -1) {
+                    response << p.second->group_id << ",";
+                    response << p.second->address << ",";
+                    response << p.second->port;
+                    response << ";";
                 }
+                std::cout << p.second->group_id << std::endl;
+                std::cout << p.second->port << std::endl;
+            }
 
-                std::string response_msg = constructMessage(response.str());
-                send(clientSocket, response_msg.c_str(), response_msg.length(), 0);
+            std::string response_msg = constructMessage(response.str());
+            send(clientSocket, response_msg.c_str(), response_msg.length(), 0);
         }
     }
     memset(&buffer, 0, sizeof(buffer));
@@ -316,9 +321,14 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
     std::vector<std::string> strs;
     boost::split(strs,msg,boost::is_any_of(","));
 
+    std::ostringstream msgFromServer;
+    msgFromServer << "Received from server " << servers[serverSocket]->group_id;
+    msgFromServer << " on socket: " << serverSocket << "\n\t" << msg << std::endl;
+    writeToLog(msgFromServer.str());
 
 
     if(strs.size() > 0) {
+
         if(strs[0] == "LISTSERVERS") {
             if(strs.size() == 2) {
 
@@ -376,11 +386,11 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                 for(auto const& p: servers) {
                     // If address and port are found in the servers structure
                     if(strcmp(p.second->address.c_str(), strs[1].c_str()) == 0
-                       && p.second->port == atoi(strs[2].c_str())) {
+                            && p.second->port == atoi(strs[2].c_str())) {
                         closedServer = p.second->sock;
                     }
                 }
-		std::cout << closedServer << std::endl;
+                std::cout << closedServer << std::endl;
 
                 if(closedServer != -1) {
                     close(closedServer);
@@ -396,7 +406,6 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
 
             send(serverSocket, e_msg.c_str(), e_msg.length()-1, 0);
         }
-        std::cout << "Received from server:\n\t" << msg << std::endl;
     }
     memset(&buffer, 0, sizeof(buffer));
 }
@@ -493,7 +502,7 @@ int main(int argc, char* argv[])
 
                 printf("Client connected on server: %d\n", clientSock);
                 std::ostringstream ss;
-                ss << "Client connected on server: " << clientSock << std::endl;
+                ss << "Client connected to server on socket: " << clientSock << std::endl;
                 writeToLog(ss.str());
 
 
@@ -519,7 +528,7 @@ int main(int argc, char* argv[])
 
                 printf("Server connected on server: %d\n", serverSock);
                 std::ostringstream ss;
-                ss << "Server connected on server: " << serverSock << std::endl;
+                ss << "Server connected to server on socket: " << serverSock << std::endl;
                 writeToLog(ss.str());
 
                 std::ostringstream request;
