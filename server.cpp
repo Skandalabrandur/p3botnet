@@ -37,6 +37,9 @@
 #include <boost/circular_buffer.hpp>
 #include <boost/algorithm/string.hpp>
 
+#include <chrono>
+#include <ctime>
+
 
 #include "fileOperations.h"
 #include "messageOperations.h"
@@ -211,6 +214,29 @@ int connectToServer(char *address, char *port, fd_set *openSockets, int *maxfds)
     writeToLog(ss.str());
     return serverSocket;
 }
+
+void timedTasks() {
+    std::cout << "Received timed ping" << std::endl;
+}
+
+void timedThread() {
+    //Pings timedTasks function once per minute
+    std::chrono::system_clock::time_point clock_now = std::chrono::system_clock::now();
+    std::time_t next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::seconds(5));
+    std::time_t now = std::chrono::system_clock::to_time_t(clock_now);
+
+    // Thread will be closed when main function hits end
+    while(true) {
+        clock_now = std::chrono::system_clock::now();
+        now = std::chrono::system_clock::to_time_t(clock_now);
+
+        if(now > next_ping) {
+            timedTasks();
+            next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::seconds(5));
+        }
+    }
+}
+
 
 void closeServer(int serverSocket, fd_set *openSockets, int *maxfds) {
     servers.erase(serverSocket);
@@ -448,6 +474,10 @@ int main(int argc, char* argv[])
     fd_set readSockets;             // Socket list for select()
     fd_set exceptSockets;           // Exception socket list
 
+    //Pings timedTasks function once per minute
+    std::thread timer (timedThread);
+
+
     //fd_set openServerSockets;
     //fd_set readServerSockets;
     int maxfds;                     // Passed to select() as max fd in set
@@ -572,18 +602,26 @@ int main(int argc, char* argv[])
 
                     if(FD_ISSET(server->sock, &readSockets)) {
                         // recv() == 0 means client has closed connection
-                        if(recv(server->sock, buffer, sizeof(buffer), MSG_DONTWAIT) == 0) {
+
+                        if(recv(server->sock, buffer, sizeof(buffer), MSG_PEEK | MSG_DONTWAIT) == 0) {
                             printf("Server closed connection: %d", server->sock);
-                            //close(server->sock);
-                            //closeServer(server->sock, &openSockets, &maxfds);
                             serversToClose.push_back(server->sock);
                         }
                         // We don't check for -1 (nothing received) because select()
                         // only triggers if there is something on the socket for us.
                         else {
-                            std::cout << buffer << std::endl;
-                            serverCommand(server->sock, &openSockets, &maxfds,
-                                    buffer, argv[2]);
+                            // We peek at the message, if it is valide then we recv fo real
+                            if(isMessageValid((std::string) buffer)) {
+                                if(recv(server->sock, buffer, sizeof(buffer), MSG_DONTWAIT) == 0) {
+                                    printf("Server closed connection: %d", server->sock);
+                                    serversToClose.push_back(server->sock);
+                                }
+                                std::cout << buffer << std::endl;
+                                serverCommand(server->sock, &openSockets, &maxfds,
+                                        buffer, argv[2]);
+                            } else {
+                                std::cout << "DEBUG: MESSAGE ISN'T VALID" << std::endl;
+                            }
                         }
                     }
                 }
@@ -622,4 +660,6 @@ int main(int argc, char* argv[])
             }
         }
     }
+    // Kill all threads
+    std::terminate();
 }
