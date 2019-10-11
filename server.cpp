@@ -534,7 +534,6 @@ int main(int argc, char* argv[])
                 request << "LISTSERVERS," << MYGROUP;
                 std::string crequest = constructMessage(request.str());
                 send(serverSock, crequest.c_str(), crequest.length(), 0);
-
             }
 
             // Now check for commands from clients
@@ -592,7 +591,6 @@ int main(int argc, char* argv[])
                     close(clientsToClose[i]);
                     closeClient(clientsToClose[i], &openSockets, &maxfds);
                 }
-                n--;
             }
         }
     }
