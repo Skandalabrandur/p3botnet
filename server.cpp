@@ -625,6 +625,7 @@ int main(int argc, char* argv[])
                                 std::cout << buffer << std::endl;
                                 serverCommand(server->sock, &openSockets, &maxfds,
                                         buffer, argv[2]);
+                                memset(&buffer, 0, sizeof(buffer));
                             } else {
                                 bool booted = false;
                                 std::string checker = (std::string) buffer;
@@ -639,8 +640,8 @@ int main(int argc, char* argv[])
                                     serversToClose.push_back(server->sock);
                                     booted = true;
                                 }
-                                std::cout << "DEBUG: MESSAGE ISN'T VALID" << std::endl;
                                 if(booted) {
+                                    std::cout << "BOOTING" << std::endl;
                                     //Consume message to clear it away
                                     recv(server->sock, buffer, sizeof(buffer), MSG_DONTWAIT);
                                 }
