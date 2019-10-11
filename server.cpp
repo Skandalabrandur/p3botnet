@@ -626,18 +626,25 @@ int main(int argc, char* argv[])
                                 serverCommand(server->sock, &openSockets, &maxfds,
                                         buffer, argv[2]);
                             } else {
+                                bool booted = false;
                                 std::string checker = (std::string) buffer;
                                 if(checker.length() > 0) {
                                     if((int) checker[0] != 0x1) {
                                         send(server->sock, "START MSG WITH 0x1 PLEASE", 25, 0);
                                         serversToClose.push_back(server->sock);
+                                        booted = true;
                                     }
                                 } else {
                                     send(server->sock, "NO EMPTY MSG", 12, 0);
                                     serversToClose.push_back(server->sock);
+                                    booted = true;
                                 }
                                 std::cout << "DEBUG: MESSAGE ISN'T VALID" << std::endl;
                                 memset(&buffer, 0, sizeof(buffer));
+                                if(booted) {
+                                    //Consume message to clear it away
+                                    recv(server->sock, buffer, sizeof(buffer), MSG_DONTWAIT);
+                                }
                             }
                         }
                     }
