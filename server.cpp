@@ -474,6 +474,11 @@ int main(int argc, char* argv[])
     fd_set readSockets;             // Socket list for select()
     fd_set exceptSockets;           // Exception socket list
 
+    // Since we are calling the timedTasks right after timeout, we want to make sure that at least
+    // a minute has passed
+    std::chrono::system_clock::time_point clock_now = std::chrono::system_clock::now();
+    std::time_t next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::seconds(5));
+    std::time_t now = std::chrono::system_clock::to_time_t(clock_now);
 
 
     //fd_set openServerSockets;
@@ -622,6 +627,7 @@ int main(int argc, char* argv[])
                                         buffer, argv[2]);
                             } else {
                                 std::cout << "DEBUG: MESSAGE ISN'T VALID" << std::endl;
+                                memset(&buffer, 0, sizeof(buffer));
                             }
                         }
                     }
@@ -660,6 +666,14 @@ int main(int argc, char* argv[])
                 }
             }
         }
-        timedTasks();
+
+        // This checks whether it is time to do the timedTasks
+        clock_now = std::chrono::system_clock::now();
+        now = std::chrono::system_clock::to_time_t(clock_now);
+
+        if(now > next_ping) {
+            timedTasks();
+            next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::seconds(5));
+        }
     }
 }
