@@ -77,7 +77,7 @@ std::map<int, Client*> clients;     // Lookup table for per Client information
 std::map<int, Server*> servers;   // Lookup table for connected servers
 
 typedef boost::circular_buffer<s_message> circular_buffer;
-circular_buffer cb{500};
+circular_buffer message_buffer{500};
 
 // Open socket for specified port.
 //
@@ -268,6 +268,21 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
             if(strs.size() == 2) {
                 std::cout << "Received GETMSG command" << std::endl;
                 std::cout << "ARGUMENT: " << strs[1] << std::endl;
+
+                std::string gotten_message = "No message found. Take heed that group_id is case sensitive and doesn't trim spaces";
+
+                for(unsigned long int i = 0; i < message_buffer.size(); i++) {
+                    s_message tmp_msg = message_buffer[i];
+                    if(strcmp(tmp_msg.receiver.c_str(), strs[1].c_str()) == 0
+                            && tmp_msg.unread) {
+                        gotten_message = tmp_msg.msg;
+                        message_buffer[i].unread = false;
+                        break;
+                    }
+                }
+
+                send(clientSocket, gotten_message.c_str(), gotten_message.length(), 0);
+
             } else {
                 std::string g_msg = "Only one argument for GETMSG! You supplied too many!";
                 send(clientSocket, g_msg.c_str(), g_msg.length(), 0);
@@ -275,15 +290,27 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
         } else if (strs[0] == "SENDMSG") {
             if(strs.size() > 2) {
                 std::cout << "Received SENDMSG command" << std::endl;
-                std::cout << "ARGUMENT: " << strs[1] << std::endl;
-                    for(auto const& p: servers){
-                    if (strcmp(strs[1].c_str(), p.second->group_id.c_str()) == 0){
-                        std::cout << "Sending message to me" << std::endl;
-                    }
-                }
-                
+                std::cout << "GROUP_ID ARGUMENT: " << strs[1] << std::endl;
+                //for(auto const& p: servers){
+                //    if (strcmp(strs[1].c_str(), p.second->group_id.c_str()) == 0){
+                        s_message new_msg_struct;
+                        std::ostringstream new_msg;
+
+                        for(long unsigned int i = 2; i < strs.size() - 1; i++) {
+                            new_msg << strs[i] << ",";
+                        }
+
+                        new_msg << strs[strs.size() - 1];
+                        new_msg_struct.msg = new_msg.str();
+                        new_msg_struct.sender = "UNKNOWN";  // Who is client? He is unknown!
+                        new_msg_struct.receiver = strs[1];
+                        new_msg_struct.unread = true;
+                        message_buffer.push_back(new_msg_struct);
+                //    }
+                //}
+
             } else {
-                std::string s_msg = "Only one argument for GETMSG! You supplied too many!";
+                std::string s_msg = "You need to supply a group AND a message with SENDMSG,GROUP,MSG!";
                 send(clientSocket, s_msg.c_str(), s_msg.length(), 0);
             }
         } else if(boost::contains(strs[0], (std::string) "LISTSERVERS")) {
