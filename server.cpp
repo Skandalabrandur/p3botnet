@@ -216,13 +216,12 @@ int connectToServer(char *address, char *port, fd_set *openSockets, int *maxfds)
 }
 
 void timedTasks() {
-    std::cout << "Received timed ping" << std::endl;
 }
 
 void timedThread() {
     //Pings timedTasks function once per minute
     std::chrono::system_clock::time_point clock_now = std::chrono::system_clock::now();
-    std::time_t next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::seconds(5));
+    std::time_t next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::minutes(1));
     std::time_t now = std::chrono::system_clock::to_time_t(clock_now);
 
     // Thread will be closed when main function hits end
@@ -232,7 +231,7 @@ void timedThread() {
 
         if(now > next_ping) {
             timedTasks();
-            next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::seconds(5));
+            next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::minutes(1));
         }
     }
 }
