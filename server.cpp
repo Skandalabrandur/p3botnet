@@ -118,6 +118,7 @@ int open_socket(int portno)
         perror("Failed to set SOCK_NOBBLOCK");
     }
 #endif
+
     memset(&sk_addr, 0, sizeof(sk_addr));
 
     sk_addr.sin_family      = AF_INET;
@@ -216,26 +217,26 @@ int connectToServer(char *address, char *port, fd_set *openSockets, int *maxfds)
 }
 
 void timedTasks() {
-}
-
-void timedThread() {
-    //Pings timedTasks function once per minute
-    std::chrono::system_clock::time_point clock_now = std::chrono::system_clock::now();
-    std::time_t next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::minutes(1));
-    std::time_t now = std::chrono::system_clock::to_time_t(clock_now);
-
-    // Thread will be closed when main function hits end
-    while(true) {
-        clock_now = std::chrono::system_clock::now();
-        now = std::chrono::system_clock::to_time_t(clock_now);
-
-        if(now > next_ping) {
-            timedTasks();
-            next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::minutes(1));
+    // KEEPALIVE directive
+    for(auto const& p : servers) {
+        if (strcmp(p.second->group_id.c_str(), "UNKNOWN") == 0) {
+            continue;
         }
-    }
-}
 
+        int unread_messages = 0;
+        for(unsigned long int i = 0; i < message_buffer.size(); i++) {
+            s_message tmp_msg = message_buffer[i];
+            if(strcmp(p.second->group_id.c_str(), tmp_msg.receiver.c_str()) == 0 && tmp_msg.unread) {
+                unread_messages += 1;
+            }
+        }
+        std::ostringstream ka_msg;
+        ka_msg << "KEEPALIVE," << unread_messages << std::endl;
+        std::string ka = ka_msg.str();
+        send(p.second->sock, ka.c_str(), ka.length(), 0);
+    }
+
+}
 
 void closeServer(int serverSocket, fd_set *openSockets, int *maxfds) {
     servers.erase(serverSocket);
@@ -473,8 +474,6 @@ int main(int argc, char* argv[])
     fd_set readSockets;             // Socket list for select()
     fd_set exceptSockets;           // Exception socket list
 
-    //Pings timedTasks function once per minute
-    std::thread timer (timedThread);
 
 
     //fd_set openServerSockets;
@@ -525,14 +524,17 @@ int main(int argc, char* argv[])
     finished = false;
 
     while(!finished) {
-
+        // This is re-initialized every loop
+        struct timeval timeout;      
+        timeout.tv_sec  = 60;
+        timeout.tv_usec = 0;
 
         // Get modifiable copy of readSockets
         readSockets = exceptSockets = openSockets;
         memset(buffer, 0, sizeof(buffer));
 
         // Look at sockets and see which ones have something to be read()
-        int n = select(maxfds + 1, &readSockets, NULL, &exceptSockets, NULL);
+        int n = select(maxfds + 1, &readSockets, NULL, &exceptSockets, &timeout);
 
         if(n < 0) {
             perror("select failed - closing down\n");
@@ -658,7 +660,6 @@ int main(int argc, char* argv[])
                 }
             }
         }
+        timedTasks();
     }
-    // Kill all threads
-    std::terminate();
 }
