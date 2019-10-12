@@ -527,7 +527,7 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                 for(long unsigned int i = 3; i < strs.size() - 1; i++) {
                     new_msg << strs[i] << ",";
                 }
-                if(new_msg.str().length > 0) {
+                if(new_msg.str().length() > 0) {
                     new_msg_struct.msg = new_msg.str();
                     new_msg_struct.sender = strs[1];
                     new_msg_struct.receiver = strs[2];
