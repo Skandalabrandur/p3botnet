@@ -25,7 +25,6 @@ struct s_message {
     std::string sender;     // GROUP_ID, who sent the message?
     std::string receiver;   // GROUP_ID, who shall receive?
     bool unread;              // Has the message been sent?
-    bool unreadByServer;      // Has a server tried parsing the message?
 };
 
 #endif

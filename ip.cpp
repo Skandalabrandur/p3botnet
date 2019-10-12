@@ -11,7 +11,7 @@
 
 #include "ip.h"
 
-#define INTERFACE "wlp1s0"    // eth0 for remote server, might have to change this on own comp
+#define INTERFACE "eno16780032"    // eth0 for remote server, might have to change this on own comp
 
 std::string getOwnIp()
 {
