@@ -29,7 +29,6 @@
 
 #include <iostream>
 #include <sstream>
-#include <thread>
 #include <map>
 
 #include <unistd.h>
@@ -174,8 +173,6 @@ int connectToServer(char *address, char *port, char *our_port, fd_set *openSocke
     hints.ai_flags    = AI_PASSIVE;
     memset(&hints,   0, sizeof(hints));
 
-    std::cout << "address: " << address << ": type= " << typeid(address).name() << std::endl;
-    std::cout << "port: " << port << ": type= " << typeid(port).name() << std::endl;
 
     if(getaddrinfo(address, port, &hints, &svr) != 0) {
         perror("getaddrinfo failed: ");
@@ -205,9 +202,10 @@ int connectToServer(char *address, char *port, char *our_port, fd_set *openSocke
     std::ostringstream response_msg;
     response_msg << "SERVERS," << MYGROUP << "," << myIp << "," << our_port << ";";
     std::string response = constructMessage(response_msg.str());
+
+    response_msg << " | SENT TO SERVER" << std::endl;
+    writeToLog(response_msg.str());
     send(serverSocket, response.c_str(), response.length(), 0);
-
-
 
     // Add new client to the list of open sockets
     FD_SET(serverSocket, openSockets);
@@ -221,13 +219,13 @@ int connectToServer(char *address, char *port, char *our_port, fd_set *openSocke
 
     printf("Connecting to: %d\n", serverSocket);
     std::ostringstream ss;
-    ss << "RECEIVED CONNECT COMMAND and am connecting to: " << address << ":" << port << std::endl;
+    ss << "RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: " << address << ":" << port << std::endl;
     writeToLog(ss.str());
     return serverSocket;
 }
 
 void timedTasks() {
-    // KEEPALIVE directive
+    // KEEPALIVE outgoing directive
     for(auto const& p : servers) {
         if (strcmp(p.second->group_id.c_str(), "UNKNOWN") == 0) {
             continue;
@@ -242,7 +240,7 @@ void timedTasks() {
         }
         std::ostringstream ka_msg;
         ka_msg << "KEEPALIVE," << unread_messages << std::endl;
-        std::string ka = ka_msg.str();
+        std::string ka = constructMessage(ka_msg.str());
         send(p.second->sock, ka.c_str(), ka.length(), 0);
     }
 
@@ -267,15 +265,19 @@ void closeServer(int serverSocket, fd_set *openSockets, int *maxfds) {
 //CLIENT COMMANDS
 ////////////////////////////////////////////////////////////////////
 
-void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
+int clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
         char *buffer, char* our_port) {
     std::string msg = extractMessage((std::string) buffer);
+
+    //If the message is invalid, then don't try to do something
+    if(msg.length() == 0) {
+        return 0;
+    }
 
     std::vector<std::string> strs;
     boost::split(strs,msg,boost::is_any_of(",\n"));
     strs.pop_back();    //drop the newline
 
-    std::cout << "strs.size() = " << strs.size() << std::endl;
 
     if(strs.size() > 0) {
         std::ostringstream msgFromClient;
@@ -289,6 +291,7 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
                 int newServerSock = connectToServer((char *) strs[1].c_str(), 
                         (char *) strs[2].c_str(), our_port,  openSockets, maxfds);
                 if(newServerSock != -1) {
+                    writeToLog("Sent SUCCESS back to client on successful connection");
                     send(clientSocket, "SUCCESS", 7, 0);
 
                     // This procs a LISTSERVERS from the new connected server
@@ -298,9 +301,13 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
                     std::string crequest = constructMessage(request.str());
                     send(newServerSock, crequest.c_str(), crequest.length(), 0);
                 } else {
+                    writeToLog("Sent FAIL back to client on unsuccessful connection attempt");
                     send(clientSocket, "FAIL", 4, 0);
                 }
             }
+        } else if(strs[0] == "DISCONNECT") {
+            writeToLog("Client issued Disconnect command");
+            return -1;
         } else if(strs[0] == "GETMSG") {
             if(strs.size() == 2) {
                 std::cout << "Received GETMSG command" << std::endl;
@@ -318,36 +325,41 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
                     }
                 }
 
+                std::ostringstream clientLog;
+                clientLog << "Following message sent to client: ";
+                clientLog << gotten_message;
+                writeToLog(clientLog.str());
                 send(clientSocket, gotten_message.c_str(), gotten_message.length(), 0);
 
             } else {
                 std::string g_msg = "Only one argument for GETMSG! You supplied too many!";
+                writeToLog("Sent an error message to client because getmsg was ill formed");
                 send(clientSocket, g_msg.c_str(), g_msg.length(), 0);
             }
         } else if (strs[0] == "SENDMSG") {
             if(strs.size() > 2) {
                 std::cout << "Received SENDMSG command" << std::endl;
                 std::cout << "GROUP_ID ARGUMENT: " << strs[1] << std::endl;
-                //for(auto const& p: servers){
-                //    if (strcmp(strs[1].c_str(), p.second->group_id.c_str()) == 0){
-                        s_message new_msg_struct;
-                        std::ostringstream new_msg;
+                s_message new_msg_struct;
+                std::ostringstream new_msg;
 
-                        for(long unsigned int i = 2; i < strs.size() - 1; i++) {
-                            new_msg << strs[i] << ",";
-                        }
+                // Join old message again with commas, since we split arguments
+                // that way. If the original message had commas, this is where
+                // they return
+                for(long unsigned int i = 2; i < strs.size() - 1; i++) {
+                    new_msg << strs[i] << ",";
+                }
 
-                        new_msg << strs[strs.size() - 1];
-                        new_msg_struct.msg = new_msg.str();
-                        new_msg_struct.sender = "UNKNOWN";  // Who is client? He is unknown!
-                        new_msg_struct.receiver = strs[1];
-                        new_msg_struct.unread = true;
-                        message_buffer.push_back(new_msg_struct);
-                //    }
-                //}
+                new_msg << strs[strs.size() - 1];
+                new_msg_struct.msg = new_msg.str();
+                new_msg_struct.sender = "UNKNOWN";  // Who is client? He is unknown!
+                new_msg_struct.receiver = strs[1];
+                new_msg_struct.unread = true;
+                message_buffer.push_back(new_msg_struct);
 
             } else {
                 std::string s_msg = "You need to supply a group AND a message with SENDMSG,GROUP,MSG!";
+                writeToLog("Sent an error message regarding SENDMSG to client since it was ill formed");
                 send(clientSocket, s_msg.c_str(), s_msg.length(), 0);
             }
         } else if(boost::contains(strs[0], (std::string) "LISTSERVERS")) {
@@ -367,10 +379,32 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
             }
 
             std::string response_msg = constructMessage(response.str());
+            response << " | SENT TO CLIENT" << std::endl;
+            writeToLog(response.str());
             send(clientSocket, response_msg.c_str(), response_msg.length(), 0);
+        } else if(boost::contains(strs[0], (std::string) "LISTMESSAGES")) {
+            std::ostringstream messages;
+            int howManyMessages = 0;
+            for(unsigned long int i = 0; i < message_buffer.size(); i++) {
+                s_message tmp_msg = message_buffer[i];
+                messages << "Sender: \t" << tmp_msg.sender << std::endl;
+                messages << "Recevr: \t" << tmp_msg.receiver << std::endl;
+                messages << "Messag: \t" << tmp_msg.msg << std::endl;
+                messages << "unread: \t" << tmp_msg.unread << std::endl;
+                messages << std::endl << std::endl;
+                howManyMessages += 1;
+            }
+
+            std::string response = constructMessage(messages.str());
+            std::ostringstream clientLog;
+            clientLog << "Sent a list of " << howManyMessages;
+            clientLog << " to client (truncated the list) " << std::endl;
+            writeToLog(clientLog.str());
+            send(clientSocket, response.c_str(), response.length(), 0);
         }
     }
     memset(&buffer, 0, sizeof(buffer));
+    return 0;
 }
 
 ////////////////////////////////////////////////////////////////////
@@ -380,6 +414,10 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
 void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
         char *buffer, char *serverListenPort) {
     std::string msg = extractMessage((std::string) buffer);
+
+    if(msg.length() == 0) {
+        return;
+    }
 
     std::vector<std::string> strs;
     boost::split(strs,msg,boost::is_any_of(","));
@@ -394,9 +432,6 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
         if(strs[0] == "LISTSERVERS") {
             if(strs.size() == 2) {
 
-                std::cout << "Received LISTSERVERS command" << std::endl;
-                std::cout << "ARGUMENT: " << strs[1] << std::endl;
-
                 std::string myIp = getOwnIp();
 
                 std::ostringstream response;
@@ -409,11 +444,14 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                         response << p.second->address << ",";
                         response << p.second->port;
                         response << ";";
-                        std::cout << "AM INSIDE WITH GROUP ID: " << p.second->group_id;
                     }
                 }
 
                 std::string response_msg = constructMessage(response.str());
+
+                response << " | SENT TO SERVER" << std::endl;
+                writeToLog(response.str());
+                
                 send(serverSocket, response_msg.c_str(), response_msg.length(), 0);
 
             } else {
@@ -435,11 +473,68 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                 }
             }
         } else if (strs[0] == "KEEPALIVE") {
+            strs[1].erase(std::remove(strs[1].begin(), 
+                            strs[1].end(), '\n'), strs[1].end());
+
             std::cout << "Received KEEPALIVE command" << std::endl;
+
+            int numOfMessages = atoi(strs[1].c_str());
+
+            if(numOfMessages > 0) {
+                std::ostringstream response;
+                response << "GET_MSG," << MYGROUP;
+                std::string response_msg = constructMessage(response.str());
+                response << " | SENT TO SERVER FROM KEEPALIVE,(num greater than 0)" << std::endl;
+                send(serverSocket, response_msg.c_str(), response_msg.length(), 0);
+            }
+
         } else if (strs[0] == "GET_MSG") {
-            std::cout << "Received GET_MSG command" << std::endl;
+            if(strs.size() == 2) {
+                std::cout << "Received GET_MSG command with GROUP_ID: " << strs[1] << std::endl;
+                strs[1].erase(std::remove(strs[1].begin(), 
+                            strs[1].end(), '\n'), strs[1].end());
+                for(auto const& p: servers) {
+                    if(strcmp(p.second->group_id.c_str(), strs[1].c_str()) == 0) {
+                        std::cout << "THE GROUP ID IS MATHCING" << std::endl;
+                        std::ostringstream gm;
+
+                        std::string gotten_message = "";
+
+                        for(unsigned long int i = 0; i < message_buffer.size(); i++) {
+                            s_message tmp_msg = message_buffer[i];
+                            if(strcmp(tmp_msg.receiver.c_str(), strs[1].c_str()) == 0
+                                    && tmp_msg.unread) {
+                                gotten_message = tmp_msg.msg;
+                                message_buffer[i].unread = false;
+                                gm << "SEND_MSG," << MYGROUP << "," << strs[1] << "," << gotten_message;
+                                std::string response = constructMessage(gm.str());
+
+                                gm << " | SENT TO SERVER " << std::endl;
+                                writeToLog(gm.str());
+
+                                send(serverSocket, response.c_str(), response.length(), 0);
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
         } else if (strs[0] == "SEND_MSG") {
-            std::cout << "Received SEND_MSG command" << std::endl;
+            if(strcmp(strs[2].c_str(), MYGROUP) == 0) { 
+                s_message new_msg_struct;
+                std::ostringstream new_msg;
+                
+                if(strs[3].length() > 0) {
+                    new_msg << strs[3];
+                    new_msg_struct.msg = new_msg.str();
+                    new_msg_struct.sender = strs[1];
+                    new_msg_struct.receiver = strs[2];
+                    new_msg_struct.unread = true;
+                    message_buffer.push_back(new_msg_struct);
+                }
+            } else {
+                //TODO more than 1-hop discovery
+            }
         } else if (strs[0] == "LEAVE") {
             std::cout << "Received LEAVE command" << std::endl;
             if(strs.size() == 3) {
@@ -451,7 +546,6 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                         closedServer = p.second->sock;
                     }
                 }
-                std::cout << closedServer << std::endl;
 
                 if(closedServer != -1) {
                     close(closedServer);
@@ -463,8 +557,8 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
         } else if (strs[0] == "STATUSRESP") {
             std::cout << "Received STATUSRESP command" << std::endl;
         } else {
-            std::string e_msg = "Please refer to the pdf on how to send messages.\nDid you perhaps forget a comma in LISTSERVERS or another command? LISTSERVERS on its own is not enough. LISTERVERS,YOUR_GROUP_ID is the way to go my friend!";
-
+            std::string e_msg = "INVALID COMMAND!";
+            writeToLog("Sent INVALID COMMAND back to server");
             send(serverSocket, e_msg.c_str(), e_msg.length()-1, 0);
         }
     }
@@ -485,7 +579,7 @@ int main(int argc, char* argv[])
     // Since we are calling the timedTasks right after timeout, we want to make sure that at least
     // a minute has passed
     std::chrono::system_clock::time_point clock_now = std::chrono::system_clock::now();
-    std::time_t next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::seconds(5));
+    std::time_t next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::minutes(1));
     std::time_t now = std::chrono::system_clock::to_time_t(clock_now);
 
 
@@ -607,6 +701,9 @@ int main(int argc, char* argv[])
                 std::ostringstream response_msg;
                 response_msg << "SERVERS," << MYGROUP << "," << myIp << "," << argv[2] << ";";
                 std::string response = constructMessage(response_msg.str());
+
+                response_msg << " | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST" << std::endl;
+                writeToLog(response_msg.str());
                 send(serverSock, response.c_str(), response.length(), 0);
 
                 std::ostringstream request;
@@ -664,20 +761,23 @@ int main(int argc, char* argv[])
                         // recv() == 0 means client has closed connection
                         if(recv(client->sock, buffer, sizeof(buffer), MSG_DONTWAIT) == 0) {
                             printf("Client closed connection: %d", client->sock);
-                            //close(client->sock);
-                            //closeClient(client->sock, &openSockets, &maxfds);
                             clientsToClose.push_back(client->sock);
                         }
                         // We don't check for -1 (nothing received) because select()
                         // only triggers if there is something on the socket for us.
                         else {
                             std::cout << buffer << std::endl;
-                            clientCommand(client->sock, &openSockets, &maxfds,
+                            int clientStatus = clientCommand(client->sock, &openSockets, &maxfds,
                                     buffer, argv[2]);
+
+                            if(clientStatus == -1) {
+                                clientsToClose.push_back(client->sock);
+                            }
                         }
                     }
                 }
 
+                
                 for(long unsigned int i = 0; i < serversToClose.size(); i++) {
                     close(serversToClose[i]);
                     closeServer(serversToClose[i], &openSockets, &maxfds);
@@ -697,7 +797,7 @@ int main(int argc, char* argv[])
 
         if(now > next_ping) {
             timedTasks();
-            next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::seconds(5));
+            next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::minutes(1));
         }
     }
 }

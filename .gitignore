@@ -2,7 +2,7 @@
 *.d
 
 # Logs
-*log.txt
+#*log.txt
 
 # Compiled Object files
 *.slo

@@ -14,7 +14,7 @@ void writeToLog(std::string text) {
 
     ofstream logfile;
     logfile.open ("log.txt", ios::app);
-    logfile << text << std::endl;
+    logfile << text;
     logfile << " | " << std::ctime(&now) << std::endl;
     logfile.close();
 }
