@@ -904,3 +904,161 @@ Received from server HEMMI on socket: 5
 STATUSRESP,P3_GROUP_77,HEMMI,HEMMI,1,KOBBI,2 | SENT TO SERVER
  | Sat Oct 12 15:49:21 2019
 
+Client connected to server on socket: 5
+ | Sat Oct 12 16:50:59 2019
+
+Received from client on socket: 5
+	CONNECT,127.0.0.1,4000
+
+ | Sat Oct 12 16:51:24 2019
+
+SERVERS,P3_GROUP_77,,4050; | SENT TO SERVER
+ | Sat Oct 12 16:51:24 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: 127.0.0.1:4000
+ | Sat Oct 12 16:51:24 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 16:51:24 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,Instructor_4
+ | Sat Oct 12 16:51:24 2019
+
+SERVERS,P3_GROUP_77,,4050; | SENT TO SERVER
+ | Sat Oct 12 16:51:24 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,Instructor_4,130.208.243.61,4000;Instructor_4,130.208.243.61,4000;Instructor_4,130.208.243.61,4000;ORACLE,130.208.243.61,4007;P3_GROUP_69,192.168.2.118,5000;P3_Group_103,10.3.35.136,10000;P3_GROUP_7,130.208.243.61,52038;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_25,130.208.243.61,4025;P3_GROUP_80,130.208.243.61,4077;P3_GROUP_39,10.3.16.155,4065;P3_GROUP_77,127.0.0.1,-1;
+ | Sat Oct 12 16:51:24 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 16:51:29 2019
+
+SERVERS,Instructor_4,130.208.243.61,4000; | SENT TO CLIENT
+ | Sat Oct 12 16:51:29 2019
+
+Received from client on socket: 5
+	CONNECT,127.0.0.1,4007
+
+ | Sat Oct 12 16:51:47 2019
+
+SERVERS,P3_GROUP_77,,4050; | SENT TO SERVER
+ | Sat Oct 12 16:51:47 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: 127.0.0.1:4007
+ | Sat Oct 12 16:51:47 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 16:51:47 2019
+
+Received from server UNKNOWN on socket: 7
+	LISTSERVERS,ORACLE
+ | Sat Oct 12 16:51:47 2019
+
+SERVERS,P3_GROUP_77,,4050;Instructor_4,130.208.243.61,4000; | SENT TO SERVER
+ | Sat Oct 12 16:51:47 2019
+
+Received from server Instructor_4 on socket: 6
+	SEND_MSG,ORACLE,P3_GROUP_77,Welcome to the net
+ | Sat Oct 12 16:51:47 2019
+
+Received from server UNKNOWN on socket: 7
+	SERVERS,ORACLE,130.208.243.61,4007;Instructor_4,130.208.243.61,4000;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_25,130.208.243.61,4025;P3_GROUP_77,127.0.0.1,-1;
+ | Sat Oct 12 16:51:47 2019
+
+Received from server Instructor_4 on socket: 6
+	Instructor_4,P3_GROUP_77,Too many errors - disconnecting;
+ | Sat Oct 12 16:51:47 2019
+
+Sent INVALID COMMAND back to server | Sat Oct 12 16:51:47 2019
+
+Received from server ORACLE on socket: 7
+	ORACLE,P3_GROUP_77,Too many errors - disconnecting;
+ | Sat Oct 12 16:51:47 2019
+
+Sent INVALID COMMAND back to server | Sat Oct 12 16:51:47 2019
+
+Received from client on socket: 5
+	CONNECT,127.0.0.1,4007
+
+ | Sat Oct 12 16:52:00 2019
+
+SERVERS,P3_GROUP_77,,4050; | SENT TO SERVER
+ | Sat Oct 12 16:52:00 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: 127.0.0.1:4007
+ | Sat Oct 12 16:52:00 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 16:52:00 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,ORACLE
+ | Sat Oct 12 16:52:00 2019
+
+SERVERS,P3_GROUP_77,,4050; | SENT TO SERVER
+ | Sat Oct 12 16:52:00 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,ORACLE,130.208.243.61,4007;Instructor_4,130.208.243.61,4000;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_25,130.208.243.61,4025;P3_GROUP_77,127.0.0.1,-1;
+ | Sat Oct 12 16:52:00 2019
+
+Received from client on socket: 5
+	SENDMSG,ORACLE,HOWDY
+
+ | Sat Oct 12 16:52:09 2019
+
+Received from server ORACLE on socket: 6
+	GET_MSG,ORACLE
+ | Sat Oct 12 16:53:09 2019
+
+SEND_MSG,P3_GROUP_77,ORACLE,HOWDY | SENT TO SERVER 
+ | Sat Oct 12 16:53:09 2019
+
+Received from client on socket: 5
+	SENDMSG,ORACLE,HELLO?
+
+ | Sat Oct 12 16:55:21 2019
+
+Received from client on socket: 5
+	GETMSG,ORACLE
+
+ | Sat Oct 12 16:55:33 2019
+
+Following message sent to client: HELLO? | Sat Oct 12 16:55:33 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sat Oct 12 16:55:54 2019
+
+Following message sent to client: No message found. Take heed that group_id is case sensitive and doesn't trim spaces | Sat Oct 12 16:55:54 2019
+
+Received from client on socket: 5
+	SENDMSG,ORACLE,KNOCK
+
+ | Sat Oct 12 16:56:18 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sat Oct 12 16:56:36 2019
+
+Sent a list of 3 to client (truncated the list) 
+ | Sat Oct 12 16:56:36 2019
+
+Received from server ORACLE on socket: 6
+	GET_MSG,ORACLE
+ | Sat Oct 12 16:56:36 2019
+
+SEND_MSG,P3_GROUP_77,ORACLE,KNOCK | SENT TO SERVER 
+ | Sat Oct 12 16:56:36 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sat Oct 12 16:56:45 2019
+
+Sent a list of 3 to client (truncated the list) 
+ | Sat Oct 12 16:56:45 2019
+
