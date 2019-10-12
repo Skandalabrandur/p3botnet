@@ -680,3 +680,227 @@ Received from server P3_GROUP_27 on socket: 6
 	KEEPALIVE,0
  | Sat Oct 12 14:50:06 2019
 
+Client connected to server on socket: 5
+ | Sat Oct 12 15:29:13 2019
+
+Received from client on socket: 5
+	SENDMSG,VIDAR,HEHEHEHE
+
+ | Sat Oct 12 15:29:30 2019
+
+Received from client on socket: 5
+	SENDMSG,VIDAR,SUCKKK
+
+ | Sat Oct 12 15:29:36 2019
+
+Received from client on socket: 5
+	SENDMSG,HLYNUR,HOHOHO
+
+ | Sat Oct 12 15:29:43 2019
+
+Received from client on socket: 5
+	SENDMSG,HLYNUR,HEOHOIEHOE
+
+ | Sat Oct 12 15:29:48 2019
+
+Received from client on socket: 5
+	SENDMSG,HLYNUR,HEHEHEHEOHEOIEOEHIEO
+
+ | Sat Oct 12 15:29:54 2019
+
+Server connected to server on socket: 5
+ | Sat Oct 12 15:30:03 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 15:30:03 2019
+
+Received from server UNKNOWN on socket: 5
+	SERVERS,HEMMI,8.8.8.8,8888;
+
+ | Sat Oct 12 15:30:10 2019
+
+Received from server HEMMI on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 15:30:12 2019
+
+Sent INVALID COMMAND back to server | Sat Oct 12 15:30:12 2019
+
+Received from server HEMMI on socket: 5
+	LISTSERVERS,HEMMI
+
+ | Sat Oct 12 15:30:17 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969;HEMMI,8.8.8.8,8888; | SENT TO SERVER
+ | Sat Oct 12 15:30:17 2019
+
+Received from server HEMMI on socket: 5
+	STATUSREQ,HEMMI
+
+ | Sat Oct 12 15:30:29 2019
+
+Server connected to server on socket: 5
+ | Sat Oct 12 15:34:06 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 15:34:06 2019
+
+Received from server UNKNOWN on socket: 5
+	SERVERS,HEMMI,87.7.7.7,7777;
+
+ | Sat Oct 12 15:34:15 2019
+
+Received from server HEMMI on socket: 5
+	STATUSREQ,HEMMI
+
+ | Sat Oct 12 15:34:29 2019
+
+STATUSRESP,P3_GROUP_77,HEMMI | SENT TO SERVER
+ | Sat Oct 12 15:34:29 2019
+
+Received from server HEMMI on socket: 5
+	SEND_MSG,HLEMMUR,KLEMMUR,181818181
+
+ | Sat Oct 12 15:34:53 2019
+
+Received from server HEMMI on socket: 5
+	SEND_MSG,GUNNI,KLEMMUR,1818181818
+
+ | Sat Oct 12 15:35:04 2019
+
+Received from server HEMMI on socket: 5
+	STATUSREQ,HEMMI
+
+ | Sat Oct 12 15:35:14 2019
+
+STATUSRESP,P3_GROUP_77,HEMMI | SENT TO SERVER
+ | Sat Oct 12 15:35:14 2019
+
+Server connected to server on socket: 5
+ | Sat Oct 12 15:37:10 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 15:37:10 2019
+
+Received from server UNKNOWN on socket: 5
+	SERVERS,HEMMI,8.8.8.8,8888;
+
+ | Sat Oct 12 15:37:16 2019
+
+Received from server HEMMI on socket: 5
+	LISTSERVERS,HEMMI
+
+ | Sat Oct 12 15:37:21 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969;HEMMI,8.8.8.8,8888; | SENT TO SERVER
+ | Sat Oct 12 15:37:21 2019
+
+Received from server HEMMI on socket: 5
+	SEND_MSG,GUNNI,TOMMA,meow
+
+ | Sat Oct 12 15:37:33 2019
+
+Received from server HEMMI on socket: 5
+	STATUSREQ,HEMMI
+
+ | Sat Oct 12 15:37:41 2019
+
+STATUSRESP,P3_GROUP_77,HEMMI,TOMMA,1 | SENT TO SERVER
+ | Sat Oct 12 15:37:41 2019
+
+Received from server HEMMI on socket: 5
+	GET_MSG,TOMMA
+
+ | Sat Oct 12 15:39:28 2019
+
+Received from server HEMMI on socket: 5
+	GET_MSG,TOMMA
+
+ | Sat Oct 12 15:39:49 2019
+
+Received from server HEMMI on socket: 5
+	GET_MSG,HEMMI
+
+ | Sat Oct 12 15:39:57 2019
+
+Received from server HEMMI on socket: 5
+	GET_MSG,GUNNI
+
+ | Sat Oct 12 15:40:02 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 15:40:08 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sat Oct 12 15:40:10 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sat Oct 12 15:40:10 2019
+
+Received from client on socket: 5
+	GETMSG,TOMMA
+
+ | Sat Oct 12 15:40:34 2019
+
+Following message sent to client: meow
+ | Sat Oct 12 15:40:34 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sat Oct 12 15:40:38 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sat Oct 12 15:40:38 2019
+
+Received from client on socket: 5
+	GETMSG,TOMMA
+
+ | Sat Oct 12 15:40:45 2019
+
+Following message sent to client: No message found. Take heed that group_id is case sensitive and doesn't trim spaces | Sat Oct 12 15:40:45 2019
+
+Server connected to server on socket: 5
+ | Sat Oct 12 15:46:23 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 15:46:23 2019
+
+Received from server UNKNOWN on socket: 5
+	SERVERS,HEMMI,8.8.8.8,8888;
+
+ | Sat Oct 12 15:46:33 2019
+
+Received from server HEMMI on socket: 5
+	LISTSERVERS,HEMMI
+
+ | Sat Oct 12 15:46:38 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969;HEMMI,8.8.8.8,8888; | SENT TO SERVER
+ | Sat Oct 12 15:46:38 2019
+
+Received from server HEMMI on socket: 5
+	SEND_MSG,STEBBI,HEMMI,MESSAGE,INABOTTLE
+
+ | Sat Oct 12 15:47:09 2019
+
+Received from server HEMMI on socket: 5
+	SEND_MSG,JOBBI,KOBBI,HEYRRU JOBBI
+
+ | Sat Oct 12 15:48:43 2019
+
+Received from server HEMMI on socket: 5
+	SEND_MSG,JOBBI,KOBBI,THARNA ER LUKKU LAKI
+
+ | Sat Oct 12 15:48:53 2019
+
+Received from server HEMMI on socket: 5
+	STATUSREQ,HEMMI
+
+ | Sat Oct 12 15:49:21 2019
+
+STATUSRESP,P3_GROUP_77,HEMMI,HEMMI,1,KOBBI,2 | SENT TO SERVER
+ | Sat Oct 12 15:49:21 2019
+

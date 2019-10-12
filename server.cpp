@@ -352,7 +352,7 @@ int clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
 
                 new_msg << strs[strs.size() - 1];
                 new_msg_struct.msg = new_msg.str();
-                new_msg_struct.sender = "UNKNOWN";  // Who is client? He is unknown!
+                new_msg_struct.sender = MYGROUP;  // Who is client? He is us!
                 new_msg_struct.receiver = strs[1];
                 new_msg_struct.unread = true;
                 message_buffer.push_back(new_msg_struct);
@@ -520,12 +520,14 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                 }
             }
         } else if (strs[0] == "SEND_MSG") {
-            if(strcmp(strs[2].c_str(), MYGROUP) == 0) { 
+            if(strs.size() >= 4) { 
                 s_message new_msg_struct;
                 std::ostringstream new_msg;
-                
-                if(strs[3].length() > 0) {
-                    new_msg << strs[3];
+
+                for(long unsigned int i = 3; i < strs.size() - 1; i++) {
+                    new_msg << strs[i] << ",";
+                }
+                if(new_msg.str().length > 0) {
                     new_msg_struct.msg = new_msg.str();
                     new_msg_struct.sender = strs[1];
                     new_msg_struct.receiver = strs[2];
@@ -553,9 +555,38 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                 }
             }
         } else if (strs[0] == "STATUSREQ") {
-            std::cout << "Received STATUSREQ command" << std::endl;
+            if (strs.size() == 2) {
+                std::cout << "Received STATUSREQ command" << std::endl;
+                strs[1].erase(std::remove(strs[1].begin(), 
+                            strs[1].end(), '\n'), strs[1].end());
+
+                std::ostringstream response;
+                response << "STATUSRESP," << MYGROUP << "," << strs[1];
+
+                std::map<std::string, int> group_message_count;
+
+                for(unsigned long int i = 0; i < message_buffer.size(); i++) {
+                    s_message tmp_msg = message_buffer[i];
+                    if(strcmp(tmp_msg.receiver.c_str(), "UNKNOWN") != 0 && tmp_msg.unread) {
+                        if ( group_message_count.find(tmp_msg.receiver) == group_message_count.end() ) {
+                            group_message_count[tmp_msg.receiver] = 1;
+                        } else {
+                            group_message_count[tmp_msg.receiver] += 1;
+                        }
+                    }
+                }
+
+                for (auto const& gmc : group_message_count) {
+                    response << "," << gmc.first << "," << gmc.second;
+                }
+
+                std::string response_msg = constructMessage(response.str());
+                response << " | SENT TO SERVER" << std::endl;
+                writeToLog(response.str());
+                send(serverSocket, response_msg.c_str(), response_msg.length(), 0);
+            }
         } else if (strs[0] == "STATUSRESP") {
-            std::cout << "Received STATUSRESP command" << std::endl;
+            std::cout << "Received STATUSRESP response" << std::endl;
         } else {
             std::string e_msg = "INVALID COMMAND!";
             writeToLog("Sent INVALID COMMAND back to server");
