@@ -161,7 +161,7 @@ void closeClient(int clientSocket, fd_set *openSockets, int *maxfds)
     FD_CLR(clientSocket, openSockets);
 }
 
-int connectToServer(char *address, char *port, fd_set *openSockets, int *maxfds) {
+int connectToServer(char *address, char *port, char *our_port, fd_set *openSockets, int *maxfds) {
 
     // Stolen from client.cpp
     struct addrinfo hints, *svr;              // Network host entry for server
@@ -184,6 +184,8 @@ int connectToServer(char *address, char *port, fd_set *openSockets, int *maxfds)
 
     serverSocket = socket(svr->ai_family, svr->ai_socktype, svr->ai_protocol);
 
+
+
     // Turn on SO_REUSEADDR to allow socket to be quickly reused after
     // program exit.
 
@@ -198,6 +200,14 @@ int connectToServer(char *address, char *port, fd_set *openSockets, int *maxfds)
         perror("Connect failed: ");
         return -1;
     }
+    // Send our server information as soon as a connection is made
+    std::string myIp = getOwnIp();
+    std::ostringstream response_msg;
+    response_msg << "SERVERS," << MYGROUP << "," << myIp << "," << our_port << ";";
+    std::string response = constructMessage(response_msg.str());
+    send(serverSocket, response.c_str(), response.length(), 0);
+
+
 
     // Add new client to the list of open sockets
     FD_SET(serverSocket, openSockets);
@@ -258,7 +268,7 @@ void closeServer(int serverSocket, fd_set *openSockets, int *maxfds) {
 ////////////////////////////////////////////////////////////////////
 
 void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
-        char *buffer) {
+        char *buffer, char* our_port) {
     std::string msg = extractMessage((std::string) buffer);
 
     std::vector<std::string> strs;
@@ -276,7 +286,8 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
         //Issue a connect command to server
         if(strs[0] == "CONNECT") {
             if(strs.size() == 3) {
-                int newServerSock = connectToServer((char *) strs[1].c_str(), (char *) strs[2].c_str(), openSockets, maxfds);
+                int newServerSock = connectToServer((char *) strs[1].c_str(), 
+                        (char *) strs[2].c_str(), our_port,  openSockets, maxfds);
                 if(newServerSock != -1) {
                     send(clientSocket, "SUCCESS", 7, 0);
 
@@ -353,8 +364,6 @@ void clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
                     response << p.second->port;
                     response << ";";
                 }
-                std::cout << p.second->group_id << std::endl;
-                std::cout << p.second->port << std::endl;
             }
 
             std::string response_msg = constructMessage(response.str());
@@ -400,9 +409,8 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                         response << p.second->address << ",";
                         response << p.second->port;
                         response << ";";
+                        std::cout << "AM INSIDE WITH GROUP ID: " << p.second->group_id;
                     }
-                    std::cout << p.second->group_id << std::endl;
-                    std::cout << p.second->port << std::endl;
                 }
 
                 std::string response_msg = constructMessage(response.str());
@@ -594,6 +602,13 @@ int main(int argc, char* argv[])
                 ss << "Server connected to server on socket: " << serverSock << std::endl;
                 writeToLog(ss.str());
 
+                // Send our server information as soon as a connection is made
+                std::string myIp = getOwnIp();
+                std::ostringstream response_msg;
+                response_msg << "SERVERS," << MYGROUP << "," << myIp << "," << argv[2] << ";";
+                std::string response = constructMessage(response_msg.str());
+                send(serverSock, response.c_str(), response.length(), 0);
+
                 std::ostringstream request;
                 request << "LISTSERVERS," << MYGROUP;
                 std::string crequest = constructMessage(request.str());
@@ -627,23 +642,13 @@ int main(int argc, char* argv[])
                                         buffer, argv[2]);
                                 memset(&buffer, 0, sizeof(buffer));
                             } else {
-                                bool booted = false;
                                 std::string checker = (std::string) buffer;
                                 if(checker.length() > 0) {
                                     if((int) checker.at(0) != 0x01) {
                                         send(server->sock, "START MSG WITH 0x1 PLEASE", 25, 0);
-                                        serversToClose.push_back(server->sock);
-                                        booted = true;
                                     }
                                 } else {
                                     send(server->sock, "NO EMPTY MSG", 12, 0);
-                                    serversToClose.push_back(server->sock);
-                                    booted = true;
-                                }
-                                if(booted) {
-                                    std::cout << "BOOTING" << std::endl;
-                                    //Consume message to clear it away
-                                    recv(server->sock, buffer, sizeof(buffer), MSG_DONTWAIT);
                                 }
                                 memset(&buffer, 0, sizeof(buffer));
                             }
@@ -668,7 +673,7 @@ int main(int argc, char* argv[])
                         else {
                             std::cout << buffer << std::endl;
                             clientCommand(client->sock, &openSockets, &maxfds,
-                                    buffer);
+                                    buffer, argv[2]);
                         }
                     }
                 }
