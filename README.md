@@ -1,5 +1,11 @@
 # Project 3 - The botnet rises
 
+## Fjóla Sif Sigvaldadóttir
+
+## Þorsteinn Sævar Kristjánsson
+
+estimated time: 36 hours
+
 ## Dependencies
 
 ### Boost library
@@ -126,3 +132,8 @@ Inside ip.cpp change the definition to the name of your interface
    //#define INTERFACE "enp0s3"       // for laptop with VirtualBox
    //#define INTERFACE "eth0"         // eth0 for our remote server @ www.heimi.li
 ```
+
+
+## How we connected to the oracle
+
+See the pictures in screenshots folder named client_heimili.png and client_skel.png
