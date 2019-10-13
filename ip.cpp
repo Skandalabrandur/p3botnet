@@ -11,10 +11,10 @@
 
 #include "ip.h"
 
-//#define INTERFACE "eno16780032"    // eno16780032 for remote skel 
+#define INTERFACE "eno16780032"    // eno16780032 for remote skel 
 //#define INTERFACE "wls1p0"         // for laptop
 //#define INTERFACE "enp0s3"         // for laptop with VirtualBox
-#define INTERFACE "eth0"             // eth0 for our remote server @ www.heimi.li
+//#define INTERFACE "eth0"             // eth0 for our remote server @ www.heimi.li
 
 std::string getOwnIp()
 {
