@@ -3,10 +3,12 @@
 #include <sstream>
 #include <stdio.h>
 
+// Checks whether a message has the correct 0x01 and 0x04 around it
 bool isMessageValid(std::string msg) {
     return (msg.length() > 2 && (int) msg.at(0) == 0x01 && (int) msg.at(msg.length() - 1) == 0x04);
 }
 
+// Constructs a message with the correct 0x01 and 0x04 around it
 std::string constructMessage(std::string msg) {
     std::stringstream ss;
     ss << (char) 0x01;
@@ -15,6 +17,8 @@ std::string constructMessage(std::string msg) {
     return ss.str();
 }
 
+// Strips 0x01 and 0x04 from a message
+// Returns an empty string if 0x01 and 0x04 are not both present
 std::string extractMessage(std::string msg) {
     if (isMessageValid(msg)) {
         return msg.substr(1, msg.length() - 2);
