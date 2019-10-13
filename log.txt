@@ -930,70 +930,6 @@ SERVERS,P3_GROUP_77,,4050; | SENT TO SERVER
 Received from server UNKNOWN on socket: 6
 	SERVERS,Instructor_4,130.208.243.61,4000;Instructor_4,130.208.243.61,4000;Instructor_4,130.208.243.61,4000;ORACLE,130.208.243.61,4007;P3_GROUP_69,192.168.2.118,5000;P3_Group_103,10.3.35.136,10000;P3_GROUP_7,130.208.243.61,52038;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_25,130.208.243.61,4025;P3_GROUP_80,130.208.243.61,4077;P3_GROUP_39,10.3.16.155,4065;P3_GROUP_77,127.0.0.1,-1;
  | Sat Oct 12 16:51:24 2019
-Server connected to server on socket: 5
- | Sat Oct 12 16:11:50 2019
-
-SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
- | Sat Oct 12 16:11:50 2019
-
-Client connected to server on socket: 5
- | Sat Oct 12 16:11:55 2019
-
-Received from client on socket: 5
-	CONNECT,skel.ru.is,4000
-
- | Sat Oct 12 16:11:59 2019
-
-SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
- | Sat Oct 12 16:11:59 2019
-
-RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4000
- | Sat Oct 12 16:11:59 2019
-
-Sent SUCCESS back to client on successful connection | Sat Oct 12 16:11:59 2019
-
-Received from server UNKNOWN on socket: 6
-	LISTSERVERS,Instructor_4
- | Sat Oct 12 16:11:59 2019
-
-SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
- | Sat Oct 12 16:11:59 2019
-
-Received from server UNKNOWN on socket: 6
-	SERVERS,Instructor_4,130.208.243.61,4000;Instructor_4,130.208.243.61,4000;Instructor_4,130.208.243.61,4000;ORACLE,130.208.243.61,4007;P3_GROUP_21,130.208.243.61,4074;P3_Group_103,127.0.0.1,10000;P3_GROUP_69,130.208.243.61,4069;P3_GROUP_7,130.208.243.61,51092;P3_GROUP_28,10.2.27.142,4034;P3_GROUP_39,172.26.183.56,4065;P3_GROUP_77,10.3.36.143,6969;
- | Sat Oct 12 16:11:59 2019
-
-Received from client on socket: 5
-	CONNECT,130.208.243.61,4007
-
- | Sat Oct 12 16:12:19 2019
-
-SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
- | Sat Oct 12 16:12:19 2019
-
-RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: 130.208.243.61:4007
- | Sat Oct 12 16:12:19 2019
-
-Sent SUCCESS back to client on successful connection | Sat Oct 12 16:12:19 2019
-
-Received from server UNKNOWN on socket: 7
-	LISTSERVERS,ORACLE
- | Sat Oct 12 16:12:19 2019
-
-SERVERS,P3_GROUP_77,10.3.36.143,6969;Instructor_4,130.208.243.61,4000; | SENT TO SERVER
- | Sat Oct 12 16:12:19 2019
-
-Received from server UNKNOWN on socket: 7
-	SERVERS,ORACLE,130.208.243.61,4007;Instructor_4,130.208.243.61,4000;P3_GROUP_21,130.208.243.61,4074;P3_GROUP_69,130.208.243.61,4069;P3_GROUP_39,172.26.183.56,4065;P3_GROUP_8,130.208.243.61,4042;P3_GROUP_77,10.3.36.143,6969;
- | Sat Oct 12 16:12:19 2019
-
-Received from server Instructor_4 on socket: 6
-	SEND_MSG,ORACLE,P3_GROUP_77,
-
-“Imagination is more important than knowledge.  For knowledge is limited, whereas 
- imagination embraces the entire world, stimulating progress, giving birth to evolution.”
-— Albert Einstein 
- | Sat Oct 12 16:13:19 2019
 
 Received from client on socket: 5
 	LISTSERVERS
@@ -1117,223 +1053,6 @@ Received from server ORACLE on socket: 6
 
 SEND_MSG,P3_GROUP_77,ORACLE,KNOCK | SENT TO SERVER 
  | Sat Oct 12 16:56:36 2019
- | Sat Oct 12 16:14:28 2019
-
-SERVERS,Instructor_4,130.208.243.61,4000;ORACLE,130.208.243.61,4007; | SENT TO CLIENT
- | Sat Oct 12 16:14:28 2019
-
-Received from server Instructor_4 on socket: 6
-	SEND_MSG,ORACLE,P3_GROUP_77,
-
-“If you automate a mess, you get an automated mess.”
-— Rod Michael 
- | Sat Oct 12 16:14:28 2019
-
-Received from client on socket: 5
-	SENDMSG,ORACLE,HELLO ORACLE
-
- | Sat Oct 12 16:14:51 2019
-
-Server connected to server on socket: 5
- | Sat Oct 12 16:27:55 2019
-
-SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
- | Sat Oct 12 16:27:55 2019
-
-Received from server UNKNOWN on socket: 5
-	SERVERS,HEMMI,7.7.7.7,8888;
-
- | Sat Oct 12 16:28:06 2019
-
-Server connected to server on socket: 5
- | Sat Oct 12 16:28:15 2019
-
-SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
- | Sat Oct 12 16:28:15 2019
-
-Received from server UNKNOWN on socket: 5
-	SERVERS,HEMMI,8.8.8.8,8888;
-
- | Sat Oct 12 16:28:27 2019
-
-Client connected to server on socket: 6
- | Sat Oct 12 16:28:36 2019
-
-Received from client on socket: 6
-	SENDMSG,HEMMI,HEY HEMMI
-
- | Sat Oct 12 16:28:58 2019
-
-Found a message for HEMMI who I am connected to and sent it:
-	HEY HEMMI
- | Sat Oct 12 16:28:58 2019
-
-Server connected to server on socket: 5
- | Sat Oct 12 16:31:28 2019
-
-SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
- | Sat Oct 12 16:31:28 2019
-
-Received from server UNKNOWN on socket: 5
-	SERVERS,HEMMI,8.8.8.8,8888;
-
- | Sat Oct 12 16:31:39 2019
-
-Client connected to server on socket: 6
- | Sat Oct 12 16:31:46 2019
-
-Received from client on socket: 6
-	SENDMSG,HEMMI,HEY HEMMI
-
- | Sat Oct 12 16:32:23 2019
-
-Received from client on socket: 6
-	SENDMSG,HEMMI,HEY ERTU VAKANDI
-
- | Sat Oct 12 16:32:51 2019
-
-Received from client on socket: 6
-	LISTMESSAGES
-
- | Sat Oct 12 16:32:58 2019
-
-Sent a list of 2 to client (truncated the list) 
- | Sat Oct 12 16:32:58 2019
-
-Found a message for HEMMI who I am connected to and sent it:
-	HEY HEMMI
- | Sat Oct 12 16:32:58 2019
-
-Received from client on socket: 6
-	LISTMESSAGES
-
- | Sat Oct 12 16:33:12 2019
-
-Sent a list of 2 to client (truncated the list) 
- | Sat Oct 12 16:33:12 2019
-
-Received from client on socket: 6
-	LISTMESSAGES
-
- | Sat Oct 12 16:33:17 2019
-
-Sent a list of 2 to client (truncated the list) 
- | Sat Oct 12 16:33:17 2019
-
-Received from client on socket: 6
-	SENDMSG,HEMMI,HEY HEY HEMMI
-
- | Sat Oct 12 16:33:55 2019
-
-Client connected to server on socket: 5
- | Sat Oct 12 16:35:16 2019
-
-Received from client on socket: 5
-	CONNECT,skel.ru.is,4007
-
- | Sat Oct 12 16:35:22 2019
-
-SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
- | Sat Oct 12 16:35:22 2019
-
-RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4007
- | Sat Oct 12 16:35:22 2019
-
-Sent SUCCESS back to client on successful connection | Sat Oct 12 16:35:22 2019
-
-Received from server UNKNOWN on socket: 6
-	LISTSERVERS,ORACLE
- | Sat Oct 12 16:35:22 2019
-
-SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
- | Sat Oct 12 16:35:22 2019
-
-Received from server UNKNOWN on socket: 6
-	SERVERS,ORACLE,130.208.243.61,4007;Instructor_4,130.208.243.61,4000;P3_GROUP_21,130.208.243.61,4074;P3_GROUP_72,192.168.1.18,5050;P3_GROUP_14,130.208.243.61,4050;P3_GROUP_39,172.26.183.56,4065;P3_GROUP_80,130.208.243.61,4077;P3_GROUP_77,10.3.36.143,6969;
- | Sat Oct 12 16:35:22 2019
-
-Received from client on socket: 5
-	LISTSERVERS
-
- | Sat Oct 12 16:35:34 2019
-
-SERVERS,ORACLE,130.208.243.61,4007; | SENT TO CLIENT
- | Sat Oct 12 16:35:34 2019
-
-Received from client on socket: 5
-	SENDMSG,ORACLE,HEY ORACLE
-
- | Sat Oct 12 16:35:53 2019
-
-Found a message for ORACLE who I am connected to and sent it:
-	HEY ORACLE
- | Sat Oct 12 16:35:53 2019
-
-Received from client on socket: 5
-	LISTMESSAGES
-
- | Sat Oct 12 16:36:55 2019
-
-Sent a list of 1 to client (truncated the list) 
- | Sat Oct 12 16:36:55 2019
-
-Received from client on socket: 5
-	DISCONNECT
-
- | Sat Oct 12 16:37:09 2019
-
-Client issued Disconnect command | Sat Oct 12 16:37:09 2019
-
-Client connected to server on socket: 5
- | Sat Oct 12 16:38:56 2019
-
-Received from client on socket: 5
-	CONNECT,skel.ru.is,4007
-
- | Sat Oct 12 16:39:04 2019
-
-SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
- | Sat Oct 12 16:39:04 2019
-
-RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4007
- | Sat Oct 12 16:39:04 2019
-
-Sent SUCCESS back to client on successful connection | Sat Oct 12 16:39:04 2019
-
-Received from server UNKNOWN on socket: 6
-	LISTSERVERS,ORACLE
- | Sat Oct 12 16:39:04 2019
-
-SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
- | Sat Oct 12 16:39:04 2019
-
-Received from server UNKNOWN on socket: 6
-	SERVERS,ORACLE,130.208.243.61,4007;Instructor_4,130.208.243.61,4000;P3_GROUP_21,130.208.243.61,4074;,130.208.243.61,-1;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_39,10.3.16.155,-1;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_77,10.3.36.143,6969;
- | Sat Oct 12 16:39:04 2019
-
-Received from client on socket: 5
-	SENDMSG,ORACLE,HEY ORACLE. DON YOU LIKE SEND_MSG FIRST HAND?
-
- | Sat Oct 12 16:39:19 2019
-
-Received from server ORACLE on socket: 6
-	GET_MSG,ORACLE
- | Sat Oct 12 16:39:19 2019
-
-SEND_MSG,P3_GROUP_77,ORACLE,HEY ORACLE. DON YOU LIKE SEND_MSG FIRST HAND? | SENT TO SERVER 
- | Sat Oct 12 16:39:19 2019
-
-Received from client on socket: 5
-	SENDMSG,ORACLE,SEND BACK SOMETHING?
-
- | Sat Oct 12 16:40:29 2019
-
-Received from server ORACLE on socket: 6
-	GET_MSG,ORACLE
- | Sat Oct 12 16:41:29 2019
-
-SEND_MSG,P3_GROUP_77,ORACLE,SEND BACK SOMETHING? | SENT TO SERVER 
- | Sat Oct 12 16:41:29 2019
 
 Received from client on socket: 5
 	LISTMESSAGES
@@ -1342,42 +1061,2643 @@ Received from client on socket: 5
 
 Sent a list of 3 to client (truncated the list) 
  | Sat Oct 12 16:56:45 2019
- | Sat Oct 12 16:41:32 2019
 
-Sent a list of 2 to client (truncated the list) 
- | Sat Oct 12 16:41:32 2019
+Client connected to server on socket: 5
+ | Sat Oct 12 17:02:03 2019
 
 Received from client on socket: 5
-	SENDMSG,HLUBBI,MEOW
+	CONNECT,skel.ru.is,4002
 
- | Sat Oct 12 16:41:49 2019
+ | Sat Oct 12 17:02:11 2019
+
+SERVERS,P3_GROUP_77,,4077; | SENT TO SERVER
+ | Sat Oct 12 17:02:11 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4002
+ | Sat Oct 12 17:02:11 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 17:02:11 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_72
+ | Sat Oct 12 17:02:11 2019
+
+SERVERS,P3_GROUP_77,,4077; | SENT TO SERVER
+ | Sat Oct 12 17:02:11 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_72,130.208.243.61,4002;,,0;
+ | Sat Oct 12 17:02:11 2019
+
+Received from server P3_GROUP_72 on socket: 6
+	LISTSERVERS,P3_GROUP_72
+ | Sat Oct 12 17:02:15 2019
+
+SERVERS,P3_GROUP_77,,4077;P3_GROUP_72,130.208.243.61,4002; | SENT TO SERVER
+ | Sat Oct 12 17:02:15 2019
+
+Received from server P3_GROUP_72 on socket: 6
+	LISTSERVERS,P3_GROUP_72
+ | Sat Oct 12 17:02:19 2019
+
+SERVERS,P3_GROUP_77,,4077;P3_GROUP_72,130.208.243.61,4002; | SENT TO SERVER
+ | Sat Oct 12 17:02:19 2019
+
+Received from server P3_GROUP_72 on socket: 6
+	LISTSERVERS,P3_GROUP_72
+ | Sat Oct 12 17:02:23 2019
+
+SERVERS,P3_GROUP_77,,4077;P3_GROUP_72,130.208.243.61,4002; | SENT TO SERVER
+ | Sat Oct 12 17:02:23 2019
+
+Received from server P3_GROUP_72 on socket: 6
+	LISTSERVERS,P3_GROUP_72
+ | Sat Oct 12 17:02:27 2019
+
+SERVERS,P3_GROUP_77,,4077;P3_GROUP_72,130.208.243.61,4002; | SENT TO SERVER
+ | Sat Oct 12 17:02:27 2019
+
+Received from server P3_GROUP_72 on socket: 6
+	LISTSERVERS,P3_GROUP_72
+ | Sat Oct 12 17:02:31 2019
+
+SERVERS,P3_GROUP_77,,4077;P3_GROUP_72,130.208.243.61,4002; | SENT TO SERVER
+ | Sat Oct 12 17:02:31 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 17:52:58 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 17:53:02 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sat Oct 12 17:53:02 2019
+
+Client connected to server on socket: 6
+ | Sat Oct 12 17:53:55 2019
+
+Server connected to server on socket: 6
+ | Sat Oct 12 17:53:55 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4077; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 17:53:55 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 17:54:05 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sat Oct 12 17:54:05 2019
+
+Server connected to server on socket: 6
+ | Sat Oct 12 17:56:21 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4077; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 17:56:21 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_Group_103,10.3.35.136,10000;P3_GROUP_77,130.208.243.61,4077;
+ | Sat Oct 12 17:56:21 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 17:56:25 2019
+
+SERVERS,P3_Group_103,10.3.35.136,10000; | SENT TO CLIENT
+ | Sat Oct 12 17:56:25 2019
+
+Received from server P3_Group_103 on socket: 6
+	LISTSERVERS,P3_Group_103
+ | Sat Oct 12 17:57:16 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4077;P3_Group_103,10.3.35.136,10000; | SENT TO SERVER
+ | Sat Oct 12 17:57:16 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_Group_103,Hello group 103 nice to socket you
+
+ | Sat Oct 12 17:57:30 2019
 
 Server connected to server on socket: 7
- | Sat Oct 12 16:41:56 2019
+ | Sat Oct 12 18:02:18 2019
 
-SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
- | Sat Oct 12 16:41:56 2019
+SERVERS,P3_GROUP_77,130.208.243.61,4077; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 18:02:18 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 18:02:20 2019
+
+SERVERS,P3_Group_103,10.3.35.136,10000; | SENT TO CLIENT
+ | Sat Oct 12 18:02:20 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 18:02:25 2019
+
+SERVERS,P3_Group_103,10.3.35.136,10000; | SENT TO CLIENT
+ | Sat Oct 12 18:02:25 2019
+
+Server connected to server on socket: 7
+ | Sat Oct 12 18:02:57 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4077; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 18:02:57 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 18:03:03 2019
+
+SERVERS,P3_Group_103,10.3.35.136,10000; | SENT TO CLIENT
+ | Sat Oct 12 18:03:03 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 18:13:01 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sat Oct 12 18:13:01 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4050
+
+ | Sat Oct 12 18:13:24 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4077; | SENT TO SERVER
+ | Sat Oct 12 18:13:24 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4050
+ | Sat Oct 12 18:13:24 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 18:13:24 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 18:13:34 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sat Oct 12 18:13:34 2019
+
+Server connected to server on socket: 7
+ | Sat Oct 12 18:20:41 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4077; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 18:20:41 2019
 
 Received from server UNKNOWN on socket: 7
-	GET_MSG,HLUBBI
+	LISTSERVERS,P3_GROUP_13
+ | Sat Oct 12 18:20:41 2019
 
- | Sat Oct 12 16:42:00 2019
-
-Received from server UNKNOWN on socket: 7
-	GET_MSG,ORACLE
-
- | Sat Oct 12 16:42:13 2019
+SERVERS,P3_GROUP_77,130.208.243.61,4077; | SENT TO SERVER
+ | Sat Oct 12 18:20:41 2019
 
 Received from server UNKNOWN on socket: 7
-	SERVERS,HLUBBI,8.8.8.8,8888;
+	SERVERS,P3_GROUP_13,130.208.243.61,4013;P3_GROUP_16,130.208.243.61,4034;P3_GROUP_77,130.208.243.61,4077;
+ | Sat Oct 12 18:20:41 2019
 
- | Sat Oct 12 16:42:27 2019
+Received from server P3_GROUP_13 on socket: 7
+	KEEPALIVE,1
+ | Sat Oct 12 18:21:41 2019
 
-Received from server HLUBBI on socket: 7
-	GET_MSG,HLUBBI
+Client connected to server on socket: 5
+ | Sat Oct 12 18:28:07 2019
 
- | Sat Oct 12 16:42:32 2019
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4007
 
-SEND_MSG,P3_GROUP_77,HLUBBI,MEOW | SENT TO SERVER 
- | Sat Oct 12 16:42:32 2019
+ | Sat Oct 12 18:28:11 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4077; | SENT TO SERVER
+ | Sat Oct 12 18:28:11 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4007
+ | Sat Oct 12 18:28:11 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 18:28:11 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_17
+ | Sat Oct 12 18:28:11 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4077; | SENT TO SERVER
+ | Sat Oct 12 18:28:11 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_17,130.208.243.61,4007;Instructor_4,130.208.243.61,4000;P3_GROUP_39,10.3.16.155,4065;P3_GROUP_99,130.208.243.61,4044;P3_GROUP_99,130.208.243.61,4046;P3_GROUP_77,130.208.243.61,4077;
+ | Sat Oct 12 18:28:11 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 18:28:15 2019
+
+SERVERS,P3_GROUP_17,130.208.243.61,4007; | SENT TO CLIENT
+ | Sat Oct 12 18:28:15 2019
+
+Received from server P3_GROUP_17 on socket: 6
+	KEEPALIVE,0
+ | Sat Oct 12 18:28:21 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_17,HELLO THERE GROUP 17
+
+ | Sat Oct 12 18:28:33 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sat Oct 12 18:28:41 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sat Oct 12 18:28:41 2019
+
+Received from server P3_GROUP_17 on socket: 6
+	KEEPALIVE,0
+ | Sat Oct 12 18:29:21 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sat Oct 12 18:29:30 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sat Oct 12 18:29:30 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sat Oct 12 18:29:44 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sat Oct 12 18:29:44 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sat Oct 12 18:30:22 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sat Oct 12 18:30:22 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4000
+
+ | Sat Oct 12 18:30:57 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4077; | SENT TO SERVER
+ | Sat Oct 12 18:30:57 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4000
+ | Sat Oct 12 18:30:57 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 18:30:57 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,Instructor_4
+ | Sat Oct 12 18:30:57 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4077; | SENT TO SERVER
+ | Sat Oct 12 18:30:57 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,Instructor_4,130.208.243.61,4000;Instructor_4,130.208.243.61,4000;Instructor_4,130.208.243.61,4000;P3_GROUP_69,192.168.2.118,5000;P3_GROUP_99,130.208.243.61,4044;P3_GROUP_99,130.208.243.61,4044;P3_GROUP_99,130.208.243.61,4044;P3_GROUP_99,130.208.243.61,4044;P3_GROUP_99,130.208.243.61,4044;P3_GROUP_69,192.168.2.117,5000;P3_GROUP_99,130.208.243.61,4044;P3_GROUP_99,130.208.243.61,4044;P3_GROUP_7,130.208.243.61,-1;P3_GROUP_99,130.208.243.61,4044;P3_GROUP_7,130.208.243.61,-1;P3_GROUP_99,130.208.243.61,4046;tsamp_p3_group19,10.0.3.15,10000;,127.0.0.1,-1;,10.3.27.160,-1;P3_GROUP_99,130.208.243.61,4037;P3_GROUP_39,10.3.16.155,4065;P3_GROUP_69,130.208.243.61,4069;P3_GROUP_39,172.26.183.56,4065;P3_GROUP_74,130.208.243.61,4010;P3_GROUP_77,130.208.243.61,4077;
+ | Sat Oct 12 18:30:57 2019
+
+Received from server Instructor_4 on socket: 6
+	SEND_MSG,ORACLE,P3_GROUP_77,
+
+“Most of you are familiar with the virtues of a programmer.  There are three, of course: 
+ laziness, impatience, and hubris.”
+ Larry Wall 
+ | Sat Oct 12 18:31:57 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4037
+
+ | Sat Oct 12 18:32:51 2019
+
+Sent FAIL back to client on unsuccessful connection attempt | Sat Oct 12 18:32:51 2019
+
+Received from server Instructor_4 on socket: 6
+	SEND_MSG,ORACLE,P3_GROUP_77,
+
+“Most of you are familiar with the virtues of a programmer.  There are three, of course: 
+ laziness, impatience, and hubris.”
+ Larry Wall 
+ | Sat Oct 12 18:32:51 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4065
+
+ | Sat Oct 12 18:33:05 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4077; | SENT TO SERVER
+ | Sat Oct 12 18:33:05 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4065
+ | Sat Oct 12 18:33:05 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 18:33:05 2019
+
+Received from server UNKNOWN on socket: 8
+	LISTSERVERS,P3_GROUP_39
+ | Sat Oct 12 18:33:05 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4077;Instructor_4,130.208.243.61,4000; | SENT TO SERVER
+ | Sat Oct 12 18:33:05 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 18:33:08 2019
+
+SERVERS,Instructor_4,130.208.243.61,4000; | SENT TO CLIENT
+ | Sat Oct 12 18:33:08 2019
+
+Received from server UNKNOWN on socket: 8
+	KEEPALIVE,0
+ | Sat Oct 12 18:33:11 2019
+
+Received from client on socket: 5
+	SENDMSG,Instructor_4,HELLO
+
+ | Sat Oct 12 18:33:26 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4069
+
+ | Sat Oct 12 18:33:48 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4077; | SENT TO SERVER
+ | Sat Oct 12 18:33:48 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4069
+ | Sat Oct 12 18:33:48 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 18:33:48 2019
+
+Received from server UNKNOWN on socket: 8
+	LISTSERVERS,P3_GROUP_69SERVERS,P3_GROUP_69,130.208.243.61,4069;Instructor_1,130.208.243.61,4029;Instructor_1,130.208.243.61,4029;Instructor_4,130.208.243.61,4000;P3_GROUP_77,130.208.243.61,4077;
+ | Sat Oct 12 18:33:48 2019
+
+Someone sent LISTSERVERS with too many arguments! | Sat Oct 12 18:33:48 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 18:33:56 2019
+
+SERVERS,Instructor_4,130.208.243.61,4000; | SENT TO CLIENT
+ | Sat Oct 12 18:33:56 2019
+
+Received from server Instructor_4 on socket: 6
+	GET_MSG,Instructor_4
+ | Sat Oct 12 18:33:56 2019
+
+SEND_MSG,P3_GROUP_77,Instructor_4,HELLO | SENT TO SERVER 
+ | Sat Oct 12 18:33:56 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sat Oct 12 18:34:27 2019
+
+Sent a list of 4 to client (truncated the list) 
+ | Sat Oct 12 18:34:27 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 18:35:05 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 18:35:07 2019
+
+SERVERS,Instructor_4,130.208.243.61,4000; | SENT TO CLIENT
+ | Sat Oct 12 18:35:07 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 18:35:17 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4000
+
+ | Sat Oct 12 18:35:32 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4077; | SENT TO SERVER
+ | Sat Oct 12 18:35:32 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4000
+ | Sat Oct 12 18:35:32 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 18:35:32 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,Instructor_4
+ | Sat Oct 12 18:35:32 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4077; | SENT TO SERVER
+ | Sat Oct 12 18:35:32 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,Instructor_4,130.208.243.61,4000;Instructor_4,130.208.243.61,4000;Instructor_4,130.208.243.61,4000;P3_GROUP_69,192.168.2.118,5000;P3_GROUP_99,130.208.243.61,4044;P3_GROUP_99,130.208.243.61,4044;P3_GROUP_99,130.208.243.61,4044;P3_GROUP_99,130.208.243.61,4044;P3_GROUP_99,130.208.243.61,4044;P3_GROUP_69,192.168.2.117,5000;P3_GROUP_99,130.208.243.61,4044;P3_GROUP_99,130.208.243.61,4044;P3_GROUP_7,130.208.243.61,-1;P3_GROUP_99,130.208.243.61,4044;P3_GROUP_7,130.208.243.61,-1;P3_GROUP_99,130.208.243.61,4046;tsamp_p3_group19,10.0.3.15,10000;,127.0.0.1,-1;,10.3.27.160,-1;P3_GROUP_99,130.208.243.61,4037;P3_GROUP_39,10.3.16.155,4065;P3_GROUP_69,130.208.243.61,4069;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_39,130.208.243.61,4065;P3_GROUP_99,130.208.243.61,4037;P3_GROUP_99,130.208.243.61,4011;P3_GROUP_80,130.208.243.61,4076;P3_GROUP_75,130.208.243.61,4040;P3_GROUP_77,130.208.243.61,4077;
+ | Sat Oct 12 18:35:32 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4040
+
+ | Sat Oct 12 18:35:47 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4077; | SENT TO SERVER
+ | Sat Oct 12 18:35:47 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4040
+ | Sat Oct 12 18:35:47 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 18:35:47 2019
+
+Received from server UNKNOWN on socket: 7
+	LISTSERVERS,P3_GROUP_75
+ | Sat Oct 12 18:35:47 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4077;Instructor_4,130.208.243.61,4000; | SENT TO SERVER
+ | Sat Oct 12 18:35:47 2019
+
+Received from server Instructor_4 on socket: 6
+	SEND_MSG,ORACLE,P3_GROUP_77,
+
+“In the future, computers may weigh no more than 1.5 tonnes.”
+— Popular mechanics, 1949 
+ | Sat Oct 12 18:35:47 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 18:35:55 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sat Oct 12 18:35:55 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 13:53:05 2019
+
+Received from client on socket: 5
+	CONNECT,heimi.li,6969
+
+ | Sun Oct 13 13:53:11 2019
+
+SERVERS,P3_GROUP_77_SKEL,130.208.243.61,4078; | SENT TO SERVER
+ | Sun Oct 13 13:53:11 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: heimi.li:6969
+ | Sun Oct 13 13:53:11 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 13:53:11 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_77_HEIMILI,167.71.136.174,6969;
+ | Sun Oct 13 13:53:11 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 6
+	LISTSERVERS,P3_GROUP_77_HEIMILI
+ | Sun Oct 13 13:53:11 2019
+
+SERVERS,P3_GROUP_77_SKEL,130.208.243.61,4078;P3_GROUP_77_HEIMILI,167.71.136.174,6969; | SENT TO SERVER
+ | Sun Oct 13 13:53:11 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 6
+	SERVERS,P3_GROUP_77_HEIMILI,167.71.136.174,6969;P3_GROUP_77_SKEL,130.208.243.61,4078;
+ | Sun Oct 13 13:53:11 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 13:53:15 2019
+
+SERVERS,P3_GROUP_77_HEIMILI,167.71.136.174,6969; | SENT TO CLIENT
+ | Sun Oct 13 13:53:15 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_77_HEIMILI,Hello,heimili, how are you doing?
+
+ | Sun Oct 13 13:53:47 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 6
+	GET_MSG,P3_GROUP_77_HEIMILI
+ | Sun Oct 13 13:53:47 2019
+
+SEND_MSG,P3_GROUP_77_SKEL,P3_GROUP_77_HEIMILI,Hello,heimili, how are you doing? | SENT TO SERVER 
+ | Sun Oct 13 13:53:47 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 13:53:49 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sun Oct 13 13:53:49 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 6
+	KEEPALIVE,0
+
+ | Sun Oct 13 13:54:11 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 6
+	KEEPALIVE,0
+
+ | Sun Oct 13 13:55:29 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 13:56:49 2019
+
+Client connected to server on socket: 6
+ | Sun Oct 13 13:56:57 2019
+
+Received from client on socket: 6
+	CMD,,V_GRP_36,ID
+ | Sun Oct 13 13:56:57 2019
+
+Received from client on socket: 5
+	CONNECT,heimi.li,6969
+
+ | Sun Oct 13 13:57:02 2019
+
+SERVERS,P3_GROUP_77_SKEL,130.208.243.61,4078; | SENT TO SERVER
+ | Sun Oct 13 13:57:02 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: heimi.li:6969
+ | Sun Oct 13 13:57:02 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 13:57:02 2019
+
+Received from server UNKNOWN on socket: 7
+	SERVERS,P3_GROUP_77_HEIMILI,167.71.136.174,6969;
+ | Sun Oct 13 13:57:02 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 7
+	LISTSERVERS,P3_GROUP_77_HEIMILI
+ | Sun Oct 13 13:57:02 2019
+
+SERVERS,P3_GROUP_77_SKEL,130.208.243.61,4078;P3_GROUP_77_HEIMILI,167.71.136.174,6969; | SENT TO SERVER
+ | Sun Oct 13 13:57:02 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 7
+	SERVERS,P3_GROUP_77_HEIMILI,167.71.136.174,6969;P3_GROUP_77_SKEL,130.208.243.61,4078;
+ | Sun Oct 13 13:57:02 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 13:57:06 2019
+
+SERVERS,P3_GROUP_77_HEIMILI,167.71.136.174,6969; | SENT TO CLIENT
+ | Sun Oct 13 13:57:06 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_77_HEIMILI,Hello, heimili. How are you doing?
+
+ | Sun Oct 13 13:57:34 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 13:57:38 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sun Oct 13 13:57:38 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 7
+	GET_MSG,P3_GROUP_77_HEIMILI
+ | Sun Oct 13 13:57:38 2019
+
+SEND_MSG,P3_GROUP_77_SKEL,P3_GROUP_77_HEIMILI,Hello, heimili. How are you doing? | SENT TO SERVER 
+ | Sun Oct 13 13:57:38 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 13:58:18 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sun Oct 13 13:58:18 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 13:58:46 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sun Oct 13 13:58:46 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 7
+	KEEPALIVE,1
+
+ | Sun Oct 13 13:58:46 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 7
+	SEND_MSG,P3_GROUP_77_HEIMILI,P3_GROUP_77_SKEL,Hello there
+ | Sun Oct 13 13:58:46 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 13:59:21 2019
+
+Sent a list of 2 to client (truncated the list) 
+ | Sun Oct 13 13:59:21 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77_SKEL
+
+ | Sun Oct 13 13:59:51 2019
+
+Following message sent to client: Hello there, | Sun Oct 13 13:59:51 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 7
+	KEEPALIVE,0
+
+ | Sun Oct 13 13:59:51 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 7
+	KEEPALIVE,0
+
+ | Sun Oct 13 14:01:05 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 14:01:53 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 14:02:07 2019
+
+SERVERS,P3_GROUP_77_HEIMILI,167.71.136.174,6969; | SENT TO CLIENT
+ | Sun Oct 13 14:02:07 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 7
+	KEEPALIVE,0
+
+ | Sun Oct 13 14:02:07 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_77_HEIMILI,ehehehehe
+
+ | Sun Oct 13 14:02:21 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 14:02:26 2019
+
+Sent a list of 3 to client (truncated the list) 
+ | Sun Oct 13 14:02:26 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 7
+	KEEPALIVE,0
+
+ | Sun Oct 13 14:03:13 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 7
+	GET_MSG,P3_GROUP_77_HEIMILI
+ | Sun Oct 13 14:03:13 2019
+
+SEND_MSG,P3_GROUP_77_SKEL,P3_GROUP_77_HEIMILI,ehehehehe | SENT TO SERVER 
+ | Sun Oct 13 14:03:13 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 14:03:56 2019
+
+Received from client on socket: 5
+	CONNECT,heimi.li,6969
+
+ | Sun Oct 13 14:04:49 2019
+
+SERVERS,P3_GROUP_77_SKEL,130.208.243.61,4078; | SENT TO SERVER
+ | Sun Oct 13 14:04:49 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: heimi.li:6969
+ | Sun Oct 13 14:04:49 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 14:04:49 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_77_HEIMILI,167.71.136.174,6969;
+ | Sun Oct 13 14:04:49 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 6
+	LISTSERVERS,P3_GROUP_77_HEIMILI
+ | Sun Oct 13 14:04:49 2019
+
+SERVERS,P3_GROUP_77_SKEL,130.208.243.61,4078;P3_GROUP_77_HEIMILI,167.71.136.174,6969; | SENT TO SERVER
+ | Sun Oct 13 14:04:49 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 6
+	SERVERS,P3_GROUP_77_HEIMILI,167.71.136.174,6969;P3_GROUP_77_SKEL,130.208.243.61,4078;
+ | Sun Oct 13 14:04:49 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 14:04:53 2019
+
+SERVERS,P3_GROUP_77_HEIMILI,167.71.136.174,6969; | SENT TO CLIENT
+ | Sun Oct 13 14:04:53 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_77_HEIMILI,Hello, there. How are you doing?
+
+ | Sun Oct 13 14:05:28 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 14:05:36 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sun Oct 13 14:05:36 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 6
+	KEEPALIVE,0
+
+ | Sun Oct 13 14:06:17 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 6
+	GET_MSG,P3_GROUP_77_HEIMILI
+ | Sun Oct 13 14:06:17 2019
+
+SEND_MSG,P3_GROUP_77_SKEL,P3_GROUP_77_HEIMILI,Hello, there. How are you doing? | SENT TO SERVER 
+ | Sun Oct 13 14:06:17 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 14:07:25 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sun Oct 13 14:07:25 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 6
+	KEEPALIVE,0
+
+ | Sun Oct 13 14:07:25 2019
+
+Received from client on socket: 5
+	DISCONNECT
+
+ | Sun Oct 13 14:07:28 2019
+
+Client issued Disconnect command | Sun Oct 13 14:07:28 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 6
+	KEEPALIVE,0
+
+ | Sun Oct 13 14:08:28 2019
+
+Server connected to server on socket: 5
+ | Sun Oct 13 14:08:58 2019
+
+SERVERS,P3_GROUP_77_SKEL,130.208.243.61,4078; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 14:08:58 2019
+
+Received from server UNKNOWN on socket: 5
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 14:08:58 2019
+
+SERVERS,P3_GROUP_77_SKEL,130.208.243.61,4078;P3_GROUP_77_HEIMILI,167.71.136.174,6969; | SENT TO SERVER
+ | Sun Oct 13 14:08:58 2019
+
+Received from server UNKNOWN on socket: 5
+	SERVERS,P3_GROUP_27,130.208.243.61,4028;P3_GROUP_77_SKEL,130.208.243.61,4078;
+ | Sun Oct 13 14:08:58 2019
+
+Received from server P3_GROUP_27 on socket: 5
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 14:08:58 2019
+
+SERVERS,P3_GROUP_77_SKEL,130.208.243.61,4078;P3_GROUP_27,130.208.243.61,4028;P3_GROUP_77_HEIMILI,167.71.136.174,6969; | SENT TO SERVER
+ | Sun Oct 13 14:08:58 2019
+
+Received from server P3_GROUP_27 on socket: 5
+	GET_MSG,P3_GROUP_27
+ | Sun Oct 13 14:09:59 2019
+
+Received from server P3_GROUP_77_HEIMILI on socket: 6
+	KEEPALIVE,0
+
+ | Sun Oct 13 14:09:59 2019
+
+Received from server P3_GROUP_27 on socket: 5
+	KEEPALIVE,1
+ | Sun Oct 13 14:10:06 2019
+
+Received from server P3_GROUP_27 on socket: 5
+	SEND_MSG,P3_GROUP_27,P3_GROUP_77_SKEL,HELLO
+ | Sun Oct 13 14:10:06 2019
+
+Received from server P3_GROUP_27 on socket: 5
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 14:10:36 2019
+
+SERVERS,P3_GROUP_77_SKEL,130.208.243.61,4078;P3_GROUP_27,130.208.243.61,4028;P3_GROUP_77_HEIMILI,167.71.136.174,6969; | SENT TO SERVER
+ | Sun Oct 13 14:10:36 2019
+
+Received from server P3_GROUP_27 on socket: 5
+	KEEPALIVE,0
+ | Sun Oct 13 14:11:06 2019
+
+Received from server P3_GROUP_27 on socket: 5
+	GET_MSG,P3_GROUP_27
+ | Sun Oct 13 14:11:06 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 14:28:26 2019
+
+Received from client on socket: 5
+	CONNECT,172.83.9.61,4040
+
+ | Sun Oct 13 14:29:06 2019
+
+SERVERS,P3_GROUP_77_SKEL,130.208.243.61,4022; | SENT TO SERVER
+ | Sun Oct 13 14:29:06 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: 172.83.9.61:4040
+ | Sun Oct 13 14:29:06 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 14:29:06 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_75
+ | Sun Oct 13 14:29:06 2019
+
+SERVERS,P3_GROUP_77_SKEL,130.208.243.61,4022; | SENT TO SERVER
+ | Sun Oct 13 14:29:06 2019
+
+Received from server UNKNOWN on socket: 6
+	SEND_MSG,P3_GROUP_75,UNKOWNGROUP,Welcome to the party server!
+ | Sun Oct 13 14:29:06 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_75,10.64.39.149,4040;P3_GROUP_77_SKEL,130.208.243.61,20624;
+ | Sun Oct 13 14:29:06 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 14:29:14 2019
+
+SERVERS,P3_GROUP_75,10.64.39.149,4040; | SENT TO CLIENT
+ | Sun Oct 13 14:29:14 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 14:29:21 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sun Oct 13 14:29:21 2019
+
+Received from client on socket: 5
+	GETMSG,UNKOWNGROUP
+
+ | Sun Oct 13 14:30:00 2019
+
+Following message sent to client: Welcome to the party server!, | Sun Oct 13 14:30:00 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_75,Thanks for the party, dudes!
+
+ | Sun Oct 13 14:30:16 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 14:30:28 2019
+
+Sent a list of 2 to client (truncated the list) 
+ | Sun Oct 13 14:30:28 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 14:30:36 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sun Oct 13 14:30:36 2019
+
+Received from client on socket: 5
+	CONNECT,172.83.9.61
+
+ | Sun Oct 13 14:30:55 2019
+
+Received from client on socket: 5
+	CONNECT,172.83.9.61,4040
+
+ | Sun Oct 13 14:31:01 2019
+
+SERVERS,P3_GROUP_77_SKEL,130.208.243.61,4022; | SENT TO SERVER
+ | Sun Oct 13 14:31:01 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: 172.83.9.61:4040
+ | Sun Oct 13 14:31:01 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 14:31:01 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_75
+ | Sun Oct 13 14:31:01 2019
+
+SERVERS,P3_GROUP_77_SKEL,130.208.243.61,4022; | SENT TO SERVER
+ | Sun Oct 13 14:31:01 2019
+
+Received from server UNKNOWN on socket: 6
+	SEND_MSG,P3_GROUP_75,UNKOWNGROUP,Welcome to the party server!
+ | Sun Oct 13 14:31:02 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_75,10.64.39.149,4040;P3_GROUP_77_SKEL,130.208.243.61,42640;
+ | Sun Oct 13 14:31:02 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_75,HELLO
+
+ | Sun Oct 13 14:31:10 2019
+
+Received from server P3_GROUP_75 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 14:32:02 2019
+
+Received from server P3_GROUP_75 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 14:33:03 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 14:33:56 2019
+
+Received from client on socket: 5
+	CONNECT,172.83.9.61,4040
+
+ | Sun Oct 13 14:34:07 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4022; | SENT TO SERVER
+ | Sun Oct 13 14:34:07 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: 172.83.9.61:4040
+ | Sun Oct 13 14:34:07 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 14:34:07 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_75
+ | Sun Oct 13 14:34:07 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4022; | SENT TO SERVER
+ | Sun Oct 13 14:34:07 2019
+
+Received from server UNKNOWN on socket: 6
+	SEND_MSG,P3_GROUP_75,UNKOWNGROUP,Welcome to the party server!ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:07 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:07 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:07 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:07 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:07 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:07 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:07 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:07 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:07 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:07 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:07 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:07 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:07 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:08 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:08 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:09 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:09 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:10 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:10 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:11 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:11 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:11 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:11 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:11 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:11 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:11 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:11 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:11 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:11 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:11 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:11 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:11 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:11 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:11 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:11 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:11 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:11 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:11 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:11 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:11 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:11 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:11 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:11 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:11 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:11 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:11 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:11 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:11 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:11 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:11 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:11 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:12 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:12 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:13 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:13 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:14 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:14 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:15 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:15 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:16 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:16 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:17 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:17 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:18 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:18 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:19 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:19 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Received from server UNKNOWN on socket: 6
+	ERROR,Sorry I don't recognize that command
+ | Sun Oct 13 14:34:20 2019
+
+Sent INVALID COMMAND back to server | Sun Oct 13 14:34:20 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 14:34:39 2019
 
