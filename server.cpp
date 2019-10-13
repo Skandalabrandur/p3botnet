@@ -79,6 +79,8 @@ std::map<int, Client*> clients;     // Lookup table for per Client information
 std::map<int, Server*> servers;   // Lookup table for connected servers
 
 
+// We are using boost to create a circular buffer object
+// we define the type and then initialize it below
 typedef boost::circular_buffer<s_message> circular_buffer;
 circular_buffer message_buffer{500};
 
@@ -161,6 +163,11 @@ void closeClient(int clientSocket, fd_set *openSockets, int *maxfds)
     FD_CLR(clientSocket, openSockets);
 }
 
+// Takes in address and port to the server and connects to it
+// It requires the openSockets and maxfds to manage socket file descriptors
+// It lastly requires our own port because we pre-emptively send a SERVERS response with
+// our server so that if other servers fail to ask for LISTSERVERS they will still receive
+// information about us
 int connectToServer(char *address, char *port, char *our_port, fd_set *openSockets, int *maxfds) {
 
     // Stolen from client.cpp
@@ -181,8 +188,6 @@ int connectToServer(char *address, char *port, char *our_port, fd_set *openSocke
     }
 
     serverSocket = socket(svr->ai_family, svr->ai_socktype, svr->ai_protocol);
-
-
 
     // Turn on SO_REUSEADDR to allow socket to be quickly reused after
     // program exit.
@@ -227,7 +232,13 @@ int connectToServer(char *address, char *port, char *our_port, fd_set *openSocke
     return serverSocket;
 }
 
+// The main function has a timeout via the chronos construct
+// that waits at least 60 seconds between timedTasks calls
+// The select timeout is set to 1 second so that this time constraint
+// is checked every second
 void timedTasks() {
+    // For all servers who have announced their group_id
+    // check if they have any messages and send the corresponding KEEPALIVE
     for(auto const& p : servers) {
         if (strcmp(p.second->group_id.c_str(), "UNKNOWN") == 0) {
             continue;
@@ -240,6 +251,7 @@ void timedTasks() {
                 unread_messages += 1;
             }
         }
+        // Construct and send the KEEPALIVE message
         std::ostringstream ka_msg;
         ka_msg << "KEEPALIVE," << unread_messages << std::endl;
         std::string ka = constructMessage(ka_msg.str());
@@ -247,6 +259,7 @@ void timedTasks() {
     }
 }
 
+// erases the server from the opensockets and the servers map
 void closeServer(int serverSocket, fd_set *openSockets, int *maxfds) {
     servers.erase(serverSocket);
 
@@ -275,22 +288,27 @@ int clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
         return 0;
     }
 
+    // Split the incoming buffer by commas and newlines
     std::vector<std::string> strs;
     boost::split(strs,msg,boost::is_any_of(",\n"));
     strs.pop_back();    //drop the newline
 
 
+    // If any tokens are received
     if(strs.size() > 0) {
         std::ostringstream msgFromClient;
         msgFromClient << "Received from client on socket: ";
         msgFromClient << clientSocket << "\n\t" << msg << std::endl;
         writeToLog(msgFromClient.str());
 
-        //Issue a connect command to server
+        //Issued a connect command to server
         if(strs[0] == "CONNECT") {
             if(strs.size() == 3) {
+                // Connect to the server using the parameters from the CONNECT command
                 int newServerSock = connectToServer((char *) strs[1].c_str(), 
                         (char *) strs[2].c_str(), our_port,  openSockets, maxfds);
+
+                // If connection is successful
                 if(newServerSock != -1) {
                     writeToLog("Sent SUCCESS back to client on successful connection");
                     send(clientSocket, "SUCCESS", 7, 0);
@@ -307,6 +325,9 @@ int clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
                 }
             }
         } else if(strs[0] == "DISCONNECT") {
+            // Returning -1 is used in a check inside an iterator
+            // for the clients. The clientsocket is pushed onto 
+            // vector that is later used to disconnect
             writeToLog("Client issued Disconnect command");
             return -1;
         } else if(strs[0] == "GETMSG") {
@@ -314,8 +335,11 @@ int clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
                 std::cout << "Received GETMSG command" << std::endl;
                 std::cout << "ARGUMENT: " << strs[1] << std::endl;
 
+                // Predefine error message. Overwritten if something is found
                 std::string gotten_message = "No message found. Take heed that group_id is case sensitive and doesn't trim spaces";
 
+                // Go through the message buffer and find the first occurrence
+                // of an unread message for the group id
                 for(unsigned long int i = 0; i < message_buffer.size(); i++) {
                     s_message tmp_msg = message_buffer[i];
                     if(strcmp(tmp_msg.receiver.c_str(), strs[1].c_str()) == 0
@@ -350,8 +374,8 @@ int clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
                 for(long unsigned int i = 2; i < strs.size() - 1; i++) {
                     new_msg << strs[i] << ",";
                 }
-
                 new_msg << strs[strs.size() - 1];
+
                 new_msg_struct.msg = new_msg.str();
                 new_msg_struct.sender = MYGROUP;  // Who is client? He is us!
                 new_msg_struct.receiver = strs[1];
@@ -368,8 +392,10 @@ int clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
             std::string myIp = getOwnIp();
             std::ostringstream response;
 
+            // Send our information
             response << "SERVERS,"; //<< MYGROUP << "," << myIp << "," << ";";
 
+            // Sends back valid connected servers, those who have a valid port and a valid group_id
             for(auto const& p : servers) {
                 if(strcmp(p.second->group_id.c_str(), "UNKNOWN") != 0 && p.second->port != -1) {
                     response << p.second->group_id << ",";
@@ -386,6 +412,9 @@ int clientCommand(int clientSocket, fd_set *openSockets, int *maxfds,
         } else if(boost::contains(strs[0], (std::string) "LISTMESSAGES")) {
             std::ostringstream messages;
             int howManyMessages = 0;
+
+            // Iterate through all messages and show them
+            // Mainly used as a debug command
             for(unsigned long int i = 0; i < message_buffer.size(); i++) {
                 s_message tmp_msg = message_buffer[i];
                 messages << "Sender: \t" << tmp_msg.sender << std::endl;
@@ -416,14 +445,17 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
         char *buffer, char *serverListenPort) {
     std::string msg = extractMessage((std::string) buffer);
 
+    // If message is of an invalid length, then do nothing
     if(msg.length() == 0) {
         return;
     }
 
+    // Split the message by commas
     std::vector<std::string> strs;
     boost::split(strs,msg,boost::is_any_of(","));
 
 
+    // If there are tokens to process then
     if(strs.size() > 0) {
         std::ostringstream msgFromServer;
         msgFromServer << "Received from server " << servers[serverSocket]->group_id;
@@ -434,11 +466,13 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
             if(strs.size() == 2) {
 
                 std::string myIp = getOwnIp();
-
                 std::ostringstream response;
 
+                // Send information about our own server
                 response << "SERVERS," << MYGROUP << "," << myIp << "," << serverListenPort << ";";
 
+                // Send information about all valid servers connected to our server
+                // those who have a valid port and a valid group_id
                 for(auto const& p : servers) {
                     if(strcmp(p.second->group_id.c_str(), "UNKNOWN") != 0 && p.second->port != -1) {
                         response << p.second->group_id << ",";
@@ -461,10 +495,13 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                 send(serverSocket, ls_msg.c_str(), ls_msg.length(), 0);
             }
         } else if (strs[0] == "SERVERS") {
+            // split incoming servers message by ;'s
             std::vector<std::string> server_infos;
             boost::split(server_infos,msg,boost::is_any_of(";"));
 
             // Initial server we are already connected to
+            // We update the information relevant to us
+            // To be implemented: Iterate through the remainder and automatically connect
             if(server_infos.size() > 0) {
                 std::vector<std::string> server_info;
                 boost::split(server_info,server_infos[0],boost::is_any_of(",\n"));
@@ -477,13 +514,17 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
             }
 
         } else if (strs[0] == "KEEPALIVE") {
+            // Erase newlines from the second token, if they are present
             strs[1].erase(std::remove(strs[1].begin(), 
                             strs[1].end(), '\n'), strs[1].end());
 
             std::cout << "Received KEEPALIVE command" << std::endl;
 
+            // Convert the number of messages argument to an integer
             int numOfMessages = atoi(strs[1].c_str());
 
+            // Get ONE message at a time from each server if they have something for us
+            // prevents spam
             if(numOfMessages > 0) {
                 std::ostringstream response;
                 response << "GET_MSG," << MYGROUP;
@@ -491,19 +532,23 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                 response << " | SENT TO SERVER FROM KEEPALIVE,(num greater than 0)" << std::endl;
                 send(serverSocket, response_msg.c_str(), response_msg.length(), 0);
             }
-
         } else if (strs[0] == "GET_MSG") {
             if(strs.size() == 2) {
                 std::cout << "Received GET_MSG command with GROUP_ID: " << strs[1] << std::endl;
+
+                // Erase newlines from the last argument if it is present
                 strs[1].erase(std::remove(strs[1].begin(), 
                             strs[1].end(), '\n'), strs[1].end());
+
+                // Find a server with a matching group id
                 for(auto const& p: servers) {
                     if(strcmp(p.second->group_id.c_str(), strs[1].c_str()) == 0) {
-                        std::cout << "THE GROUP ID IS MATHCING" << std::endl;
                         std::ostringstream gm;
-
                         std::string gotten_message = "";
 
+                        // Go through the message_buffer. If a message that is unread
+                        // is found for this GROUP_ID in the request, it is sent back
+                        // in a correct SEND_MSG format to the requesting server
                         for(unsigned long int i = 0; i < message_buffer.size(); i++) {
                             s_message tmp_msg = message_buffer[i];
                             if(strcmp(tmp_msg.receiver.c_str(), strs[1].c_str()) == 0
@@ -528,6 +573,8 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                 s_message new_msg_struct;
                 std::ostringstream new_msg;
 
+                // Rejoin our tokens on commas to rebuild the 
+                // message, if necessary
                 for(long unsigned int i = 3; i < strs.size() - 1; i++) {
                     new_msg << strs[i] << ",";
                 }
@@ -540,13 +587,12 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                     new_msg_struct.unread = true;
                     message_buffer.push_back(new_msg_struct);
                 }
-            } else {
-                //TODO more than 1-hop discovery
-            }
         } else if (strs[0] == "LEAVE") {
             std::cout << "Received LEAVE command" << std::endl;
             if(strs.size() == 3) {
                 int closedServer = -1;
+                // Go through the servers and stage it for a disconnect
+                // if it is found
                 for(auto const& p: servers) {
                     // If address and port are found in the servers structure
                     if(strcmp(p.second->address.c_str(), strs[1].c_str()) == 0
@@ -563,6 +609,8 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
         } else if (strs[0] == "STATUSREQ") {
             if (strs.size() == 2) {
                 std::cout << "Received STATUSREQ command" << std::endl;
+
+                // Erase the newline on the last token if present
                 strs[1].erase(std::remove(strs[1].begin(), 
                             strs[1].end(), '\n'), strs[1].end());
 
@@ -571,6 +619,8 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
 
                 std::map<std::string, int> group_message_count;
 
+                // Go through the message_buffer and count the messages for servers
+                // who are valid
                 for(unsigned long int i = 0; i < message_buffer.size(); i++) {
                     s_message tmp_msg = message_buffer[i];
                     if(strcmp(tmp_msg.receiver.c_str(), "UNKNOWN") != 0 && tmp_msg.unread) {
@@ -582,6 +632,8 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                     }
                 }
 
+                // Go throug the collection and construct GROUP_ID,<NUM_OF_MESSAGES>
+                // for the STATUSRESPONSE
                 for (auto const& gmc : group_message_count) {
                     response << "," << gmc.first << "," << gmc.second;
                 }
@@ -620,16 +672,13 @@ int main(int argc, char* argv[])
     std::time_t next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::seconds(60));
     std::time_t now = std::chrono::system_clock::to_time_t(clock_now);
 
-
-    //fd_set openServerSockets;
-    //fd_set readServerSockets;
     int maxfds;                     // Passed to select() as max fd in set
     struct sockaddr_in client;
     socklen_t clientLen;
 
     struct sockaddr_in server;
     socklen_t serverLen;
-    char buffer[1025];              // buffer for reading from clients
+    char buffer[5000];              // buffer for reading from clients
 
     if(argc != 4) {
         //CLIENTS is mainly used to make the port distinction more 
@@ -638,13 +687,10 @@ int main(int argc, char* argv[])
         exit(0);
     }
 
-    // Setup socket for server to listen to
-
+    // Setup sockets for server to listen to
     clistenSock = open_socket(atoi(argv[3]));
     printf("Listening for clients on port: %d\n", atoi(argv[3]));
-
     slistenSock = open_socket(atoi(argv[1]));
-
     printf("Listening for server on port: %d\n", atoi(argv[1]));
 
     if(listen(clistenSock, BACKLOG) < 0) {
@@ -662,17 +708,17 @@ int main(int argc, char* argv[])
         exit(0);
     } else {
         FD_SET(slistenSock, &openSockets);
-        maxfds = slistenSock;        //TODO: determine maxfds in a better way?
+        maxfds = slistenSock;
     }
-
 
     finished = false;
 
     while(!finished) {
-        // This is re-initialized every loop
+        // This is re-initialized every loop because 
+        // it seems to need a reset to work properly
         struct timeval timeout;      
-        timeout.tv_sec  = 60;
-        timeout.tv_usec = 0;        // Seems to need to be set. No harm done
+        timeout.tv_sec  = 1;
+        timeout.tv_usec = 0;        // Seems to need to be set. No harm done, not used
 
         // Get modifiable copy of readSockets
         readSockets = exceptSockets = openSockets;
@@ -711,23 +757,23 @@ int main(int argc, char* argv[])
 
             }
 
+            // Does exactly the same thing as the FD_ISSET for clients above
+            // but this is for servers
             if(FD_ISSET(slistenSock, &readSockets)) {
                 serverLen = sizeof(server);
                 serverSock = accept(slistenSock, (struct sockaddr *)&server,
                         &serverLen);
 
-                // Add new client to the list of open sockets
+                // Add new servers to the list of open sockets
                 FD_SET(serverSock, &openSockets);
 
                 // And update the maximum file descriptor
                 maxfds = std::max(maxfds, serverSock);
 
-                // create a new client to store information.
+                // create a new server to store information.
                 if(servers.size() < 5) {
                     servers[serverSock] = new Server(serverSock, inet_ntoa(server.sin_addr));
                 }
-
-
                 // Decrement the number of sockets waiting to be dealt with
                 n--;
 
@@ -754,13 +800,19 @@ int main(int argc, char* argv[])
 
             // Now check for commands from clients
             while(n > 0) {
+                //Initialize a vector to collect servers
+                //who have closed their connections
+                //and close them outside of the iterator
                 std::vector<int> serversToClose;
+
+                // Go through the servers and check if they have issued commands
                 for(auto const& pair : servers) {
                     Server *server = pair.second;
 
                     if(FD_ISSET(server->sock, &readSockets)) {
                         // recv() == 0 means client has closed connection
-
+                        // We peek at the message, if it is valid then we recv for real 
+                        // from (isMessageValid)
                         if(recv(server->sock, buffer, sizeof(buffer), MSG_PEEK | MSG_DONTWAIT) == 0) {
                             printf("Server closed connection: %d", server->sock);
                             serversToClose.push_back(server->sock);
@@ -768,7 +820,6 @@ int main(int argc, char* argv[])
                         // We don't check for -1 (nothing received) because select()
                         // only triggers if there is something on the socket for us.
                         else {
-                            // We peek at the message, if it is valide then we recv fo real
                             if(isMessageValid((std::string) buffer)) {
                                 if(recv(server->sock, buffer, sizeof(buffer), MSG_DONTWAIT) == 0) {
                                     printf("Server closed connection: %d", server->sock);
@@ -818,6 +869,9 @@ int main(int argc, char* argv[])
                 }
 
                 
+                // If there are any servers or clients to close, then this
+                // is the place to do it. Moving this into the iterator
+                // will most likely result in a segfault
                 for(long unsigned int i = 0; i < serversToClose.size(); i++) {
                     close(serversToClose[i]);
                     closeServer(serversToClose[i], &openSockets, &maxfds);
@@ -834,7 +888,6 @@ int main(int argc, char* argv[])
         // This checks whether it is time to do the timedTasks
         clock_now = std::chrono::system_clock::now();
         now = std::chrono::system_clock::to_time_t(clock_now);
-
         if(now > next_ping) {
             timedTasks();
             next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::seconds(60));
