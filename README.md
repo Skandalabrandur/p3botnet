@@ -136,6 +136,10 @@ Inside ip.cpp change the definition to the name of your interface
 ```
 
 
-## How we connected to the oracle
+## JUBJUB: How we connected to the oracle
 
-See the pictures in screenshots folder named client_heimili.png and client_skel.png
+We were having trouble with the KEEPALIVE not showing up from the oracle and therefore no message being  requested and then received accordingly. Therefore we spoofed a server connection which Jacky informed us was ok. We then decrypted the MD5 hash with a decrypt tool on the internet
+
+![](./screenshots/oracle_part1.png)
+
+![](./screenshots/oracle_part2.png)
