@@ -1,0 +1,1383 @@
+Client connected to server on socket: 5
+ | Sat Oct 12 13:21:21 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4000
+
+ | Sat Oct 12 13:21:26 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4000
+ | Sat Oct 12 13:21:26 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,Instructor_1
+ | Sat Oct 12 13:21:26 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,Instructor_1,130.208.243.61,4000;P3_GROUP_392,172.26.183.56,4400;P3_GROUP_69,130.208.243.61,4069;ORACLE,130.208.243.61,4023;P3_GROUP_77,10.3.36.143,6969;
+ | Sat Oct 12 13:21:26 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 13:21:38 2019
+
+Received from client on socket: 5
+	LEAVE,130.208,243.61,4000
+
+ | Sat Oct 12 13:21:56 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 13:22:03 2019
+
+Received from server Instructor_1 on socket: 6
+	Instructor_1,P3_GROUP_77,Too many errors - disconnecting;
+ | Sat Oct 12 13:22:28 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 13:27:49 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4000
+
+ | Sat Oct 12 13:27:53 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4000
+ | Sat Oct 12 13:27:53 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,Instructor_1
+ | Sat Oct 12 13:27:53 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,Instructor_1,130.208.243.61,4000;P3_GROUP_7,127.0.0.1,4015;P3_GROUP_77,10.3.36.143,6969;
+ | Sat Oct 12 13:27:53 2019
+
+Received from client on socket: 5
+	DISCONNECT
+
+ | Sat Oct 12 13:27:56 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 13:29:12 2019
+
+Received from client on socket: 5
+	DISCONNECT
+
+ | Sat Oct 12 13:29:14 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 13:33:36 2019
+
+Received from client on socket: 5
+	DISCONNECT
+
+ | Sat Oct 12 13:33:40 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 13:35:24 2019
+
+Received from client on socket: 5
+	DISCONNECT
+
+ | Sat Oct 12 13:35:26 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 13:36:31 2019
+
+Received from client on socket: 5
+	DISCONNECT
+
+ | Sat Oct 12 13:36:34 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 13:36:53 2019
+
+Received from client on socket: 5
+	DISCONNECT
+
+ | Sat Oct 12 13:36:55 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 13:40:42 2019
+
+Received from client on socket: 5
+	DISCONNECT
+
+ | Sat Oct 12 13:40:47 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 13:44:46 2019
+
+Received from client on socket: 5
+	DISCONNECT
+
+ | Sat Oct 12 13:44:51 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 13:47:10 2019
+
+Received from client on socket: 5
+	DISCONNECT
+
+ | Sat Oct 12 13:47:13 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 13:48:34 2019
+
+Received from client on socket: 5
+	DISCONNECT
+
+ | Sat Oct 12 13:48:45 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 13:49:36 2019
+
+Received from client on socket: 5
+	DISCONNECT
+
+ | Sat Oct 12 13:49:39 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 13:53:48 2019
+
+Received from client on socket: 5
+	DISCONNECT
+
+ | Sat Oct 12 13:53:52 2019
+
+Received from client on socket: 5
+	
+
+ | Sat Oct 12 13:53:55 2019
+
+Received from client on socket: 5
+	
+
+ | Sat Oct 12 13:53:56 2019
+
+Received from client on socket: 5
+	
+
+ | Sat Oct 12 13:53:56 2019
+
+Received from client on socket: 5
+	SENDMSG,HEMMI,HEHE
+
+ | Sat Oct 12 13:54:06 2019
+
+Received from client on socket: 5
+	DISCONNECT
+
+ | Sat Oct 12 13:54:09 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 13:56:07 2019
+
+Received from client on socket: 5
+	DISCONNECT
+
+ | Sat Oct 12 13:56:09 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 13:56:29 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4000
+
+ | Sat Oct 12 13:56:33 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4006
+
+ | Sat Oct 12 13:56:38 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4099
+
+ | Sat Oct 12 13:56:54 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4099
+ | Sat Oct 12 13:56:54 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 13:57:02 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4080
+
+ | Sat Oct 12 13:57:55 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4080
+ | Sat Oct 12 13:57:55 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4023
+
+ | Sat Oct 12 13:58:20 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4023
+ | Sat Oct 12 13:58:20 2019
+
+Received from server UNKNOWN on socket: 10
+	LISTSERVERS,ORACLE
+ | Sat Oct 12 13:58:20 2019
+
+Received from server UNKNOWN on socket: 10
+	SERVERS,ORACLE,130.208.243.61,4023;P3_GROUP_14,130.208.243.61,4072;P3_GROUP_77,10.3.36.143,6969;
+ | Sat Oct 12 13:58:20 2019
+
+Received from client on socket: 5
+	DISCONNECT
+
+ | Sat Oct 12 13:58:25 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 13:58:35 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 13:58:37 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 13:59:48 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4027
+
+ | Sat Oct 12 13:59:55 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4027
+ | Sat Oct 12 13:59:55 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_27
+ | Sat Oct 12 13:59:55 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_27,130.208.243.61,4027;P3_GROUP_77,10.3.36.143,6969;ORACLE,130.208.243.61,4023;
+ | Sat Oct 12 13:59:55 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	KEEPALIVE,0
+ | Sat Oct 12 14:00:20 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 14:00:26 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_27,HEY HEY
+
+ | Sat Oct 12 14:00:41 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	LISTSERVERS,P3_GROUP_27
+ | Sat Oct 12 14:00:50 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	KEEPALIVE,1
+ | Sat Oct 12 14:01:20 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	STATUSREQ,P3_GROUP_27
+ | Sat Oct 12 14:01:50 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sat Oct 12 14:01:54 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	KEEPALIVE,1
+ | Sat Oct 12 14:02:20 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sat Oct 12 14:02:27 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	LISTSERVERS,P3_GROUP_27
+ | Sat Oct 12 14:02:50 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 14:03:18 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	KEEPALIVE,2
+ | Sat Oct 12 14:03:20 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	STATUSREQ,P3_GROUP_27
+ | Sat Oct 12 14:03:50 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	KEEPALIVE,3
+ | Sat Oct 12 14:04:20 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 14:05:30 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4027
+
+ | Sat Oct 12 14:05:44 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4027
+ | Sat Oct 12 14:05:44 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_27
+ | Sat Oct 12 14:05:44 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_27
+ | Sat Oct 12 14:05:44 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_27,130.208.243.61,4027;ORACLE,130.208.243.61,4023;P3_GROUP_77,10.3.36.143,6969;
+ | Sat Oct 12 14:05:44 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_27,Hello there jobbi
+
+ | Sat Oct 12 14:06:09 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	KEEPALIVE,0
+ | Sat Oct 12 14:06:33 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 14:07:13 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4027
+
+ | Sat Oct 12 14:07:18 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4027
+ | Sat Oct 12 14:07:18 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_27
+ | Sat Oct 12 14:07:18 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_27,130.208.243.61,4027;ORACLE,130.208.243.61,4023;P3_GROUP_77,10.3.36.143,6969;
+ | Sat Oct 12 14:07:18 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 14:07:26 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	KEEPALIVE,0
+ | Sat Oct 12 14:07:33 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_27,HEYHEYHEY
+
+ | Sat Oct 12 14:07:44 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sat Oct 12 14:07:51 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	STATUSREQ,P3_GROUP_27
+ | Sat Oct 12 14:08:03 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	KEEPALIVE,0
+ | Sat Oct 12 14:08:33 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	GET_MSG,P3_GROUP_27
+ | Sat Oct 12 14:08:33 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 14:29:37 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4027
+
+ | Sat Oct 12 14:29:41 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
+ | Sat Oct 12 14:29:41 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4027
+ | Sat Oct 12 14:29:41 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 14:29:41 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_27
+ | Sat Oct 12 14:29:41 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
+ | Sat Oct 12 14:29:41 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_27,130.208.243.61,4027;P3_GROUP_21,130.208.243.61,4003;P3_GROUP_77,10.3.36.143,6969;
+ | Sat Oct 12 14:29:41 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	KEEPALIVE,0
+ | Sat Oct 12 14:29:49 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	STATUSREQ,P3_GROUP_27
+ | Sat Oct 12 14:30:19 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	KEEPALIVE,0
+ | Sat Oct 12 14:30:49 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	GET_MSG,P3_GROUP_27
+ | Sat Oct 12 14:30:49 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	LISTSERVERS,P3_GROUP_27
+ | Sat Oct 12 14:31:19 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969;P3_GROUP_27,130.208.243.61,4027; | SENT TO SERVER
+ | Sat Oct 12 14:31:19 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	KEEPALIVE,1
+ | Sat Oct 12 14:31:49 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	GET_MSG,P3_GROUP_27
+ | Sat Oct 12 14:32:16 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	STATUSREQ,P3_GROUP_27
+ | Sat Oct 12 14:32:19 2019
+
+Server connected to server on socket: 5
+ | Sat Oct 12 14:42:09 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 14:42:09 2019
+
+Received from server UNKNOWN on socket: 5
+	SERVERS,HEMMI,8.8.8.8,8888
+
+ | Sat Oct 12 14:42:16 2019
+
+Received from server UNKNOWN on socket: 5
+	KEEPALIVE,5
+
+ | Sat Oct 12 14:42:28 2019
+
+Received from server UNKNOWN on socket: 5
+	SERVERS,HEMMI,8.8.8.8,8888;
+
+ | Sat Oct 12 14:42:43 2019
+
+Received from server HEMMI on socket: 5
+	KEEPALIVE,5
+
+ | Sat Oct 12 14:42:47 2019
+
+Server connected to server on socket: 5
+ | Sat Oct 12 14:43:49 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 14:43:49 2019
+
+Received from server UNKNOWN on socket: 5
+	SERVERS,HEMMI,8.8.8.8,8888;
+
+ | Sat Oct 12 14:43:56 2019
+
+Received from server HEMMI on socket: 5
+	KEEPALIVE,0
+
+ | Sat Oct 12 14:44:02 2019
+
+Received from server HEMMI on socket: 5
+	KEEPALIVE,1
+
+ | Sat Oct 12 14:44:04 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 14:44:29 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4027
+
+ | Sat Oct 12 14:44:50 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
+ | Sat Oct 12 14:44:50 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4027
+ | Sat Oct 12 14:44:50 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 14:44:50 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_27
+ | Sat Oct 12 14:44:50 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
+ | Sat Oct 12 14:44:50 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_27,130.208.243.61,4027;P3_GROUP_21,130.208.243.61,4003;P3_GROUP_77,10.3.36.143,6969;
+ | Sat Oct 12 14:44:50 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	KEEPALIVE,0
+ | Sat Oct 12 14:45:06 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	STATUSREQ,P3_GROUP_27
+ | Sat Oct 12 14:45:36 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	GET_MSG,P3_GROUP_27
+ | Sat Oct 12 14:45:36 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_27,SEND US MESSAGE PLOX
+
+ | Sat Oct 12 14:46:00 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	KEEPALIVE,0
+ | Sat Oct 12 14:46:06 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	LISTSERVERS,P3_GROUP_27
+ | Sat Oct 12 14:46:15 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969;P3_GROUP_27,130.208.243.61,4027; | SENT TO SERVER
+ | Sat Oct 12 14:46:15 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	LISTSERVERS,P3_GROUP_27
+ | Sat Oct 12 14:46:36 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969;P3_GROUP_27,130.208.243.61,4027; | SENT TO SERVER
+ | Sat Oct 12 14:46:36 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	GET_MSG,P3_GROUP_27
+ | Sat Oct 12 14:46:59 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_27,SEND US MESSAGE PLOX | SENT TO SERVER 
+ | Sat Oct 12 14:46:59 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 14:47:19 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4027
+
+ | Sat Oct 12 14:47:25 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
+ | Sat Oct 12 14:47:25 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4027
+ | Sat Oct 12 14:47:25 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 14:47:25 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_27
+ | Sat Oct 12 14:47:25 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
+ | Sat Oct 12 14:47:25 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_27,130.208.243.61,4027;P3_GROUP_21,130.208.243.61,4003;P3_GROUP_77,10.3.36.143,6969;
+ | Sat Oct 12 14:47:25 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	STATUSREQ,P3_GROUP_27
+ | Sat Oct 12 14:47:36 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_27,dedede
+
+ | Sat Oct 12 14:47:59 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	KEEPALIVE,0
+ | Sat Oct 12 14:48:06 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	GET_MSG,P3_GROUP_27
+ | Sat Oct 12 14:48:06 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_27,dedede | SENT TO SERVER 
+ | Sat Oct 12 14:48:06 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	LISTSERVERS,P3_GROUP_27
+ | Sat Oct 12 14:48:36 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969;P3_GROUP_27,130.208.243.61,4027; | SENT TO SERVER
+ | Sat Oct 12 14:48:36 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	KEEPALIVE,1
+ | Sat Oct 12 14:49:06 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	SEND_MSG,P3_GROUP_27,P3_GROUP_77,We are V_GROUP_27. This is an autosent message and does not subsitute human contact.
+ | Sat Oct 12 14:49:06 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sat Oct 12 14:49:24 2019
+
+Sent a list of 2 to client (truncated the list) 
+ | Sat Oct 12 14:49:24 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	GET_MSG,P3_GROUP_27
+ | Sat Oct 12 14:49:24 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	STATUSREQ,P3_GROUP_27
+ | Sat Oct 12 14:49:36 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sat Oct 12 14:49:39 2019
+
+Following message sent to client: We are V_GROUP_27. This is an autosent message and does not subsitute human contact. | Sat Oct 12 14:49:39 2019
+
+Received from client on socket: 5
+	DISCONNECT
+
+ | Sat Oct 12 14:50:05 2019
+
+Client issued Disconnect command | Sat Oct 12 14:50:05 2019
+
+Received from server P3_GROUP_27 on socket: 6
+	KEEPALIVE,0
+ | Sat Oct 12 14:50:06 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 15:29:13 2019
+
+Received from client on socket: 5
+	SENDMSG,VIDAR,HEHEHEHE
+
+ | Sat Oct 12 15:29:30 2019
+
+Received from client on socket: 5
+	SENDMSG,VIDAR,SUCKKK
+
+ | Sat Oct 12 15:29:36 2019
+
+Received from client on socket: 5
+	SENDMSG,HLYNUR,HOHOHO
+
+ | Sat Oct 12 15:29:43 2019
+
+Received from client on socket: 5
+	SENDMSG,HLYNUR,HEOHOIEHOE
+
+ | Sat Oct 12 15:29:48 2019
+
+Received from client on socket: 5
+	SENDMSG,HLYNUR,HEHEHEHEOHEOIEOEHIEO
+
+ | Sat Oct 12 15:29:54 2019
+
+Server connected to server on socket: 5
+ | Sat Oct 12 15:30:03 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 15:30:03 2019
+
+Received from server UNKNOWN on socket: 5
+	SERVERS,HEMMI,8.8.8.8,8888;
+
+ | Sat Oct 12 15:30:10 2019
+
+Received from server HEMMI on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 15:30:12 2019
+
+Sent INVALID COMMAND back to server | Sat Oct 12 15:30:12 2019
+
+Received from server HEMMI on socket: 5
+	LISTSERVERS,HEMMI
+
+ | Sat Oct 12 15:30:17 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969;HEMMI,8.8.8.8,8888; | SENT TO SERVER
+ | Sat Oct 12 15:30:17 2019
+
+Received from server HEMMI on socket: 5
+	STATUSREQ,HEMMI
+
+ | Sat Oct 12 15:30:29 2019
+
+Server connected to server on socket: 5
+ | Sat Oct 12 15:34:06 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 15:34:06 2019
+
+Received from server UNKNOWN on socket: 5
+	SERVERS,HEMMI,87.7.7.7,7777;
+
+ | Sat Oct 12 15:34:15 2019
+
+Received from server HEMMI on socket: 5
+	STATUSREQ,HEMMI
+
+ | Sat Oct 12 15:34:29 2019
+
+STATUSRESP,P3_GROUP_77,HEMMI | SENT TO SERVER
+ | Sat Oct 12 15:34:29 2019
+
+Received from server HEMMI on socket: 5
+	SEND_MSG,HLEMMUR,KLEMMUR,181818181
+
+ | Sat Oct 12 15:34:53 2019
+
+Received from server HEMMI on socket: 5
+	SEND_MSG,GUNNI,KLEMMUR,1818181818
+
+ | Sat Oct 12 15:35:04 2019
+
+Received from server HEMMI on socket: 5
+	STATUSREQ,HEMMI
+
+ | Sat Oct 12 15:35:14 2019
+
+STATUSRESP,P3_GROUP_77,HEMMI | SENT TO SERVER
+ | Sat Oct 12 15:35:14 2019
+
+Server connected to server on socket: 5
+ | Sat Oct 12 15:37:10 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 15:37:10 2019
+
+Received from server UNKNOWN on socket: 5
+	SERVERS,HEMMI,8.8.8.8,8888;
+
+ | Sat Oct 12 15:37:16 2019
+
+Received from server HEMMI on socket: 5
+	LISTSERVERS,HEMMI
+
+ | Sat Oct 12 15:37:21 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969;HEMMI,8.8.8.8,8888; | SENT TO SERVER
+ | Sat Oct 12 15:37:21 2019
+
+Received from server HEMMI on socket: 5
+	SEND_MSG,GUNNI,TOMMA,meow
+
+ | Sat Oct 12 15:37:33 2019
+
+Received from server HEMMI on socket: 5
+	STATUSREQ,HEMMI
+
+ | Sat Oct 12 15:37:41 2019
+
+STATUSRESP,P3_GROUP_77,HEMMI,TOMMA,1 | SENT TO SERVER
+ | Sat Oct 12 15:37:41 2019
+
+Received from server HEMMI on socket: 5
+	GET_MSG,TOMMA
+
+ | Sat Oct 12 15:39:28 2019
+
+Received from server HEMMI on socket: 5
+	GET_MSG,TOMMA
+
+ | Sat Oct 12 15:39:49 2019
+
+Received from server HEMMI on socket: 5
+	GET_MSG,HEMMI
+
+ | Sat Oct 12 15:39:57 2019
+
+Received from server HEMMI on socket: 5
+	GET_MSG,GUNNI
+
+ | Sat Oct 12 15:40:02 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 15:40:08 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sat Oct 12 15:40:10 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sat Oct 12 15:40:10 2019
+
+Received from client on socket: 5
+	GETMSG,TOMMA
+
+ | Sat Oct 12 15:40:34 2019
+
+Following message sent to client: meow
+ | Sat Oct 12 15:40:34 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sat Oct 12 15:40:38 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sat Oct 12 15:40:38 2019
+
+Received from client on socket: 5
+	GETMSG,TOMMA
+
+ | Sat Oct 12 15:40:45 2019
+
+Following message sent to client: No message found. Take heed that group_id is case sensitive and doesn't trim spaces | Sat Oct 12 15:40:45 2019
+
+Server connected to server on socket: 5
+ | Sat Oct 12 15:46:23 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 15:46:23 2019
+
+Received from server UNKNOWN on socket: 5
+	SERVERS,HEMMI,8.8.8.8,8888;
+
+ | Sat Oct 12 15:46:33 2019
+
+Received from server HEMMI on socket: 5
+	LISTSERVERS,HEMMI
+
+ | Sat Oct 12 15:46:38 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969;HEMMI,8.8.8.8,8888; | SENT TO SERVER
+ | Sat Oct 12 15:46:38 2019
+
+Received from server HEMMI on socket: 5
+	SEND_MSG,STEBBI,HEMMI,MESSAGE,INABOTTLE
+
+ | Sat Oct 12 15:47:09 2019
+
+Received from server HEMMI on socket: 5
+	SEND_MSG,JOBBI,KOBBI,HEYRRU JOBBI
+
+ | Sat Oct 12 15:48:43 2019
+
+Received from server HEMMI on socket: 5
+	SEND_MSG,JOBBI,KOBBI,THARNA ER LUKKU LAKI
+
+ | Sat Oct 12 15:48:53 2019
+
+Received from server HEMMI on socket: 5
+	STATUSREQ,HEMMI
+
+ | Sat Oct 12 15:49:21 2019
+
+STATUSRESP,P3_GROUP_77,HEMMI,HEMMI,1,KOBBI,2 | SENT TO SERVER
+ | Sat Oct 12 15:49:21 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 16:50:59 2019
+
+Received from client on socket: 5
+	CONNECT,127.0.0.1,4000
+
+ | Sat Oct 12 16:51:24 2019
+
+SERVERS,P3_GROUP_77,,4050; | SENT TO SERVER
+ | Sat Oct 12 16:51:24 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: 127.0.0.1:4000
+ | Sat Oct 12 16:51:24 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 16:51:24 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,Instructor_4
+ | Sat Oct 12 16:51:24 2019
+
+SERVERS,P3_GROUP_77,,4050; | SENT TO SERVER
+ | Sat Oct 12 16:51:24 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,Instructor_4,130.208.243.61,4000;Instructor_4,130.208.243.61,4000;Instructor_4,130.208.243.61,4000;ORACLE,130.208.243.61,4007;P3_GROUP_69,192.168.2.118,5000;P3_Group_103,10.3.35.136,10000;P3_GROUP_7,130.208.243.61,52038;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_25,130.208.243.61,4025;P3_GROUP_80,130.208.243.61,4077;P3_GROUP_39,10.3.16.155,4065;P3_GROUP_77,127.0.0.1,-1;
+ | Sat Oct 12 16:51:24 2019
+Server connected to server on socket: 5
+ | Sat Oct 12 16:11:50 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 16:11:50 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 16:11:55 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4000
+
+ | Sat Oct 12 16:11:59 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
+ | Sat Oct 12 16:11:59 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4000
+ | Sat Oct 12 16:11:59 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 16:11:59 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,Instructor_4
+ | Sat Oct 12 16:11:59 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
+ | Sat Oct 12 16:11:59 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,Instructor_4,130.208.243.61,4000;Instructor_4,130.208.243.61,4000;Instructor_4,130.208.243.61,4000;ORACLE,130.208.243.61,4007;P3_GROUP_21,130.208.243.61,4074;P3_Group_103,127.0.0.1,10000;P3_GROUP_69,130.208.243.61,4069;P3_GROUP_7,130.208.243.61,51092;P3_GROUP_28,10.2.27.142,4034;P3_GROUP_39,172.26.183.56,4065;P3_GROUP_77,10.3.36.143,6969;
+ | Sat Oct 12 16:11:59 2019
+
+Received from client on socket: 5
+	CONNECT,130.208.243.61,4007
+
+ | Sat Oct 12 16:12:19 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
+ | Sat Oct 12 16:12:19 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: 130.208.243.61:4007
+ | Sat Oct 12 16:12:19 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 16:12:19 2019
+
+Received from server UNKNOWN on socket: 7
+	LISTSERVERS,ORACLE
+ | Sat Oct 12 16:12:19 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969;Instructor_4,130.208.243.61,4000; | SENT TO SERVER
+ | Sat Oct 12 16:12:19 2019
+
+Received from server UNKNOWN on socket: 7
+	SERVERS,ORACLE,130.208.243.61,4007;Instructor_4,130.208.243.61,4000;P3_GROUP_21,130.208.243.61,4074;P3_GROUP_69,130.208.243.61,4069;P3_GROUP_39,172.26.183.56,4065;P3_GROUP_8,130.208.243.61,4042;P3_GROUP_77,10.3.36.143,6969;
+ | Sat Oct 12 16:12:19 2019
+
+Received from server Instructor_4 on socket: 6
+	SEND_MSG,ORACLE,P3_GROUP_77,
+
+“Imagination is more important than knowledge.  For knowledge is limited, whereas 
+ imagination embraces the entire world, stimulating progress, giving birth to evolution.”
+— Albert Einstein 
+ | Sat Oct 12 16:13:19 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 16:51:29 2019
+
+SERVERS,Instructor_4,130.208.243.61,4000; | SENT TO CLIENT
+ | Sat Oct 12 16:51:29 2019
+
+Received from client on socket: 5
+	CONNECT,127.0.0.1,4007
+
+ | Sat Oct 12 16:51:47 2019
+
+SERVERS,P3_GROUP_77,,4050; | SENT TO SERVER
+ | Sat Oct 12 16:51:47 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: 127.0.0.1:4007
+ | Sat Oct 12 16:51:47 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 16:51:47 2019
+
+Received from server UNKNOWN on socket: 7
+	LISTSERVERS,ORACLE
+ | Sat Oct 12 16:51:47 2019
+
+SERVERS,P3_GROUP_77,,4050;Instructor_4,130.208.243.61,4000; | SENT TO SERVER
+ | Sat Oct 12 16:51:47 2019
+
+Received from server Instructor_4 on socket: 6
+	SEND_MSG,ORACLE,P3_GROUP_77,Welcome to the net
+ | Sat Oct 12 16:51:47 2019
+
+Received from server UNKNOWN on socket: 7
+	SERVERS,ORACLE,130.208.243.61,4007;Instructor_4,130.208.243.61,4000;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_25,130.208.243.61,4025;P3_GROUP_77,127.0.0.1,-1;
+ | Sat Oct 12 16:51:47 2019
+
+Received from server Instructor_4 on socket: 6
+	Instructor_4,P3_GROUP_77,Too many errors - disconnecting;
+ | Sat Oct 12 16:51:47 2019
+
+Sent INVALID COMMAND back to server | Sat Oct 12 16:51:47 2019
+
+Received from server ORACLE on socket: 7
+	ORACLE,P3_GROUP_77,Too many errors - disconnecting;
+ | Sat Oct 12 16:51:47 2019
+
+Sent INVALID COMMAND back to server | Sat Oct 12 16:51:47 2019
+
+Received from client on socket: 5
+	CONNECT,127.0.0.1,4007
+
+ | Sat Oct 12 16:52:00 2019
+
+SERVERS,P3_GROUP_77,,4050; | SENT TO SERVER
+ | Sat Oct 12 16:52:00 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: 127.0.0.1:4007
+ | Sat Oct 12 16:52:00 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 16:52:00 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,ORACLE
+ | Sat Oct 12 16:52:00 2019
+
+SERVERS,P3_GROUP_77,,4050; | SENT TO SERVER
+ | Sat Oct 12 16:52:00 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,ORACLE,130.208.243.61,4007;Instructor_4,130.208.243.61,4000;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_25,130.208.243.61,4025;P3_GROUP_77,127.0.0.1,-1;
+ | Sat Oct 12 16:52:00 2019
+
+Received from client on socket: 5
+	SENDMSG,ORACLE,HOWDY
+
+ | Sat Oct 12 16:52:09 2019
+
+Received from server ORACLE on socket: 6
+	GET_MSG,ORACLE
+ | Sat Oct 12 16:53:09 2019
+
+SEND_MSG,P3_GROUP_77,ORACLE,HOWDY | SENT TO SERVER 
+ | Sat Oct 12 16:53:09 2019
+
+Received from client on socket: 5
+	SENDMSG,ORACLE,HELLO?
+
+ | Sat Oct 12 16:55:21 2019
+
+Received from client on socket: 5
+	GETMSG,ORACLE
+
+ | Sat Oct 12 16:55:33 2019
+
+Following message sent to client: HELLO? | Sat Oct 12 16:55:33 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sat Oct 12 16:55:54 2019
+
+Following message sent to client: No message found. Take heed that group_id is case sensitive and doesn't trim spaces | Sat Oct 12 16:55:54 2019
+
+Received from client on socket: 5
+	SENDMSG,ORACLE,KNOCK
+
+ | Sat Oct 12 16:56:18 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sat Oct 12 16:56:36 2019
+
+Sent a list of 3 to client (truncated the list) 
+ | Sat Oct 12 16:56:36 2019
+
+Received from server ORACLE on socket: 6
+	GET_MSG,ORACLE
+ | Sat Oct 12 16:56:36 2019
+
+SEND_MSG,P3_GROUP_77,ORACLE,KNOCK | SENT TO SERVER 
+ | Sat Oct 12 16:56:36 2019
+ | Sat Oct 12 16:14:28 2019
+
+SERVERS,Instructor_4,130.208.243.61,4000;ORACLE,130.208.243.61,4007; | SENT TO CLIENT
+ | Sat Oct 12 16:14:28 2019
+
+Received from server Instructor_4 on socket: 6
+	SEND_MSG,ORACLE,P3_GROUP_77,
+
+“If you automate a mess, you get an automated mess.”
+— Rod Michael 
+ | Sat Oct 12 16:14:28 2019
+
+Received from client on socket: 5
+	SENDMSG,ORACLE,HELLO ORACLE
+
+ | Sat Oct 12 16:14:51 2019
+
+Server connected to server on socket: 5
+ | Sat Oct 12 16:27:55 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 16:27:55 2019
+
+Received from server UNKNOWN on socket: 5
+	SERVERS,HEMMI,7.7.7.7,8888;
+
+ | Sat Oct 12 16:28:06 2019
+
+Server connected to server on socket: 5
+ | Sat Oct 12 16:28:15 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 16:28:15 2019
+
+Received from server UNKNOWN on socket: 5
+	SERVERS,HEMMI,8.8.8.8,8888;
+
+ | Sat Oct 12 16:28:27 2019
+
+Client connected to server on socket: 6
+ | Sat Oct 12 16:28:36 2019
+
+Received from client on socket: 6
+	SENDMSG,HEMMI,HEY HEMMI
+
+ | Sat Oct 12 16:28:58 2019
+
+Found a message for HEMMI who I am connected to and sent it:
+	HEY HEMMI
+ | Sat Oct 12 16:28:58 2019
+
+Server connected to server on socket: 5
+ | Sat Oct 12 16:31:28 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 16:31:28 2019
+
+Received from server UNKNOWN on socket: 5
+	SERVERS,HEMMI,8.8.8.8,8888;
+
+ | Sat Oct 12 16:31:39 2019
+
+Client connected to server on socket: 6
+ | Sat Oct 12 16:31:46 2019
+
+Received from client on socket: 6
+	SENDMSG,HEMMI,HEY HEMMI
+
+ | Sat Oct 12 16:32:23 2019
+
+Received from client on socket: 6
+	SENDMSG,HEMMI,HEY ERTU VAKANDI
+
+ | Sat Oct 12 16:32:51 2019
+
+Received from client on socket: 6
+	LISTMESSAGES
+
+ | Sat Oct 12 16:32:58 2019
+
+Sent a list of 2 to client (truncated the list) 
+ | Sat Oct 12 16:32:58 2019
+
+Found a message for HEMMI who I am connected to and sent it:
+	HEY HEMMI
+ | Sat Oct 12 16:32:58 2019
+
+Received from client on socket: 6
+	LISTMESSAGES
+
+ | Sat Oct 12 16:33:12 2019
+
+Sent a list of 2 to client (truncated the list) 
+ | Sat Oct 12 16:33:12 2019
+
+Received from client on socket: 6
+	LISTMESSAGES
+
+ | Sat Oct 12 16:33:17 2019
+
+Sent a list of 2 to client (truncated the list) 
+ | Sat Oct 12 16:33:17 2019
+
+Received from client on socket: 6
+	SENDMSG,HEMMI,HEY HEY HEMMI
+
+ | Sat Oct 12 16:33:55 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 16:35:16 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4007
+
+ | Sat Oct 12 16:35:22 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
+ | Sat Oct 12 16:35:22 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4007
+ | Sat Oct 12 16:35:22 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 16:35:22 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,ORACLE
+ | Sat Oct 12 16:35:22 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
+ | Sat Oct 12 16:35:22 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,ORACLE,130.208.243.61,4007;Instructor_4,130.208.243.61,4000;P3_GROUP_21,130.208.243.61,4074;P3_GROUP_72,192.168.1.18,5050;P3_GROUP_14,130.208.243.61,4050;P3_GROUP_39,172.26.183.56,4065;P3_GROUP_80,130.208.243.61,4077;P3_GROUP_77,10.3.36.143,6969;
+ | Sat Oct 12 16:35:22 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sat Oct 12 16:35:34 2019
+
+SERVERS,ORACLE,130.208.243.61,4007; | SENT TO CLIENT
+ | Sat Oct 12 16:35:34 2019
+
+Received from client on socket: 5
+	SENDMSG,ORACLE,HEY ORACLE
+
+ | Sat Oct 12 16:35:53 2019
+
+Found a message for ORACLE who I am connected to and sent it:
+	HEY ORACLE
+ | Sat Oct 12 16:35:53 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sat Oct 12 16:36:55 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sat Oct 12 16:36:55 2019
+
+Received from client on socket: 5
+	DISCONNECT
+
+ | Sat Oct 12 16:37:09 2019
+
+Client issued Disconnect command | Sat Oct 12 16:37:09 2019
+
+Client connected to server on socket: 5
+ | Sat Oct 12 16:38:56 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4007
+
+ | Sat Oct 12 16:39:04 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
+ | Sat Oct 12 16:39:04 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4007
+ | Sat Oct 12 16:39:04 2019
+
+Sent SUCCESS back to client on successful connection | Sat Oct 12 16:39:04 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,ORACLE
+ | Sat Oct 12 16:39:04 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER
+ | Sat Oct 12 16:39:04 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,ORACLE,130.208.243.61,4007;Instructor_4,130.208.243.61,4000;P3_GROUP_21,130.208.243.61,4074;,130.208.243.61,-1;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_39,10.3.16.155,-1;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_77,10.3.36.143,6969;
+ | Sat Oct 12 16:39:04 2019
+
+Received from client on socket: 5
+	SENDMSG,ORACLE,HEY ORACLE. DON YOU LIKE SEND_MSG FIRST HAND?
+
+ | Sat Oct 12 16:39:19 2019
+
+Received from server ORACLE on socket: 6
+	GET_MSG,ORACLE
+ | Sat Oct 12 16:39:19 2019
+
+SEND_MSG,P3_GROUP_77,ORACLE,HEY ORACLE. DON YOU LIKE SEND_MSG FIRST HAND? | SENT TO SERVER 
+ | Sat Oct 12 16:39:19 2019
+
+Received from client on socket: 5
+	SENDMSG,ORACLE,SEND BACK SOMETHING?
+
+ | Sat Oct 12 16:40:29 2019
+
+Received from server ORACLE on socket: 6
+	GET_MSG,ORACLE
+ | Sat Oct 12 16:41:29 2019
+
+SEND_MSG,P3_GROUP_77,ORACLE,SEND BACK SOMETHING? | SENT TO SERVER 
+ | Sat Oct 12 16:41:29 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sat Oct 12 16:56:45 2019
+
+Sent a list of 3 to client (truncated the list) 
+ | Sat Oct 12 16:56:45 2019
+ | Sat Oct 12 16:41:32 2019
+
+Sent a list of 2 to client (truncated the list) 
+ | Sat Oct 12 16:41:32 2019
+
+Received from client on socket: 5
+	SENDMSG,HLUBBI,MEOW
+
+ | Sat Oct 12 16:41:49 2019
+
+Server connected to server on socket: 7
+ | Sat Oct 12 16:41:56 2019
+
+SERVERS,P3_GROUP_77,10.3.36.143,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sat Oct 12 16:41:56 2019
+
+Received from server UNKNOWN on socket: 7
+	GET_MSG,HLUBBI
+
+ | Sat Oct 12 16:42:00 2019
+
+Received from server UNKNOWN on socket: 7
+	GET_MSG,ORACLE
+
+ | Sat Oct 12 16:42:13 2019
+
+Received from server UNKNOWN on socket: 7
+	SERVERS,HLUBBI,8.8.8.8,8888;
+
+ | Sat Oct 12 16:42:27 2019
+
+Received from server HLUBBI on socket: 7
+	GET_MSG,HLUBBI
+
+ | Sat Oct 12 16:42:32 2019
+
+SEND_MSG,P3_GROUP_77,HLUBBI,MEOW | SENT TO SERVER 
+ | Sat Oct 12 16:42:32 2019
+

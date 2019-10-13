@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 bool isMessageValid(std::string msg) {
-    return ((int) msg.at(0) == 0x01 && (int) msg.at(msg.length() - 1) == 0x04);
+    return (msg.length() > 2 && (int) msg.at(0) == 0x01 && (int) msg.at(msg.length() - 1) == 0x04);
 }
 
 std::string constructMessage(std::string msg) {
