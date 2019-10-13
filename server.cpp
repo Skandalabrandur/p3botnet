@@ -528,9 +528,11 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                 s_message new_msg_struct;
                 std::ostringstream new_msg;
 
-                for(long unsigned int i = 3; i < strs.size(); i++) {
+                for(long unsigned int i = 3; i < strs.size() - 1; i++) {
                     new_msg << strs[i] << ",";
                 }
+                new_msg << strs[strs.size() - 1];
+
                 if(new_msg.str().length() > 0) {
                     new_msg_struct.msg = new_msg.str();
                     new_msg_struct.sender = strs[1];
