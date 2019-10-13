@@ -629,24 +629,24 @@ int main(int argc, char* argv[])
     socklen_t serverLen;
     char buffer[1025];              // buffer for reading from clients
 
-    if(argc != 5) {
-        //SERVERS and CLIENTS are mainly used to make it readable for people searching for servers
-        //via the 'w' command
-        printf("Usage: chat_server SERVERS <server listen port> CLIENTS <client listen port>\n");
+    if(argc != 4) {
+        //CLIENTS is mainly used to make the port distinction more 
+        //readable for people searching for servers via the 'w' command
+        printf("Usage: chat_server <server listen port> CLIENTS <client listen port>\n");
         exit(0);
     }
 
     // Setup socket for server to listen to
 
-    clistenSock = open_socket(atoi(argv[4]));
-    printf("Listening for clients on port: %d\n", atoi(argv[4]));
+    clistenSock = open_socket(atoi(argv[3]));
+    printf("Listening for clients on port: %d\n", atoi(argv[3]));
 
-    slistenSock = open_socket(atoi(argv[2]));
+    slistenSock = open_socket(atoi(argv[1]));
 
-    printf("Listening for server on port: %d\n", atoi(argv[2]));
+    printf("Listening for server on port: %d\n", atoi(argv[1]));
 
     if(listen(clistenSock, BACKLOG) < 0) {
-        printf("Listening for clients failed on port %s\n", argv[4]);
+        printf("Listening for clients failed on port %s\n", argv[3]);
         exit(0);
     } else
         // Add listen socket to socket set we are monitoring
@@ -656,7 +656,7 @@ int main(int argc, char* argv[])
     }
 
     if(listen(slistenSock, BACKLOG) < 0) {
-        printf("Listening for servers failed on port %s\n", argv[2]);
+        printf("Listening for servers failed on port %s\n", argv[1]);
         exit(0);
     } else {
         FD_SET(slistenSock, &openSockets);
@@ -737,7 +737,7 @@ int main(int argc, char* argv[])
                 // Send our server information as soon as a connection is made
                 std::string myIp = getOwnIp();
                 std::ostringstream response_msg;
-                response_msg << "SERVERS," << MYGROUP << "," << myIp << "," << argv[2] << ";";
+                response_msg << "SERVERS," << MYGROUP << "," << myIp << "," << argv[1] << ";";
                 std::string response = constructMessage(response_msg.str());
 
                 response_msg << " | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST" << std::endl;
@@ -774,7 +774,7 @@ int main(int argc, char* argv[])
                                 }
                                 std::cout << buffer << std::endl;
                                 serverCommand(server->sock, &openSockets, &maxfds,
-                                        buffer, argv[2]);
+                                        buffer, argv[1]);
                                 memset(&buffer, 0, sizeof(buffer));
                             } else {
                                 std::string checker = (std::string) buffer;
@@ -806,7 +806,7 @@ int main(int argc, char* argv[])
                         else {
                             std::cout << buffer << std::endl;
                             int clientStatus = clientCommand(client->sock, &openSockets, &maxfds,
-                                    buffer, argv[2]);
+                                    buffer, argv[1]);
 
                             if(clientStatus == -1) {
                                 clientsToClose.push_back(client->sock);
