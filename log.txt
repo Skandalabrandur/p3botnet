@@ -1692,3 +1692,2850 @@ Received from server UNKNOWN on socket: 6
 	SEND_MSG,P3_GROUP_75,UNKOWNGROUP,Welcome to the party server!ERROR,Sorry I don't recognize that command
  | Sun Oct 13 14:34:07 2019
 
+Client connected to server on socket: 5
+ | Sun Oct 13 15:38:27 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4086
+
+ | Sun Oct 13 15:38:53 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:38:53 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4086
+ | Sun Oct 13 15:38:53 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 15:38:53 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_55
+ | Sun Oct 13 15:38:53 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:38:53 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 15:39:05 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sun Oct 13 15:39:05 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 15:39:33 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4006
+
+ | Sun Oct 13 15:40:32 2019
+
+Sent FAIL back to client on unsuccessful connection attempt | Sun Oct 13 15:40:32 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4040
+
+ | Sun Oct 13 15:40:53 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:40:54 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4040
+ | Sun Oct 13 15:40:54 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 15:40:54 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 15:40:57 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sun Oct 13 15:40:57 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 15:41:06 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 15:41:12 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4095
+
+ | Sun Oct 13 15:41:35 2019
+
+Sent FAIL back to client on unsuccessful connection attempt | Sun Oct 13 15:41:35 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 15:41:42 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4065
+
+ | Sun Oct 13 15:43:40 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:43:40 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4065
+ | Sun Oct 13 15:43:40 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 15:43:40 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_39
+ | Sun Oct 13 15:43:40 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:43:40 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_39,130.208.243.61,4065;P3_GROUP_77,130.208.243.61,4060;
+ | Sun Oct 13 15:43:40 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 15:43:50 2019
+
+SERVERS,P3_GROUP_39,130.208.243.61,4065; | SENT TO CLIENT
+ | Sun Oct 13 15:43:50 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_39,HELLO GROUP 39
+
+ | Sun Oct 13 15:44:03 2019
+
+Received from server P3_GROUP_39 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 15:44:31 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4076
+
+ | Sun Oct 13 15:45:56 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:45:56 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4076
+ | Sun Oct 13 15:45:56 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 15:45:56 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 15:46:07 2019
+
+SERVERS,P3_GROUP_39,130.208.243.61,4065; | SENT TO CLIENT
+ | Sun Oct 13 15:46:07 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4054
+
+ | Sun Oct 13 15:46:30 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:46:30 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4054
+ | Sun Oct 13 15:46:30 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 15:46:30 2019
+
+Received from server UNKNOWN on socket: 8
+	LISTSERVERS,test1
+ | Sun Oct 13 15:46:30 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060;P3_GROUP_39,130.208.243.61,4065; | SENT TO SERVER
+ | Sun Oct 13 15:46:30 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 15:47:04 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4054
+
+ | Sun Oct 13 15:47:09 2019
+
+Sent FAIL back to client on unsuccessful connection attempt | Sun Oct 13 15:47:09 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4043
+
+ | Sun Oct 13 15:47:56 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:47:56 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4043
+ | Sun Oct 13 15:47:56 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 15:47:56 2019
+
+Received from server UNKNOWN on socket: 7
+	LISTSERVERS,Instructor_1
+ | Sun Oct 13 15:47:56 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:47:56 2019
+
+Received from server UNKNOWN on socket: 7
+	SERVERS,Instructor_1,130.208.243.61,4043;P3_GROUP_40,139.162.232.7,4040;P3_GROUP_77,130.208.243.61,4060;
+ | Sun Oct 13 15:47:56 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 15:48:05 2019
+
+SERVERS,Instructor_1,130.208.243.61,4043; | SENT TO CLIENT
+ | Sun Oct 13 15:48:05 2019
+
+Received from server Instructor_1 on socket: 7
+	SEND_MSG,ORACLE,P3_GROUP_77,Welcome to the net
+ | Sun Oct 13 15:48:05 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4040
+
+ | Sun Oct 13 15:48:19 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:48:19 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4040
+ | Sun Oct 13 15:48:19 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 15:48:19 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 15:49:04 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4047
+
+ | Sun Oct 13 15:49:11 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:49:11 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4047
+ | Sun Oct 13 15:49:11 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 15:49:11 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,V_GROUP_47
+ | Sun Oct 13 15:49:11 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:49:11 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_47,130.208.243.61,4047;
+ | Sun Oct 13 15:49:11 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 15:49:15 2019
+
+SERVERS,P3_GROUP_47,130.208.243.61,4047; | SENT TO CLIENT
+ | Sun Oct 13 15:49:15 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 15:49:18 2019
+
+Sent a list of 0 to client (truncated the list) 
+ | Sun Oct 13 15:49:18 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_47,HELLO THERE GROUP 47 pls send us message
+
+ | Sun Oct 13 15:49:32 2019
+
+Received from server P3_GROUP_47 on socket: 6
+	GET_MSG,P3_GROUP_47
+ | Sun Oct 13 15:49:32 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_47,HELLO THERE GROUP 47 pls send us message | SENT TO SERVER 
+ | Sun Oct 13 15:49:32 2019
+
+Received from server P3_GROUP_47 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 15:49:35 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 15:49:39 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sun Oct 13 15:49:39 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4051
+
+ | Sun Oct 13 15:50:14 2019
+
+Sent FAIL back to client on unsuccessful connection attempt | Sun Oct 13 15:50:14 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4057
+
+ | Sun Oct 13 15:50:32 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:50:32 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4057
+ | Sun Oct 13 15:50:32 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 15:50:32 2019
+
+Received from server UNKNOWN on socket: 8
+	LISTSERVERS,P3_GROUP_80
+ | Sun Oct 13 15:50:32 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060;P3_GROUP_47,130.208.243.61,4047; | SENT TO SERVER
+ | Sun Oct 13 15:50:32 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 15:50:40 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4047
+
+ | Sun Oct 13 15:50:46 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:50:46 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4047
+ | Sun Oct 13 15:50:46 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 15:50:46 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,V_GROUP_47
+ | Sun Oct 13 15:50:46 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:50:46 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_47,130.208.243.61,4047;
+ | Sun Oct 13 15:50:46 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 15:50:49 2019
+
+SERVERS,P3_GROUP_47,130.208.243.61,4047; | SENT TO CLIENT
+ | Sun Oct 13 15:50:49 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_47,HELLO THERE
+
+ | Sun Oct 13 15:51:00 2019
+
+Received from server P3_GROUP_47 on socket: 6
+	SEND_MSG,P3_GROUP_47,P3_GROUP_77,HELLO
+ | Sun Oct 13 15:51:08 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 15:51:33 2019
+
+Sent a list of 2 to client (truncated the list) 
+ | Sun Oct 13 15:51:33 2019
+
+Received from server P3_GROUP_47 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 15:51:35 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 15:51:47 2019
+
+Following message sent to client: HELLO | Sun Oct 13 15:51:47 2019
+
+Received from server P3_GROUP_47 on socket: 6
+	GET_MSG,P3_GROUP_47
+ | Sun Oct 13 15:51:47 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_47,HELLO THERE | SENT TO SERVER 
+ | Sun Oct 13 15:51:47 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 15:51:54 2019
+
+Sent a list of 2 to client (truncated the list) 
+ | Sun Oct 13 15:51:54 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 15:52:06 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 15:52:13 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 15:52:13 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_29
+ | Sun Oct 13 15:52:13 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:52:13 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_29,130.208.243.61,4029;P3_GROUP_47,130.208.243.61,4047;P3_GROUP_13,130.208.243.61,4001;P3_GROUP_77,130.208.243.61,4060;
+ | Sun Oct 13 15:52:13 2019
+
+Received from server P3_GROUP_29 on socket: 6
+	SEND_MSG,P3_GROUP_29,P3_GROUP_77,hello :)
+ | Sun Oct 13 15:52:29 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 15:52:38 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sun Oct 13 15:52:38 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP29,HELLO
+
+ | Sun Oct 13 15:52:46 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 15:53:01 2019
+
+Following message sent to client: hello :) | Sun Oct 13 15:53:01 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 15:53:05 2019
+
+Sent a list of 2 to client (truncated the list) 
+ | Sun Oct 13 15:53:05 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 15:53:10 2019
+
+SERVERS,P3_GROUP_29,130.208.243.61,4029; | SENT TO CLIENT
+ | Sun Oct 13 15:53:10 2019
+
+Received from server P3_GROUP_29 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 15:53:14 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 15:53:20 2019
+
+Sent a list of 2 to client (truncated the list) 
+ | Sun Oct 13 15:53:20 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_29,HELLO :D
+
+ | Sun Oct 13 15:53:55 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 15:53:58 2019
+
+Sent a list of 3 to client (truncated the list) 
+ | Sun Oct 13 15:53:58 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 15:54:02 2019
+
+SERVERS,P3_GROUP_29,130.208.243.61,4029; | SENT TO CLIENT
+ | Sun Oct 13 15:54:02 2019
+
+Received from server P3_GROUP_29 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 15:54:15 2019
+
+Received from server P3_GROUP_29 on socket: 6
+	GET_MSG,P3_GROUP_29
+ | Sun Oct 13 15:54:15 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_29,HELLO :D | SENT TO SERVER 
+ | Sun Oct 13 15:54:15 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 15:54:18 2019
+
+Sent a list of 3 to client (truncated the list) 
+ | Sun Oct 13 15:54:18 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 15:54:31 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4080
+
+ | Sun Oct 13 15:55:50 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:55:50 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4080
+ | Sun Oct 13 15:55:50 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 15:55:50 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 15:55:53 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sun Oct 13 15:55:53 2019
+
+Received from client on socket: 5
+	CONNECT,skel.ru.is,4079
+
+ | Sun Oct 13 15:56:07 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:56:07 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: skel.ru.is:4079
+ | Sun Oct 13 15:56:07 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 15:56:07 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_9
+
+ | Sun Oct 13 15:56:07 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:56:07 2019
+
+Received from server UNKNOWN on socket: 7
+	LISTSERVERS,P3_GROUP_48
+ | Sun Oct 13 15:56:07 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER
+ | Sun Oct 13 15:56:07 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 15:56:14 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sun Oct 13 15:56:14 2019
+
+Received from server UNKNOWN on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 15:56:27 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 15:56:28 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sun Oct 13 15:56:28 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 15:56:37 2019
+
+Client connected to server on socket: 6
+ | Sun Oct 13 16:04:29 2019
+
+Client connected to server on socket: 7
+ | Sun Oct 13 16:04:29 2019
+
+Received from client on socket: 7
+	LISTSERVERS, 
+ | Sun Oct 13 16:04:29 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sun Oct 13 16:04:29 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:04:33 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sun Oct 13 16:04:33 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 16:10:57 2019
+
+SERVERS,P3_GROUP_77,130.208.243.61,4060; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:10:57 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_75SEND_MSG,P3_GROUP_75,UNKOWNGROUP,Welcome to the party server!
+ | Sun Oct 13 16:10:57 2019
+
+Someone sent LISTSERVERS with too many arguments! | Sun Oct 13 16:10:57 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_75,130.208.243.61,4041;Instructor_2,130.208.243.61,4046;P3_GROUP_77,130.208.243.61,4060;P3_GROUP_80,130.208.243.61,63639;
+ | Sun Oct 13 16:10:57 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 16:11:09 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 16:14:06 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:14:06 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_25,130.208.243.61,4025;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 16:14:06 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:14:10 2019
+
+SERVERS,P3_GROUP_25,130.208.243.61,4025; | SENT TO CLIENT
+ | Sun Oct 13 16:14:10 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_25,HELL YEAH
+
+ | Sun Oct 13 16:14:20 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 16:14:30 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sun Oct 13 16:14:30 2019
+
+Received from server P3_GROUP_25 on socket: 6
+	GET_MSG,P3_GROUP_25
+ | Sun Oct 13 16:14:36 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_25,HELL YEAH | SENT TO SERVER 
+ | Sun Oct 13 16:14:36 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 16:14:41 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sun Oct 13 16:14:41 2019
+
+Received from server P3_GROUP_25 on socket: 6
+	KEEPALIVE,3
+ | Sun Oct 13 16:14:42 2019
+
+Received from server P3_GROUP_25 on socket: 6
+	SEND_MSG,P3_GROUP_25,P3_GROUP_77,SUBMIT
+ | Sun Oct 13 16:14:42 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 16:14:48 2019
+
+Sent a list of 2 to client (truncated the list) 
+ | Sun Oct 13 16:14:48 2019
+
+Received from client on socket: 5
+	GETMSGM,P3_GROUP_25
+
+ | Sun Oct 13 16:14:59 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_25
+
+ | Sun Oct 13 16:15:05 2019
+
+Following message sent to client: No message found. Take heed that group_id is case sensitive and doesn't trim spaces | Sun Oct 13 16:15:05 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 16:15:12 2019
+
+Following message sent to client: SUBMIT | Sun Oct 13 16:15:12 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:15:22 2019
+
+SERVERS,P3_GROUP_25,130.208.243.61,4025; | SENT TO CLIENT
+ | Sun Oct 13 16:15:22 2019
+
+Received from server P3_GROUP_25 on socket: 6
+	GET_MSG,P3_GROUP_25
+ | Sun Oct 13 16:15:37 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_25,Thanks a bunch, you cool cats!
+
+ | Sun Oct 13 16:15:38 2019
+
+Received from server P3_GROUP_25 on socket: 6
+	KEEPALIVE,4
+ | Sun Oct 13 16:15:42 2019
+
+Received from server P3_GROUP_25 on socket: 6
+	SEND_MSG,P3_GROUP_25,P3_GROUP_77,BTW AK CITY BBY
+ | Sun Oct 13 16:15:42 2019
+
+Server connected to server on socket: 7
+ | Sun Oct 13 16:15:42 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:15:42 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_25,RVK en fæddist á eyrinni representin odderyin
+
+ | Sun Oct 13 16:16:01 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:16:23 2019
+
+SERVERS,P3_GROUP_25,130.208.243.61,4025; | SENT TO CLIENT
+ | Sun Oct 13 16:16:23 2019
+
+Received from server P3_GROUP_25 on socket: 6
+	GET_MSG,P3_GROUP_25
+ | Sun Oct 13 16:16:38 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_25,Thanks a bunch, you cool cats! | SENT TO SERVER 
+ | Sun Oct 13 16:16:38 2019
+
+Received from server P3_GROUP_25 on socket: 6
+	KEEPALIVE,3
+ | Sun Oct 13 16:16:42 2019
+
+Received from server P3_GROUP_25 on socket: 6
+	SEND_MSG,P3_GROUP_25,P3_GROUP_77,HOW YALL DOIN!!!!!
+ | Sun Oct 13 16:16:42 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_25,We doing fine!
+
+ | Sun Oct 13 16:16:58 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 16:17:07 2019
+
+Following message sent to client: BTW AK CITY BBY | Sun Oct 13 16:17:07 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 16:17:13 2019
+
+Following message sent to client: HOW YALL DOIN!!!!! | Sun Oct 13 16:17:13 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 16:17:17 2019
+
+Following message sent to client: No message found. Take heed that group_id is case sensitive and doesn't trim spaces | Sun Oct 13 16:17:17 2019
+
+Received from server P3_GROUP_25 on socket: 6
+	GET_MSG,P3_GROUP_25
+ | Sun Oct 13 16:17:39 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_25,RVK en fæddist á eyrinni representin odderyin | SENT TO SERVER 
+ | Sun Oct 13 16:17:39 2019
+
+Received from server P3_GROUP_25 on socket: 6
+	KEEPALIVE,2
+ | Sun Oct 13 16:17:42 2019
+
+Received from server P3_GROUP_25 on socket: 6
+	SEND_MSG,P3_GROUP_25,P3_GROUP_77,Say Hebbo!...
+ | Sun Oct 13 16:17:42 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_25,Hebbo
+
+ | Sun Oct 13 16:17:55 2019
+
+Received from server P3_GROUP_25 on socket: 6
+	GET_MSG,P3_GROUP_25
+ | Sun Oct 13 16:18:40 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_25,We doing fine! | SENT TO SERVER 
+ | Sun Oct 13 16:18:40 2019
+
+Received from server P3_GROUP_25 on socket: 6
+	KEEPALIVE,1
+ | Sun Oct 13 16:18:42 2019
+
+Received from server P3_GROUP_25 on socket: 6
+	SEND_MSG,P3_GROUP_25,P3_GROUP_77,Say Hebbo!...
+ | Sun Oct 13 16:18:42 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 16:19:00 2019
+
+Sent a list of 10 to client (truncated the list) 
+ | Sun Oct 13 16:19:00 2019
+
+Received from server P3_GROUP_25 on socket: 6
+	GET_MSG,P3_GROUP_25
+ | Sun Oct 13 16:19:41 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_25,Hebbo | SENT TO SERVER 
+ | Sun Oct 13 16:19:41 2019
+
+Received from server P3_GROUP_25 on socket: 6
+	KEEPALIVE,1
+ | Sun Oct 13 16:19:42 2019
+
+Received from server P3_GROUP_25 on socket: 6
+	SEND_MSG,P3_GROUP_25,P3_GROUP_77,good srry bout hebboid thad er automated
+ | Sun Oct 13 16:19:42 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 16:20:32 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 16:22:00 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:22:00 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_55,167.71.136.174,4086;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 16:22:00 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:22:06 2019
+
+SERVERS,P3_GROUP_55,167.71.136.174,4086; | SENT TO CLIENT
+ | Sun Oct 13 16:22:06 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_55,Hey there obi wan kenobi
+
+ | Sun Oct 13 16:22:17 2019
+
+Server connected to server on socket: 7
+ | Sun Oct 13 16:22:18 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:22:18 2019
+
+Received from server UNKNOWN on socket: 7
+	LISTSERVERS,P3_GROUP_75
+ | Sun Oct 13 16:22:18 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_55,167.71.136.174,4086; | SENT TO SERVER
+ | Sun Oct 13 16:22:18 2019
+
+Received from server UNKNOWN on socket: 7
+	SEND_MSG,P3_GROUP_75,UNKOWNGROUP,Welcome to the party server!
+ | Sun Oct 13 16:22:18 2019
+
+Received from server UNKNOWN on socket: 7
+	SERVERS,P3_GROUP_75,130.208.243.61,4041;Instructor_2,130.208.243.61,4046;P3_GROUP_77,167.71.136.174,6969;P3_GROUP_96,130.208.243.61,38040;
+ | Sun Oct 13 16:22:18 2019
+
+Server connected to server on socket: 8
+ | Sun Oct 13 16:22:27 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:22:27 2019
+
+Received from server UNKNOWN on socket: 8
+	LISTSERVERS,P3_GROUP_42
+ | Sun Oct 13 16:22:27 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_55,167.71.136.174,4086;P3_GROUP_75,130.208.243.61,4041; | SENT TO SERVER
+ | Sun Oct 13 16:22:27 2019
+
+Received from server UNKNOWN on socket: 8
+	KEEPALIVE,0
+ | Sun Oct 13 16:22:27 2019
+
+Received from server UNKNOWN on socket: 8
+	SERVERS,P3_GROUP_42,130.208.243.61,4042;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 16:22:31 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:22:35 2019
+
+SERVERS,P3_GROUP_55,167.71.136.174,4086;P3_GROUP_75,130.208.243.61,4041;P3_GROUP_42,130.208.243.61,4042; | SENT TO CLIENT
+ | Sun Oct 13 16:22:35 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_42,HEy there fellas
+
+ | Sun Oct 13 16:22:47 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 16:23:02 2019
+
+Sent a list of 3 to client (truncated the list) 
+ | Sun Oct 13 16:23:02 2019
+
+Received from server P3_GROUP_42 on socket: 8
+	GET_MSG,P3_GROUP_42
+ | Sun Oct 13 16:23:10 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_42,HEy there fellas | SENT TO SERVER 
+ | Sun Oct 13 16:23:10 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 16:23:13 2019
+
+Following message sent to client: No message found. Take heed that group_id is case sensitive and doesn't trim spaces | Sun Oct 13 16:23:13 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 16:23:16 2019
+
+Sent a list of 3 to client (truncated the list) 
+ | Sun Oct 13 16:23:16 2019
+
+Server connected to server on socket: 9
+ | Sun Oct 13 16:23:28 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:23:28 2019
+
+Received from server P3_GROUP_42 on socket: 8
+	KEEPALIVE,0
+ | Sun Oct 13 16:23:32 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:23:41 2019
+
+SERVERS,P3_GROUP_55,167.71.136.174,4086;P3_GROUP_75,130.208.243.61,4041;P3_GROUP_42,130.208.243.61,4042; | SENT TO CLIENT
+ | Sun Oct 13 16:23:41 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_75,HEY there
+
+ | Sun Oct 13 16:24:09 2019
+
+Received from server P3_GROUP_42 on socket: 8
+	KEEPALIVE,1
+ | Sun Oct 13 16:24:35 2019
+
+Received from server P3_GROUP_42 on socket: 8
+	SEND_MSG,P3_GROUP_42,P3_GROUP_77,What is the ultimate question?
+ | Sun Oct 13 16:24:37 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_42,IDK but the answer is 42
+
+ | Sun Oct 13 16:24:56 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 16:25:04 2019
+
+Following message sent to client: What is the ultimate question? | Sun Oct 13 16:25:04 2019
+
+Received from server P3_GROUP_42 on socket: 8
+	GET_MSG,P3_GROUP_42
+ | Sun Oct 13 16:25:12 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_42,IDK but the answer is 42 | SENT TO SERVER 
+ | Sun Oct 13 16:25:12 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 16:25:15 2019
+
+Following message sent to client: No message found. Take heed that group_id is case sensitive and doesn't trim spaces | Sun Oct 13 16:25:15 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:25:26 2019
+
+SERVERS,P3_GROUP_75,130.208.243.61,4041;P3_GROUP_42,130.208.243.61,4042; | SENT TO CLIENT
+ | Sun Oct 13 16:25:26 2019
+
+Received from server P3_GROUP_42 on socket: 8
+	KEEPALIVE,0
+ | Sun Oct 13 16:25:44 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:26:02 2019
+
+SERVERS,P3_GROUP_75,130.208.243.61,4041;P3_GROUP_42,130.208.243.61,4042; | SENT TO CLIENT
+ | Sun Oct 13 16:26:02 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 16:26:04 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:26:04 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_55,167.71.136.174,4086;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 16:26:04 2019
+
+Received from server P3_GROUP_75 on socket: 7
+	KEEPALIVE,0
+ | Sun Oct 13 16:26:10 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:26:17 2019
+
+SERVERS,P3_GROUP_55,167.71.136.174,4086;P3_GROUP_75,130.208.243.61,4041;P3_GROUP_42,130.208.243.61,4042; | SENT TO CLIENT
+ | Sun Oct 13 16:26:17 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 16:26:22 2019
+
+Sent a list of 6 to client (truncated the list) 
+ | Sun Oct 13 16:26:22 2019
+
+Received from server P3_GROUP_42 on socket: 8
+	KEEPALIVE,0
+ | Sun Oct 13 16:26:54 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:27:03 2019
+
+SERVERS,P3_GROUP_75,130.208.243.61,4041;P3_GROUP_42,130.208.243.61,4042; | SENT TO CLIENT
+ | Sun Oct 13 16:27:03 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 16:27:27 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:27:27 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:27:34 2019
+
+SERVERS,P3_GROUP_75,130.208.243.61,4041;P3_GROUP_42,130.208.243.61,4042; | SENT TO CLIENT
+ | Sun Oct 13 16:27:34 2019
+
+Server connected to server on socket: 10
+ | Sun Oct 13 16:27:43 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:27:43 2019
+
+Received from server UNKNOWN on socket: 10
+	SERVERS,P3_GROUP_55,167.71.136.174,4086;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 16:27:44 2019
+
+Received from server P3_GROUP_42 on socket: 8
+	KEEPALIVE,0
+ | Sun Oct 13 16:27:55 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:27:56 2019
+
+SERVERS,P3_GROUP_75,130.208.243.61,4041;P3_GROUP_42,130.208.243.61,4042;P3_GROUP_55,167.71.136.174,4086; | SENT TO CLIENT
+ | Sun Oct 13 16:27:56 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_55,Hey there guys
+
+ | Sun Oct 13 16:28:05 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 16:29:00 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 16:29:06 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:29:06 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_8
+ | Sun Oct 13 16:29:07 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER
+ | Sun Oct 13 16:29:07 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_8,130.208.243.61,4081;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 16:29:08 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:29:13 2019
+
+SERVERS,P3_GROUP_8,130.208.243.61,4081; | SENT TO CLIENT
+ | Sun Oct 13 16:29:13 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_8,Hello buddy
+
+ | Sun Oct 13 16:29:22 2019
+
+Received from server P3_GROUP_8 on socket: 6
+	GET_MSG,P3_GROUP_8
+ | Sun Oct 13 16:29:52 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_8,Hello buddy | SENT TO SERVER 
+ | Sun Oct 13 16:29:52 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 16:29:57 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sun Oct 13 16:29:57 2019
+
+Server connected to server on socket: 7
+ | Sun Oct 13 16:30:04 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:30:04 2019
+
+Received from server UNKNOWN on socket: 7
+	SERVERS,P3_GROUP_27,130.208.243.61,4027;ORACLE,130.208.243.61,4013;
+ | Sun Oct 13 16:30:04 2019
+
+Received from server P3_GROUP_8 on socket: 6
+	KEEPALIVE,1
+ | Sun Oct 13 16:30:11 2019
+
+Received from server P3_GROUP_8 on socket: 6
+	SEND_MSG,P3_GROUP_8,P3_GROUP_77,hello!
+ | Sun Oct 13 16:30:12 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_27,Heyo
+
+ | Sun Oct 13 16:30:23 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 16:30:47 2019
+
+Sent a list of 3 to client (truncated the list) 
+ | Sun Oct 13 16:30:47 2019
+
+Server connected to server on socket: 8
+ | Sun Oct 13 16:31:02 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:31:02 2019
+
+Received from server UNKNOWN on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:02 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027; | SENT TO SERVER
+ | Sun Oct 13 16:31:02 2019
+
+Received from server UNKNOWN on socket: 8
+	SERVERS,P3_GROUP_27,130.208.243.61,4026;P3_GROUP_77,167.71.136.174,6969;ORACLE,130.208.243.61,4013;
+ | Sun Oct 13 16:31:02 2019
+
+Server connected to server on socket: 9
+ | Sun Oct 13 16:31:02 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:31:02 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	SERVERS,P3_GROUP_27,130.208.243.61,4026;P3_GROUP_77,167.71.136.174,6969;ORACLE,130.208.243.61,4013;P3_GROUP_77,167.71.136.174,6969;LISTSERVERS,P3_GROUP_27LISTSERVERS,P3_GROUP_27LISTSERVERS,P3_GROUP_27LISTSERVERS,P3_GROUP_27LISTSERVERS,P3_GROUP_27LISTSERVERS,P3_GROUP_27LISTSERVERS,P3_GROUP_27LISTSERVERS,P3_GROUP_27LISTSERVERS,P3_GROUP_27LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:02 2019
+
+Received from server UNKNOWN on socket: 9
+	SERVERS,P3_GROUP_96,130.208.243.61,4096;Instructor_1,130.208.243.61,4043;ORACLE,130.208.243.61,4013;P3_GROUP_27,130.208.243.61,4028;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 16:31:02 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:05 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:05 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:05 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:05 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:08 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:08 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:08 2019
+
+Someone sent LISTSERVERS with too many arguments! | Sun Oct 13 16:31:08 2019
+
+Received from server P3_GROUP_8 on socket: 6
+	SEND_MSG,P3_GROUP_8,P3_GROUP_77,Hello there! :)
+ | Sun Oct 13 16:31:10 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:11 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:11 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27LISTSERVERS,P3_GROUP_27LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:11 2019
+
+Someone sent LISTSERVERS with too many arguments! | Sun Oct 13 16:31:11 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:14 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:14 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:14 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:14 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:14 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:14 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:14 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:14 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:14 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:14 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:14 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:14 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:14 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:14 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:14 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:14 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:14 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:14 2019
+
+Received from server P3_GROUP_8 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 16:31:15 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:17 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:17 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:31:18 2019
+
+SERVERS,P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO CLIENT
+ | Sun Oct 13 16:31:18 2019
+
+Received from client on socket: 5
+	SENDMSG,GROUP_96,Heyo there
+
+ | Sun Oct 13 16:31:31 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:31 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:31 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:32 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:32 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:34 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:34 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:35 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:35 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:36 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:36 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 16:31:36 2019
+
+Sent a list of 5 to client (truncated the list) 
+ | Sun Oct 13 16:31:36 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:37 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:37 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:38 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:38 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:39 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:39 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:40 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:40 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:41 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:41 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:42 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:42 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:43 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:43 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:44 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:44 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:45 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:45 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:46 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:46 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:47 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:47 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:48 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:48 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:49 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:49 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:50 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:50 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:51 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:51 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:52 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:52 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:53 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:53 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	GET_MSG,P3_GROUP_27
+ | Sun Oct 13 16:31:53 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_27,Heyo | SENT TO SERVER 
+ | Sun Oct 13 16:31:53 2019
+
+Received from server P3_GROUP_96 on socket: 9
+	GET_MSG,P3_GROUP_96
+ | Sun Oct 13 16:31:53 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	GET_MSG,P3_GROUP_27
+ | Sun Oct 13 16:31:53 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:54 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:54 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:55 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:55 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:56 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:56 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:57 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:57 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:58 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:58 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:31:59 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:31:59 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:32:00 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:32:00 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:32:01 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:32:01 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:32:02 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:32:02 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:32:03 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:32:03 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:32:04 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:32:04 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:32:05 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:32:05 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:32:06 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:32:06 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:32:07 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:32:07 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:32:08 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:32:08 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:32:09 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:32:09 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:32:10 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:32:10 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:32:11 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:32:11 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:32:12 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:32:12 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:32:13 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_8,130.208.243.61,4081;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:32:13 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 16:32:21 2019
+
+Sent a list of 5 to client (truncated the list) 
+ | Sun Oct 13 16:32:21 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:32:25 2019
+
+SERVERS,P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO CLIENT
+ | Sun Oct 13 16:32:25 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_96,Heylo
+
+ | Sun Oct 13 16:32:34 2019
+
+Received from server P3_GROUP_96 on socket: 9
+	GET_MSG,P3_GROUP_96
+ | Sun Oct 13 16:32:54 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_96,Heylo | SENT TO SERVER 
+ | Sun Oct 13 16:32:54 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	GET_MSG,P3_GROUP_27
+ | Sun Oct 13 16:32:54 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:32:58 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:32:58 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 16:33:00 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:33:00 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_48,130.208.243.61,4079;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 16:33:00 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_48,Hello group 48
+
+ | Sun Oct 13 16:33:13 2019
+
+Received from server P3_GROUP_48 on socket: 6
+	SEND_MSG,P3_GROUP_48,P3_GROUP_77, SAYS: HALLO HI HI 
+ | Sun Oct 13 16:33:13 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 16:33:21 2019
+
+Following message sent to client: hello! | Sun Oct 13 16:33:21 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 16:33:31 2019
+
+Following message sent to client: Hello there! :) | Sun Oct 13 16:33:31 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 16:33:37 2019
+
+Following message sent to client:  SAYS: HALLO HI HI  | Sun Oct 13 16:33:37 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:33:41 2019
+
+SERVERS,P3_GROUP_48,130.208.243.61,4079;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO CLIENT
+ | Sun Oct 13 16:33:41 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_48,A message yay
+
+ | Sun Oct 13 16:33:52 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	GET_MSG,P3_GROUP_27
+ | Sun Oct 13 16:33:55 2019
+
+Received from server P3_GROUP_96 on socket: 9
+	GET_MSG,P3_GROUP_96
+ | Sun Oct 13 16:33:55 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:33:57 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_48,130.208.243.61,4079;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026;P3_GROUP_96,130.208.243.61,4096; | SENT TO SERVER
+ | Sun Oct 13 16:33:57 2019
+
+Server connected to server on socket: 8
+ | Sun Oct 13 16:34:09 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:34:09 2019
+
+Received from server UNKNOWN on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:34:09 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_48,130.208.243.61,4079;P3_GROUP_27,130.208.243.61,4027; | SENT TO SERVER
+ | Sun Oct 13 16:34:09 2019
+
+Received from server UNKNOWN on socket: 8
+	SERVERS,P3_GROUP_27,130.208.243.61,4026;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 16:34:09 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	GET_MSG,P3_GROUP_27
+ | Sun Oct 13 16:34:56 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	KEEPALIVE,1
+ | Sun Oct 13 16:35:15 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	SEND_MSG,P3_GROUP_27,P3_GROUP_77,autosentmessage
+ | Sun Oct 13 16:35:15 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 16:35:30 2019
+
+Following message sent to client: autosentmessage | Sun Oct 13 16:35:30 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	LISTSERVERS,P3_GROUP_27
+ | Sun Oct 13 16:35:45 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_48,130.208.243.61,4079;P3_GROUP_27,130.208.243.61,4027;P3_GROUP_27,130.208.243.61,4026; | SENT TO SERVER
+ | Sun Oct 13 16:35:45 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	GET_MSG,P3_GROUP_27
+ | Sun Oct 13 16:35:57 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	KEEPALIVE,0
+ | Sun Oct 13 16:36:15 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	STATUSREQ,P3_GROUP_27
+ | Sun Oct 13 16:36:45 2019
+
+Server connected to server on socket: 9
+ | Sun Oct 13 16:36:48 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:36:48 2019
+
+Received from server UNKNOWN on socket: 9
+	SERVERS,P3_GROUP_24,130.208.243.61,4037;P3_GROUP_77,167.71.136.174,6969
+ | Sun Oct 13 16:36:48 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	GET_MSG,P3_GROUP_27
+ | Sun Oct 13 16:36:58 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	KEEPALIVE,1
+ | Sun Oct 13 16:37:15 2019
+
+Received from server P3_GROUP_27 on socket: 8
+	SEND_MSG,P3_GROUP_27,P3_GROUP_77,autosentmessage
+ | Sun Oct 13 16:37:15 2019
+
+Received from server P3_GROUP_24 on socket: 9
+	KEEPALIVE,0
+ | Sun Oct 13 16:37:26 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 16:37:31 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 16:38:31 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:38:31 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_24,130.208.243.61,4037;P3_GROUP_77,167.71.136.174,6969
+ | Sun Oct 13 16:38:32 2019
+
+Received from server P3_GROUP_24 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 16:38:40 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:38:42 2019
+
+SERVERS,P3_GROUP_24,130.208.243.61,4037; | SENT TO CLIENT
+ | Sun Oct 13 16:38:42 2019
+
+Server connected to server on socket: 7
+ | Sun Oct 13 16:38:49 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:38:49 2019
+
+Received from server UNKNOWN on socket: 7
+	LISTSERVERS,P3_GROUP_69
+ | Sun Oct 13 16:38:49 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_24,130.208.243.61,4037; | SENT TO SERVER
+ | Sun Oct 13 16:38:49 2019
+
+Received from server UNKNOWN on socket: 7
+	SERVERS,P3_GROUP_69,130.208.243.61,4069;Instructor_2,130.208.243.61,4046;P3_GROUP_77,167.71.136.174,6969;P3_GROUP_75,130.208.243.61,4041;
+ | Sun Oct 13 16:38:49 2019
+
+Received from server P3_GROUP_69 on socket: 7
+	LISTSERVERS,P3_GROUP_69
+ | Sun Oct 13 16:38:50 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_24,130.208.243.61,4037;P3_GROUP_69,130.208.243.61,4069; | SENT TO SERVER
+ | Sun Oct 13 16:38:50 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_24,Hello 24 babbay
+
+ | Sun Oct 13 16:38:51 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:39:00 2019
+
+SERVERS,P3_GROUP_24,130.208.243.61,4037;P3_GROUP_69,130.208.243.61,4069; | SENT TO CLIENT
+ | Sun Oct 13 16:39:00 2019
+
+Received from server P3_GROUP_69 on socket: 7
+	KEEPALIVE,0
+ | Sun Oct 13 16:39:05 2019
+
+Received from server P3_GROUP_69 on socket: 7
+	SEND_MSG,P3_GROUP_69,P3_GROUP_77,hello is anyone there? 
+ | Sun Oct 13 16:39:07 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_69,Yes we are here
+
+ | Sun Oct 13 16:39:12 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 16:39:25 2019
+
+Following message sent to client: hello is anyone there?  | Sun Oct 13 16:39:25 2019
+
+Received from server P3_GROUP_24 on socket: 6
+	GET_MSG,P3_GROUP_24
+ | Sun Oct 13 16:39:32 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_24,Hello 24 babbay | SENT TO SERVER 
+ | Sun Oct 13 16:39:32 2019
+
+Received from server P3_GROUP_24 on socket: 6
+	KEEPALIVE,1
+ | Sun Oct 13 16:39:40 2019
+
+Received from server P3_GROUP_24 on socket: 6
+	SEND_MSG,P3_GROUP_24,P3_GROUP_77,Hi
+ | Sun Oct 13 16:39:40 2019
+
+Received from server P3_GROUP_69 on socket: 7
+	GET_MSG,P3_GROUP_69
+ | Sun Oct 13 16:39:45 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_69,Yes we are here | SENT TO SERVER 
+ | Sun Oct 13 16:39:45 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 16:39:52 2019
+
+Following message sent to client: Hi | Sun Oct 13 16:39:52 2019
+
+Received from server P3_GROUP_69 on socket: 7
+	KEEPALIVE,0
+ | Sun Oct 13 16:40:06 2019
+
+Received from server P3_GROUP_69 on socket: 7
+	SEND_MSG,P3_GROUP_69,P3_GROUP_77,send nudes 
+ | Sun Oct 13 16:40:15 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 16:40:27 2019
+
+Following message sent to client: send nudes  | Sun Oct 13 16:40:27 2019
+
+Server connected to server on socket: 8
+ | Sun Oct 13 16:40:29 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:40:29 2019
+
+Received from server UNKNOWN on socket: 8
+	SERVERS,P3_GROUP_55,167.71.136.174,4086;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 16:40:29 2019
+
+Received from server P3_GROUP_24 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 16:40:40 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_69,8=====D
+
+ | Sun Oct 13 16:40:42 2019
+
+Received from server P3_GROUP_69 on socket: 7
+	GET_MSG,P3_GROUP_69
+ | Sun Oct 13 16:40:50 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_69,8=====D | SENT TO SERVER 
+ | Sun Oct 13 16:40:50 2019
+
+Received from server P3_GROUP_55 on socket: 8
+	SEND_MSG,P3_GROUP_55,P3_GROUP_77
+,You got mail
+ | Sun Oct 13 16:40:50 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_55,MAIL RECEIVED BOIIIII
+
+ | Sun Oct 13 16:41:01 2019
+
+Received from server P3_GROUP_69 on socket: 7
+	KEEPALIVE,0
+ | Sun Oct 13 16:41:07 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 16:41:11 2019
+
+Following message sent to client: No message found. Take heed that group_id is case sensitive and doesn't trim spaces | Sun Oct 13 16:41:11 2019
+
+Received from server P3_GROUP_69 on socket: 7
+	SEND_MSG,P3_GROUP_69,P3_GROUP_77,( . Y . ) 
+ | Sun Oct 13 16:41:16 2019
+
+Received from server P3_GROUP_24 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 16:41:40 2019
+
+Received from server P3_GROUP_69 on socket: 7
+	GET_MSG,P3_GROUP_69
+ | Sun Oct 13 16:41:50 2019
+
+Received from server P3_GROUP_69 on socket: 7
+	KEEPALIVE,0
+ | Sun Oct 13 16:42:08 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 16:42:18 2019
+
+Following message sent to client: ( . Y . )  | Sun Oct 13 16:42:18 2019
+
+Received from server P3_GROUP_69 on socket: 7
+	GET_MSG,P3_GROUP_69
+ | Sun Oct 13 16:42:24 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 16:42:30 2019
+
+Following message sent to client: No message found. Take heed that group_id is case sensitive and doesn't trim spaces | Sun Oct 13 16:42:30 2019
+
+Received from server P3_GROUP_24 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 16:42:40 2019
+
+Received from server P3_GROUP_69 on socket: 7
+	GET_MSG,P3_GROUP_69
+ | Sun Oct 13 16:42:49 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:42:59 2019
+
+SERVERS,P3_GROUP_24,130.208.243.61,4037;P3_GROUP_69,130.208.243.61,4069;P3_GROUP_55,167.71.136.174,4086; | SENT TO CLIENT
+ | Sun Oct 13 16:42:59 2019
+
+Received from server P3_GROUP_69 on socket: 7
+	KEEPALIVE,0
+ | Sun Oct 13 16:43:09 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 16:43:26 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:49:37 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sun Oct 13 16:49:37 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 16:49:45 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:49:45 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_55,167.71.136.174,4086;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 16:49:45 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:49:51 2019
+
+SERVERS,P3_GROUP_55,167.71.136.174,4086; | SENT TO CLIENT
+ | Sun Oct 13 16:49:51 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_55,How you doing, fellas?
+
+ | Sun Oct 13 16:50:09 2019
+
+Received from server P3_GROUP_55 on socket: 6
+	GET_MSG,P3_GROUP_55
+
+ | Sun Oct 13 16:50:59 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_55,How you doing, fellas? | SENT TO SERVER 
+ | Sun Oct 13 16:50:59 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:52:15 2019
+
+SERVERS,P3_GROUP_55,167.71.136.174,4086; | SENT TO CLIENT
+ | Sun Oct 13 16:52:15 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 16:52:24 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sun Oct 13 16:52:24 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 16:55:15 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:55:15 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_48,130.208.243.61,4079;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 16:55:15 2019
+
+Received from server P3_GROUP_48 on socket: 6
+	SEND_MSG,P3_GROUP_48,P3_GROUP_77, SAYS: HALLO HI HI 
+ | Sun Oct 13 16:55:36 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_48,Hello again :D
+
+ | Sun Oct 13 16:55:39 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_48
+
+ | Sun Oct 13 16:55:45 2019
+
+Following message sent to client: Hello again :D | Sun Oct 13 16:55:45 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_48,Hello again :D
+
+ | Sun Oct 13 16:55:54 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 16:56:02 2019
+
+Following message sent to client:  SAYS: HALLO HI HI  | Sun Oct 13 16:56:02 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:56:48 2019
+
+SERVERS,P3_GROUP_48,130.208.243.61,4079; | SENT TO CLIENT
+ | Sun Oct 13 16:56:48 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 16:57:25 2019
+
+Sent a list of 4 to client (truncated the list) 
+ | Sun Oct 13 16:57:25 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:57:44 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sun Oct 13 16:57:44 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 16:57:48 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 16:57:48 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:57:56 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sun Oct 13 16:57:56 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 16:59:14 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sun Oct 13 16:59:14 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 16:59:52 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 17:10:12 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sun Oct 13 17:10:12 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 17:11:46 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 17:11:46 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_29
+ | Sun Oct 13 17:11:46 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER
+ | Sun Oct 13 17:11:46 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_29,130.208.243.61,4029;P3_GROUP_25,130.208.243.61,4025;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 17:11:47 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 17:11:52 2019
+
+SERVERS,P3_GROUP_29,130.208.243.61,4029; | SENT TO CLIENT
+ | Sun Oct 13 17:11:52 2019
+
+Received from server P3_GROUP_29 on socket: 6
+	SEND_MSG,P3_GROUP_29,P3_GROUP_77,hallo :):):)
+ | Sun Oct 13 17:12:00 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_29,hallo hallo yourself
+
+ | Sun Oct 13 17:12:04 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 17:12:16 2019
+
+Following message sent to client: hallo :):):) | Sun Oct 13 17:12:16 2019
+
+Received from server P3_GROUP_29 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 17:12:47 2019
+
+Received from server P3_GROUP_29 on socket: 6
+	GET_MSG,P3_GROUP_29
+ | Sun Oct 13 17:13:03 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_29,hallo hallo yourself | SENT TO SERVER 
+ | Sun Oct 13 17:13:03 2019
+
+Received from server P3_GROUP_29 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 17:13:48 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 17:13:56 2019
+
+SERVERS,P3_GROUP_29,130.208.243.61,4029; | SENT TO CLIENT
+ | Sun Oct 13 17:13:56 2019
+
+Received from server P3_GROUP_29 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 17:14:49 2019
+
+Received from server P3_GROUP_29 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 17:15:50 2019
+
+Received from server P3_GROUP_29 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 17:16:51 2019
+
+Received from server P3_GROUP_29 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 17:17:52 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 17:19:23 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 17:19:23 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_55,167.71.136.174,4086;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 17:19:23 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_55,Hello buddies
+
+ | Sun Oct 13 17:19:35 2019
+
+Received from server P3_GROUP_55 on socket: 6
+	SEND_MSG,P3_GROUP_55,P3_GROUP_77,You got mail
+ | Sun Oct 13 17:19:51 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 17:20:00 2019
+
+Following message sent to client: You got mail | Sun Oct 13 17:20:00 2019
+
+Received from server P3_GROUP_55 on socket: 6
+	GET_MSG,P3_GROUP_55
+ | Sun Oct 13 17:20:34 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_55,Hello buddies | SENT TO SERVER 
+ | Sun Oct 13 17:20:34 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_55,Message received, hell yeah!
+
+ | Sun Oct 13 17:20:46 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 17:21:59 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sun Oct 13 17:21:59 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 17:24:29 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sun Oct 13 17:24:29 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 17:32:35 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 17:32:35 2019
+
+Server connected to server on socket: 7
+ | Sun Oct 13 17:32:39 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 17:32:39 2019
+
+Received from server UNKNOWN on socket: 7
+	LISTSERVERS,SOLVI
+ | Sun Oct 13 17:32:39 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER
+ | Sun Oct 13 17:32:39 2019
+
+Received from server UNKNOWN on socket: 7
+	SERVERS,SOLVI,130.208.243.61,4096;P3_GROUP_29,130.208.243.61,4029;P3_GROUP_40,139.162.232.7,4040;,130.208.243.61,45100;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 17:32:39 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 17:32:50 2019
+
+SERVERS,SOLVI,130.208.243.61,4096; | SENT TO CLIENT
+ | Sun Oct 13 17:32:50 2019
+
+Received from client on socket: 5
+	SENDMSG,SOLVI,Umm a thetta ekki ad vera group_id name en ekki solvi?
+
+ | Sun Oct 13 17:33:11 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 17:33:42 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 17:33:42 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_88,130.208.243.61,4092;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 17:33:42 2019
+
+Received from server P3_GROUP_88 on socket: 6
+	LISTSERVERS,P3_GROUP_88
+ | Sun Oct 13 17:33:43 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_88,130.208.243.61,4092; | SENT TO SERVER
+ | Sun Oct 13 17:33:43 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 17:33:48 2019
+
+SERVERS,P3_GROUP_88,130.208.243.61,4092; | SENT TO CLIENT
+ | Sun Oct 13 17:33:48 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_88,88 bottles of beer on the wall. 88 bottles of beeeeer
+
+ | Sun Oct 13 17:34:03 2019
+
+Received from server P3_GROUP_88 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 17:34:12 2019
+
+Received from server P3_GROUP_88 on socket: 6
+	GET_MSG,P3_GROUP_88
+ | Sun Oct 13 17:34:24 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_88,88 bottles of beer on the wall. 88 bottles of beeeeer | SENT TO SERVER 
+ | Sun Oct 13 17:34:24 2019
+
+Server connected to server on socket: 7
+ | Sun Oct 13 17:34:33 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 17:34:33 2019
+
+Received from server UNKNOWN on socket: 7
+	LISTSERVERS,P3_GROUP_96
+ | Sun Oct 13 17:34:33 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_88,130.208.243.61,4092; | SENT TO SERVER
+ | Sun Oct 13 17:34:33 2019
+
+Received from server UNKNOWN on socket: 7
+	SERVERS,P3_GROUP_96,130.208.243.61,4096;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 17:34:33 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 17:34:47 2019
+
+SERVERS,P3_GROUP_88,130.208.243.61,4092;P3_GROUP_96,130.208.243.61,4096; | SENT TO CLIENT
+ | Sun Oct 13 17:34:47 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_96,Ellho
+
+ | Sun Oct 13 17:34:59 2019
+
+Received from server P3_GROUP_88 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 17:35:13 2019
+
+Received from server P3_GROUP_96 on socket: 7
+	SEND_MSG,P3_GROUP_96,P3_GROUP_77,hello
+ | Sun Oct 13 17:35:16 2019
+
+Received from server P3_GROUP_96 on socket: 7
+	KEEPALIVE,0
+ | Sun Oct 13 17:35:21 2019
+
+Received from server P3_GROUP_96 on socket: 7
+	GET_MSG,P3_GROUP_96
+ | Sun Oct 13 17:35:25 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_96,Ellho | SENT TO SERVER 
+ | Sun Oct 13 17:35:25 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 17:35:35 2019
+
+Following message sent to client: hello | Sun Oct 13 17:35:35 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_96,I do believe we have met before :)
+
+ | Sun Oct 13 17:35:52 2019
+
+Received from server P3_GROUP_88 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 17:36:14 2019
+
+Received from server P3_GROUP_96 on socket: 7
+	KEEPALIVE,0
+ | Sun Oct 13 17:36:21 2019
+
+Received from server P3_GROUP_96 on socket: 7
+	GET_MSG,P3_GROUP_96
+ | Sun Oct 13 17:36:26 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_96,I do believe we have met before :) | SENT TO SERVER 
+ | Sun Oct 13 17:36:26 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 17:36:45 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 17:38:08 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 17:38:08 2019
+
+Server connected to server on socket: 7
+ | Sun Oct 13 17:38:08 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 17:38:08 2019
+
+Received from server UNKNOWN on socket: 7
+	LISTSERVERS,P3_GROUP_54
+ | Sun Oct 13 17:38:08 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER
+ | Sun Oct 13 17:38:08 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 17:42:19 2019
+
+Received from client on socket: 5
+	CONNECT,172.83.9.61,4040
+
+ | Sun Oct 13 17:42:25 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER
+ | Sun Oct 13 17:42:25 2019
+
+RECEIVED FROM CLIENT CONNECT COMMAND and am connecting to: 172.83.9.61:4040
+ | Sun Oct 13 17:42:25 2019
+
+Sent SUCCESS back to client on successful connection | Sun Oct 13 17:42:25 2019
+
+Received from server UNKNOWN on socket: 6
+	LISTSERVERS,P3_GROUP_75
+ | Sun Oct 13 17:42:25 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER
+ | Sun Oct 13 17:42:25 2019
+
+Received from server UNKNOWN on socket: 6
+	STATUSREQ,P3_GROUP_75
+ | Sun Oct 13 17:42:25 2019
+
+Received from server UNKNOWN on socket: 6
+	SEND_MSG,P3_GROUP_75,P3_GROUP_77,Welcome to the party server!SERVERS,P3_GROUP_75,10.64.39.149,4040;P3_GROUP_77,167.71.136.174,28315;
+ | Sun Oct 13 17:42:25 2019
+
+Received from server UNKNOWN on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 17:43:25 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_75,http://partypartypartyparty.party
+
+ | Sun Oct 13 17:43:42 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 17:44:00 2019
+
+Following message sent to client: Welcome to the party server!SERVERS,P3_GROUP_75,10.64.39.149,4040;P3_GROUP_77,167.71.136.174,28315; | Sun Oct 13 17:44:00 2019
+
+Received from server UNKNOWN on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 17:44:26 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 17:44:30 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sun Oct 13 17:44:30 2019
+
+Received from server UNKNOWN on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 17:45:26 2019
+
+Received from server UNKNOWN on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 17:46:26 2019
+
+Server connected to server on socket: 7
+ | Sun Oct 13 17:47:18 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 17:47:18 2019
+
+Received from server UNKNOWN on socket: 7
+	SERVERS,P3_GROUP_88,130.208.243.61,4092;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 17:47:18 2019
+
+Received from server P3_GROUP_88 on socket: 7
+	LISTSERVERS,P3_GROUP_88
+ | Sun Oct 13 17:47:18 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_88,130.208.243.61,4092; | SENT TO SERVER
+ | Sun Oct 13 17:47:18 2019
+
+Received from server UNKNOWN on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 17:47:26 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_88,Hello buddies sorry about the long wait
+
+ | Sun Oct 13 17:47:31 2019
+
+Received from server P3_GROUP_88 on socket: 7
+	KEEPALIVE,0
+ | Sun Oct 13 17:47:57 2019
+
+Received from server P3_GROUP_88 on socket: 7
+	GET_MSG,P3_GROUP_88
+ | Sun Oct 13 17:48:22 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_88,Hello buddies sorry about the long wait | SENT TO SERVER 
+ | Sun Oct 13 17:48:22 2019
+
+Received from server UNKNOWN on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 17:48:26 2019
+
+Received from server P3_GROUP_88 on socket: 7
+	KEEPALIVE,0
+ | Sun Oct 13 17:48:58 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 17:49:25 2019
+
+Sent a list of 3 to client (truncated the list) 
+ | Sun Oct 13 17:49:25 2019
+
+Received from server UNKNOWN on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 17:49:26 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 17:49:30 2019
+
+SERVERS,P3_GROUP_88,130.208.243.61,4092; | SENT TO CLIENT
+ | Sun Oct 13 17:49:30 2019
+
+Received from server UNKNOWN on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 17:50:50 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 17:50:53 2019
+
+Following message sent to client: No message found. Take heed that group_id is case sensitive and doesn't trim spaces | Sun Oct 13 17:50:53 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 17:51:14 2019
+
+SERVERS,P3_GROUP_88,130.208.243.61,4092; | SENT TO CLIENT
+ | Sun Oct 13 17:51:14 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 17:51:33 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 17:54:26 2019
+
+SERVERS, | SENT TO CLIENT
+ | Sun Oct 13 17:54:26 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 17:55:39 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 17:55:39 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_88,130.208.243.61,4092;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 17:55:39 2019
+
+Received from server P3_GROUP_88 on socket: 6
+	LISTSERVERS,P3_GROUP_88
+ | Sun Oct 13 17:55:39 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_88,130.208.243.61,4092; | SENT TO SERVER
+ | Sun Oct 13 17:55:39 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 17:56:33 2019
+
+SERVERS,P3_GROUP_88,130.208.243.61,4092; | SENT TO CLIENT
+ | Sun Oct 13 17:56:33 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_88,Hallo aftur hvernig er heilsan ?
+
+ | Sun Oct 13 17:56:46 2019
+
+Received from client on socket: 5
+	LISTSERVERS
+
+ | Sun Oct 13 17:58:00 2019
+
+SERVERS,P3_GROUP_88,130.208.243.61,4092; | SENT TO CLIENT
+ | Sun Oct 13 17:58:00 2019
+
+Received from client on socket: 5
+	LISTMESSAGES
+
+ | Sun Oct 13 17:58:09 2019
+
+Sent a list of 1 to client (truncated the list) 
+ | Sun Oct 13 17:58:09 2019
+
+Client connected to server on socket: 5
+ | Sun Oct 13 17:58:37 2019
+
+Server connected to server on socket: 6
+ | Sun Oct 13 17:59:05 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 17:59:05 2019
+
+Received from server UNKNOWN on socket: 6
+	SERVERS,P3_GROUP_88,130.208.243.61,4092;P3_GROUP_77,167.71.136.174,6969;
+ | Sun Oct 13 17:59:05 2019
+
+Received from server P3_GROUP_88 on socket: 6
+	LISTSERVERS,P3_GROUP_88
+ | Sun Oct 13 17:59:05 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969;P3_GROUP_88,130.208.243.61,4092; | SENT TO SERVER
+ | Sun Oct 13 17:59:05 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_88,Hallo aftur
+
+ | Sun Oct 13 17:59:20 2019
+
+Received from server P3_GROUP_88 on socket: 6
+	SEND_MSG,P3_GROUP_88,P3_GROUP_77,oops, think we got it this time!
+ | Sun Oct 13 17:59:24 2019
+
+Received from server P3_GROUP_88 on socket: 6
+	GET_MSG,P3_GROUP_88
+ | Sun Oct 13 17:59:35 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_88,Hallo aftur | SENT TO SERVER 
+ | Sun Oct 13 17:59:35 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 17:59:35 2019
+
+Following message sent to client: oops, think we got it this time! | Sun Oct 13 17:59:35 2019
+
+Received from server P3_GROUP_88 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 17:59:42 2019
+
+Received from server P3_GROUP_88 on socket: 6
+	SEND_MSG,P3_GROUP_88,P3_GROUP_77,ok. allt i godu nuna? haha
+ | Sun Oct 13 18:00:24 2019
+
+Received from server P3_GROUP_88 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 18:00:43 2019
+
+Received from client on socket: 5
+	SENDMSG,P3_GROUP_88,Allt i godu
+
+ | Sun Oct 13 18:00:44 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 18:00:59 2019
+
+Following message sent to client: ok. allt i godu nuna? haha | Sun Oct 13 18:00:59 2019
+
+Server connected to server on socket: 7
+ | Sun Oct 13 18:01:02 2019
+
+SERVERS,P3_GROUP_77,167.71.136.174,6969; | SENT TO SERVER ALONG WITH A LISTSERVERS REQUEST
+ | Sun Oct 13 18:01:02 2019
+
+Received from client on socket: 5
+	GETMSG,P3_GROUP_77
+
+ | Sun Oct 13 18:01:05 2019
+
+Following message sent to client: No message found. Take heed that group_id is case sensitive and doesn't trim spaces | Sun Oct 13 18:01:05 2019
+
+Received from server P3_GROUP_88 on socket: 6
+	GET_MSG,P3_GROUP_88
+ | Sun Oct 13 18:01:37 2019
+
+SEND_MSG,P3_GROUP_77,P3_GROUP_88,Allt i godu | SENT TO SERVER 
+ | Sun Oct 13 18:01:37 2019
+
+Received from server P3_GROUP_88 on socket: 6
+	KEEPALIVE,0
+ | Sun Oct 13 18:01:44 2019
+
