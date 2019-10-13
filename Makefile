@@ -1,4 +1,5 @@
-gpp             = g++ --std=c++11 -pthread -Wall
+gpp             = g++ --std=c++11 -Wall
+pthr			= -pthread
 skelAddendum    = -static-libstdc++
 serverDirective = server.cpp fileOperations.cpp messageOperations.cpp ip.cpp -o tsamp3group77
 clientDirective = client.cpp messageOperations.cpp fileOperations.cpp -o client
@@ -7,7 +8,7 @@ all:
 	if test -e tsamp3group77; then rm tsamp3group77; fi
 	$(gpp) $(serverDirective)
 	if test -e client; then rm client; fi
-	$(gpp) $(clientDirective)
+	$(gpp) $(pthr) $(clientDirective)
 
 server:
 	if test -e tsamp3group77; then rm tsamp3group77; fi
@@ -17,11 +18,11 @@ compileforskel:
 	if test -e tsamp3group77; then rm tsamp3group77; fi
 	$(gpp) $(skelAddendum) $(serverDirective)
 	if test -e client; then rm client; fi
-	$(gpp) $(skelAddendum) $(clientDirective)
+	$(gpp) $(pthr) $(skelAddendum) $(clientDirective)
 
 client:
 	if test -e client; then rm client; fi
-	$(gpp) $(clientDirective)
+	$(gpp) $(pthr) $(clientDirective)
 
 clean:
 	if test -e tsamp3group77; then rm tsamp3group77; fi
