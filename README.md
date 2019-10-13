@@ -87,6 +87,8 @@ for example
 
 ### Client commands overview
 
+**Screenshots between client and server for WIRESHARK monitoring can be found in the folder *screenshots/wireshark_client_commands* **
+
 `LISTSERVERS`: lists servers who are connected to the server the client is talking to
 
 `GETMSG,<GROUP_ID>`: if a message is in the `message_buffer` with a receiver for this group id, it gets sent to the client
