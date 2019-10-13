@@ -52,7 +52,7 @@
 #endif
 
 #define BACKLOG  5              // Allowed length of queue of waiting connections
-#define MYGROUP "P3_GROUP_77"   // Our group id
+#define MYGROUP "P3_GROUP_77_HEIMILI"   // Our group id
 
 // Simple class for handling connections from clients.
 //
