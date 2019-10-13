@@ -486,7 +486,7 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
 
                 response << " | SENT TO SERVER" << std::endl;
                 writeToLog(response.str());
-                
+
                 send(serverSocket, response_msg.c_str(), response_msg.length(), 0);
 
             } else {
@@ -516,7 +516,7 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
         } else if (strs[0] == "KEEPALIVE") {
             // Erase newlines from the second token, if they are present
             strs[1].erase(std::remove(strs[1].begin(), 
-                            strs[1].end(), '\n'), strs[1].end());
+                        strs[1].end(), '\n'), strs[1].end());
 
             std::cout << "Received KEEPALIVE command" << std::endl;
 
@@ -587,72 +587,73 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                     new_msg_struct.unread = true;
                     message_buffer.push_back(new_msg_struct);
                 }
-        } else if (strs[0] == "LEAVE") {
-            std::cout << "Received LEAVE command" << std::endl;
-            if(strs.size() == 3) {
-                int closedServer = -1;
-                // Go through the servers and stage it for a disconnect
-                // if it is found
-                for(auto const& p: servers) {
-                    // If address and port are found in the servers structure
-                    if(strcmp(p.second->address.c_str(), strs[1].c_str()) == 0
-                            && p.second->port == atoi(strs[2].c_str())) {
-                        closedServer = p.second->sock;
-                    }
-                }
-
-                if(closedServer != -1) {
-                    close(closedServer);
-                    closeServer(closedServer, openSockets, maxfds);
-                }
-            }
-        } else if (strs[0] == "STATUSREQ") {
-            if (strs.size() == 2) {
-                std::cout << "Received STATUSREQ command" << std::endl;
-
-                // Erase the newline on the last token if present
-                strs[1].erase(std::remove(strs[1].begin(), 
-                            strs[1].end(), '\n'), strs[1].end());
-
-                std::ostringstream response;
-                response << "STATUSRESP," << MYGROUP << "," << strs[1];
-
-                std::map<std::string, int> group_message_count;
-
-                // Go through the message_buffer and count the messages for servers
-                // who are valid
-                for(unsigned long int i = 0; i < message_buffer.size(); i++) {
-                    s_message tmp_msg = message_buffer[i];
-                    if(strcmp(tmp_msg.receiver.c_str(), "UNKNOWN") != 0 && tmp_msg.unread) {
-                        if ( group_message_count.find(tmp_msg.receiver) == group_message_count.end() ) {
-                            group_message_count[tmp_msg.receiver] = 1;
-                        } else {
-                            group_message_count[tmp_msg.receiver] += 1;
+            } else if (strs[0] == "LEAVE") {
+                std::cout << "Received LEAVE command" << std::endl;
+                if(strs.size() == 3) {
+                    int closedServer = -1;
+                    // Go through the servers and stage it for a disconnect
+                    // if it is found
+                    for(auto const& p: servers) {
+                        // If address and port are found in the servers structure
+                        if(strcmp(p.second->address.c_str(), strs[1].c_str()) == 0
+                                && p.second->port == atoi(strs[2].c_str())) {
+                            closedServer = p.second->sock;
                         }
                     }
-                }
 
-                // Go throug the collection and construct GROUP_ID,<NUM_OF_MESSAGES>
-                // for the STATUSRESPONSE
-                for (auto const& gmc : group_message_count) {
-                    response << "," << gmc.first << "," << gmc.second;
+                    if(closedServer != -1) {
+                        close(closedServer);
+                        closeServer(closedServer, openSockets, maxfds);
+                    }
                 }
+            } else if (strs[0] == "STATUSREQ") {
+                if (strs.size() == 2) {
+                    std::cout << "Received STATUSREQ command" << std::endl;
 
-                std::string response_msg = constructMessage(response.str());
-                response << " | SENT TO SERVER" << std::endl;
-                writeToLog(response.str());
-                send(serverSocket, response_msg.c_str(), response_msg.length(), 0);
+                    // Erase the newline on the last token if present
+                    strs[1].erase(std::remove(strs[1].begin(), 
+                                strs[1].end(), '\n'), strs[1].end());
+
+                    std::ostringstream response;
+                    response << "STATUSRESP," << MYGROUP << "," << strs[1];
+
+                    std::map<std::string, int> group_message_count;
+
+                    // Go through the message_buffer and count the messages for servers
+                    // who are valid
+                    for(unsigned long int i = 0; i < message_buffer.size(); i++) {
+                        s_message tmp_msg = message_buffer[i];
+                        if(strcmp(tmp_msg.receiver.c_str(), "UNKNOWN") != 0 && tmp_msg.unread) {
+                            if ( group_message_count.find(tmp_msg.receiver) == group_message_count.end() ) {
+                                group_message_count[tmp_msg.receiver] = 1;
+                            } else {
+                                group_message_count[tmp_msg.receiver] += 1;
+                            }
+                        }
+                    }
+
+                    // Go throug the collection and construct GROUP_ID,<NUM_OF_MESSAGES>
+                    // for the STATUSRESPONSE
+                    for (auto const& gmc : group_message_count) {
+                        response << "," << gmc.first << "," << gmc.second;
+                    }
+
+                    std::string response_msg = constructMessage(response.str());
+                    response << " | SENT TO SERVER" << std::endl;
+                    writeToLog(response.str());
+                    send(serverSocket, response_msg.c_str(), response_msg.length(), 0);
+                }
+            } else if (strs[0] == "STATUSRESP") {
+                // Not implemented yet
+                std::cout << "Received STATUSRESP response" << std::endl;
+            } else {
+                std::string e_msg = "INVALID COMMAND!";
+                writeToLog("Sent INVALID COMMAND back to server");
+                send(serverSocket, e_msg.c_str(), e_msg.length()-1, 0);
             }
-        } else if (strs[0] == "STATUSRESP") {
-            // Not implemented yet
-            std::cout << "Received STATUSRESP response" << std::endl;
-        } else {
-            std::string e_msg = "INVALID COMMAND!";
-            writeToLog("Sent INVALID COMMAND back to server");
-            send(serverSocket, e_msg.c_str(), e_msg.length()-1, 0);
         }
+        memset(&buffer, 0, sizeof(buffer));
     }
-    memset(&buffer, 0, sizeof(buffer));
 }
 
 int main(int argc, char* argv[])
@@ -868,7 +869,7 @@ int main(int argc, char* argv[])
                     }
                 }
 
-                
+
                 // If there are any servers or clients to close, then this
                 // is the place to do it. Moving this into the iterator
                 // will most likely result in a segfault
