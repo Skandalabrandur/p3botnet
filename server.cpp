@@ -78,7 +78,6 @@ class Client
 std::map<int, Client*> clients;     // Lookup table for per Client information
 std::map<int, Server*> servers;   // Lookup table for connected servers
 
-int timedTasksIndex = 0;
 
 typedef boost::circular_buffer<s_message> circular_buffer;
 circular_buffer message_buffer{500};
@@ -229,56 +228,23 @@ int connectToServer(char *address, char *port, char *our_port, fd_set *openSocke
 }
 
 void timedTasks() {
-    if(timedTasksIndex == 0) {
-        // KEEPALIVE outgoing directive
-        for(auto const& p : servers) {
-            if (strcmp(p.second->group_id.c_str(), "UNKNOWN") == 0) {
-                continue;
-            }
-
-            int unread_messages = 0;
-            for(unsigned long int i = 0; i < message_buffer.size(); i++) {
-                s_message tmp_msg = message_buffer[i];
-                if(strcmp(p.second->group_id.c_str(), tmp_msg.receiver.c_str()) == 0 && tmp_msg.unread) {
-                    unread_messages += 1;
-                }
-            }
-            std::ostringstream ka_msg;
-            ka_msg << "KEEPALIVE," << unread_messages << std::endl;
-            std::string ka = constructMessage(ka_msg.str());
-            send(p.second->sock, ka.c_str(), ka.length(), 0);
+    for(auto const& p : servers) {
+        if (strcmp(p.second->group_id.c_str(), "UNKNOWN") == 0) {
+            continue;
         }
-        //TODO CHANGE THIS TO RE-ENABLE SENDING MESSAGES
-        timedTasksIndex = 0;
-    } else if(timedTasksIndex == 1) {
-        // One message per server sent at a time to reduce spamming
-        for(auto const& p : servers) {
-            s_message gotten_msg;
-            for(unsigned long int i = 0; i < message_buffer.size(); i++) {
-                s_message tmp_msg = message_buffer[i];
-                if(strcmp(tmp_msg.receiver.c_str(), p.second->group_id.c_str()) == 0
-                        && tmp_msg.unread) {
-                    gotten_msg = tmp_msg;
-                    message_buffer[i].unread = false;
-                    break;
-                }
+
+        int unread_messages = 0;
+        for(unsigned long int i = 0; i < message_buffer.size(); i++) {
+            s_message tmp_msg = message_buffer[i];
+            if(strcmp(p.second->group_id.c_str(), tmp_msg.receiver.c_str()) == 0 && tmp_msg.unread) {
+                unread_messages += 1;
             }
-            std::ostringstream timedTask;
-            timedTask << "Found a message for " << p.second->group_id; 
-            timedTask << " who I am connected to and sent it:\n\t";
-            timedTask << gotten_msg.msg << std::endl;
-            writeToLog(timedTask.str());
-
-            std::ostringstream message;
-            message << "SEND_MSG," << gotten_msg.sender << "," << gotten_msg.receiver;
-            message << "," << gotten_msg.msg;
-
-            std::string message_construct = constructMessage(message.str());
-            send(p.second->sock, message_construct.c_str(), message_construct.length(), 0);
         }
-        timedTasksIndex = 0;
+        std::ostringstream ka_msg;
+        ka_msg << "KEEPALIVE," << unread_messages << std::endl;
+        std::string ka = constructMessage(ka_msg.str());
+        send(p.second->sock, ka.c_str(), ka.length(), 0);
     }
-
 }
 
 void closeServer(int serverSocket, fd_set *openSockets, int *maxfds) {
@@ -510,14 +476,6 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                 }
             }
 
-//            // Remainder of servers we may not have connected to
-//            while(processing) {
-//                if(processed + 3 <= server_infos.size()) {
-//                    connectToServer(server_info);
-//char *address, char *port, char *our_port, fd_set *openSockets, int *maxfds
-//                }
-//            }
-
         } else if (strs[0] == "KEEPALIVE") {
             strs[1].erase(std::remove(strs[1].begin(), 
                             strs[1].end(), '\n'), strs[1].end());
@@ -632,6 +590,7 @@ void serverCommand(int serverSocket, fd_set *openSockets, int *maxfds,
                 send(serverSocket, response_msg.c_str(), response_msg.length(), 0);
             }
         } else if (strs[0] == "STATUSRESP") {
+            // Not implemented yet
             std::cout << "Received STATUSRESP response" << std::endl;
         } else {
             std::string e_msg = "INVALID COMMAND!";
@@ -656,7 +615,7 @@ int main(int argc, char* argv[])
     // Since we are calling the timedTasks right after timeout, we want to make sure that at least
     // a minute has passed
     std::chrono::system_clock::time_point clock_now = std::chrono::system_clock::now();
-    std::time_t next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::seconds(30));
+    std::time_t next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::seconds(60));
     std::time_t now = std::chrono::system_clock::to_time_t(clock_now);
 
 
@@ -711,7 +670,7 @@ int main(int argc, char* argv[])
         // This is re-initialized every loop
         struct timeval timeout;      
         timeout.tv_sec  = 60;
-        timeout.tv_usec = 0;
+        timeout.tv_usec = 0;        // Seems to need to be set. No harm done
 
         // Get modifiable copy of readSockets
         readSockets = exceptSockets = openSockets;
@@ -876,7 +835,7 @@ int main(int argc, char* argv[])
 
         if(now > next_ping) {
             timedTasks();
-            next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::seconds(30));
+            next_ping = std::chrono::system_clock::to_time_t(clock_now + std::chrono::seconds(60));
         }
     }
 }
